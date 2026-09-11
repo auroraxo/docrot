@@ -1,48 +1,104 @@
 #!/usr/bin/env python3
-"""docrot — measure documentation image rot in public OSS repositories.
+"""docrot v2 — measure documentation image rot in public OSS repositories.
 
-For each repo: list markdown files on the default branch, extract every image
-reference, resolve it, and check whether it still loads. Output: raw JSON.
+Classification, deliberately conservative:
 
-No authentication needed for the image checks; the GitHub API calls use a PAT
-only to avoid the unauthenticated rate limit.
+  in-repo   a relative or root-relative path that resolves to a blob present in
+            the repository's own git tree at the scanned commit. Verified
+            against the tree listing, not by HTTP, so encoding and rate limits
+            cannot produce a false "broken".
+  missing   a relative path that resolves nowhere in the tree AND whose
+            containing document is not part of a docs site that rewrites roots.
+  external  an absolute http(s) URL on a host the repository does not control.
+            Checked by HTTP: >=400 or unreachable counts as broken.
+  unresolvable
+            root-relative paths inside a documentation site (mkdocs, docusaurus,
+            mintlify, hugo...), template placeholders ({{ }}, {% %}, $VAR),
+            and non-http schemes such as cid:. These are NOT counted as broken:
+            the published URL depends on build configuration a static scan
+            cannot see. Reported separately and honestly.
+
+The headline number is external rot: an image a project links but does not own.
 """
 import json
 import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
-TOKEN = open(os.path.expanduser("~/.ghtok")).read().strip()
-UA = "docrot/1.0 (+https://codebyaurora.com/docrot/)"
-MD_CAP = 120          # markdown files inspected per repo
+UA = "docrot/2.0 (+https://codebyaurora.com/docrot/)"
+MD_CAP = 150
 TIMEOUT = 15
 
-MD_IMG = re.compile(r"!\[[^\]]*\]\(\s*<?([^)\s>]+)>?[^)]*\)")
-HTML_IMG = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']", re.I)
+MD_IMG = re.compile(
+    r"!\[[^\]]*\]\(\s*(?:<([^>\n]*)>|([^\s()]+))"
+    r"(?:\s+(?:\"[^\"]*\"|'[^']*'|\([^)]*\)))?\s*\)"
+)
+HTML_IMG = re.compile(r"<img\b[^>]*?\bsrc\s*=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s>]+))", re.I)
+
+GITHUB_OWNED = ("raw.githubusercontent.com", "github.com", "gist.github.com",
+                "user-images.githubusercontent.com", "camo.githubusercontent.com",
+                "avatars.githubusercontent.com", "github.githubassets.com",
+                "private-user-images.githubusercontent.com")
+
+# A document under one of these trees belongs to a built docs site whose URL
+# root is not the repository root.
+DOCSITE_HINTS = ("docs/", "doc/", "website/", "web/", "site/", "documentation/")
+
+TEMPLATEY = re.compile(r"\{\{|\}\}|\{%|<%|\$\{|\$[A-Z_]{3,}|^\{.*\}$", re.S)
 
 
-def api(path):
+def strip_code(text):
+    """Remove fenced and inline code before looking for rendered Markdown.
+
+    Image syntax inside examples is not a rendered image and must not enter the
+    dataset. This deliberately handles Markdown's common backtick/tilde forms;
+    it is not intended to be a complete Markdown parser.
+    """
+    text = re.sub(r"(?ms)^[ \t]{0,3}(`{3,}|~{3,})[^\n]*\n.*?^[ \t]{0,3}\1[ \t]*$", "", text)
+    text = re.sub(r"(?s)(`+).*?\1", "", text)
+    return text
+
+
+def extract_image_refs(text):
+    text = strip_code(text)
+    out = []
+    for m in MD_IMG.finditer(text):
+        ref = m.group(1) if m.group(1) is not None else m.group(2)
+        if ref:
+            out.append(ref)
+    for m in HTML_IMG.finditer(text):
+        ref = next((g for g in m.groups() if g is not None), "")
+        if ref:
+            out.append(ref)
+    return out
+
+
+def api(path, token):
+    headers = {"User-Agent": UA, "Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = "Bearer " + token
     req = urllib.request.Request(
         "https://api.github.com" + path,
-        headers={"Authorization": "Bearer " + TOKEN, "User-Agent": UA,
-                 "Accept": "application/vnd.github+json"})
+        headers=headers)
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(req, timeout=40) as r:
                 return json.load(r)
-        except Exception as e:
+        except Exception:
             if attempt == 2:
                 raise
-            time.sleep(3 * (attempt + 1))
+            time.sleep(4 * (attempt + 1))
 
 
 def raw(owner, repo, sha, path):
     url = "https://raw.githubusercontent.com/%s/%s/%s/%s" % (
-        owner, repo, sha, urllib.parse.quote(path))
+        urllib.parse.quote(owner), urllib.parse.quote(repo),
+        urllib.parse.quote(sha), urllib.parse.quote(path))
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
@@ -52,136 +108,177 @@ def raw(owner, repo, sha, path):
 
 
 def check(url):
-    """Return (status, note). status is an int HTTP code or 0 for a network error."""
+    """(status, note). status is an HTTP code, or 0 for no response at all."""
+    last = (0, "unreachable")
     for method in ("HEAD", "GET"):
         req = urllib.request.Request(url, method=method,
                                      headers={"User-Agent": UA,
                                               "Accept": "image/*,*/*"})
         try:
             with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-                ctype = r.headers.get("Content-Type", "")
                 if method == "GET":
                     r.read(2048)
-                return r.status, ctype
+                return r.status, r.headers.get("Content-Type", "")
         except urllib.error.HTTPError as e:
-            if e.code in (403, 405, 501) and method == "HEAD":
+            if method == "HEAD" and e.code in (400, 403, 404, 405, 429, 500, 501):
+                last = (e.code, "head-refused")
                 continue
             return e.code, "http-error"
         except Exception as e:
-            if method == "HEAD":
-                continue
-            return 0, type(e).__name__
-    return 0, "unreachable"
+            last = (0, type(e).__name__)
+    return last
 
 
-def resolve(ref, owner, repo, sha, md_path):
-    ref = ref.strip().split("#")[0]
-    if not ref or ref.startswith("data:") or ref.startswith("mailto:"):
-        return None
+def normalize_http_url(url):
+    """Percent-encode spaces/non-ASCII without altering URL delimiters."""
+    return urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
+
+
+def classify(ref, md_path, tree_paths):
+    """Return (kind, target) where kind is external|in-repo|missing|unresolvable."""
+    ref = ref.strip()
+    if not ref:
+        return "unresolvable", "empty"
+    if TEMPLATEY.search(ref):
+        return "unresolvable", "template-placeholder"
+    low = ref.lower()
+    if low.startswith("data:"):
+        return "unresolvable", "data-uri"
+    if ":" in ref.split("/")[0] and not low.startswith(("http://", "https://")) \
+            and not ref.startswith("//"):
+        return "unresolvable", "non-http-scheme"
     if ref.startswith("//"):
-        return "https:" + ref
-    if ref.startswith("http://") or ref.startswith("https://"):
-        return ref
-    base_dir = os.path.dirname(md_path)
-    if ref.startswith("/"):
-        target = ref.lstrip("/")
-    else:
-        target = os.path.normpath(os.path.join(base_dir, ref))
-    return "https://raw.githubusercontent.com/%s/%s/%s/%s" % (
-        owner, repo, sha, urllib.parse.quote(target))
+        return "external", normalize_http_url("https:" + ref)
+    if low.startswith(("http://", "https://")):
+        return "external", normalize_http_url(ref)
+
+    path = urllib.parse.unquote(ref.split("#")[0].split("?")[0])
+    if not path:
+        return "unresolvable", "fragment-only"
+    if path.startswith("/"):
+        in_docsite = md_path.lower().startswith(DOCSITE_HINTS)
+        target = os.path.normpath(path.lstrip("/"))
+        if target in tree_paths:
+            return "in-repo", target
+        if in_docsite:
+            # a docs site rewrites "/" to the site root, not the repo root
+            return "unresolvable", "docsite-root-relative"
+        return "missing", target
+    target = os.path.normpath(os.path.join(os.path.dirname(md_path), path))
+    if target.startswith(".."):
+        return "unresolvable", "escapes-repo-root"
+    if target in tree_paths:
+        return "in-repo", target
+    if md_path.lower().startswith(DOCSITE_HINTS):
+        return "unresolvable", "docsite-relative-missing"
+    return "missing", target
 
 
-def scan_repo(slug):
-    owner, repo = slug.split("/")
-    meta = api("/repos/%s/%s" % (owner, repo))
+def scan_repo(slug, token):
+    owner, repo = slug.split("/", 1)
+    meta = api("/repos/%s/%s" % (urllib.parse.quote(owner), urllib.parse.quote(repo)), token)
     branch = meta["default_branch"]
-    stars = meta.get("stargazers_count")
-    head = api("/repos/%s/%s/commits/%s" % (owner, repo, branch))
+    head = api("/repos/%s/%s/commits/%s" % (urllib.parse.quote(owner), urllib.parse.quote(repo), urllib.parse.quote(branch)), token)
     sha = head["sha"]
-    tree = api("/repos/%s/%s/git/trees/%s?recursive=1" % (owner, repo, sha))
-    mds = [t["path"] for t in tree.get("tree", [])
-           if t["type"] == "blob"
-           and t["path"].lower().endswith((".md", ".mdx"))
-           and "/node_modules/" not in t["path"]
-           and not t["path"].lower().startswith("vendor/")]
-    # prefer README and docs/ trees, then the rest
-    mds.sort(key=lambda p: (0 if "readme" in p.lower() else
-                            1 if p.lower().startswith(("docs/", "doc/", "website/")) else 2,
-                            p))
-    mds = mds[:MD_CAP]
+    tree = api("/repos/%s/%s/git/trees/%s?recursive=1" % (urllib.parse.quote(owner), urllib.parse.quote(repo), urllib.parse.quote(sha)), token)
+    blobs = [t["path"] for t in tree.get("tree", []) if t["type"] == "blob"]
+    tree_paths = set(blobs)
+    truncated = bool(tree.get("truncated"))
 
-    refs = {}  # resolved url -> list of (md_path, original ref)
+    all_md = [p for p in blobs
+              if p.lower().endswith((".md", ".mdx"))
+              and "/node_modules/" not in p
+              and not p.lower().startswith("vendor/")]
+    mds = sorted(all_md, key=lambda p: (
+        0 if "readme" in p.lower() else
+        1 if p.lower().startswith(DOCSITE_HINTS) else 2, p))[:MD_CAP]
+
+    refs = {}            # (kind, target) -> [[md_path, ref], ...]
     for path in mds:
         text = raw(owner, repo, sha, path)
         if not text:
             continue
-        for m in list(MD_IMG.finditer(text)) + list(HTML_IMG.finditer(text)):
-            ref = m.group(1)
-            url = resolve(ref, owner, repo, sha, path)
-            if url:
-                refs.setdefault(url, []).append([path, ref])
+        for ref in extract_image_refs(text):
+            kind, target = classify(ref, path, tree_paths)
+            refs.setdefault((kind, target), []).append([path, ref])
 
-    urls = list(refs)
-    results = {}
-    with ThreadPoolExecutor(max_workers=12) as ex:
-        for url, (status, note) in zip(urls, ex.map(check, urls)):
-            results[url] = (status, note)
+    ext_urls = [t for (k, t) in refs if k == "external"]
+    statuses = {}
+    if ext_urls:
+        with ThreadPoolExecutor(max_workers=12) as ex:
+            for url, res in zip(ext_urls, ex.map(check, ext_urls)):
+                statuses[url] = res
 
     images = []
-    for url, places in refs.items():
-        status, note = results[url]
-        host = urllib.parse.urlparse(url).netloc.lower()
-        internal = host in ("raw.githubusercontent.com", "github.com",
-                            "user-images.githubusercontent.com",
-                            "camo.githubusercontent.com")
-        images.append({
-            "url": url, "host": host, "external": not internal,
-            "status": status, "note": note,
-            "broken": status == 0 or status >= 400,
-            "refs": places[:5], "refCount": len(places),
-        })
+    for (kind, target), places in refs.items():
+        rec = {"kind": kind, "target": target, "refCount": len(places),
+               "refs": places[:5]}
+        if kind == "external":
+            status, note = statuses[target]
+            host = urllib.parse.urlparse(target).netloc.lower()
+            rec.update({"host": host, "status": status, "note": note,
+                        "githubHosted": host in GITHUB_OWNED,
+                        "broken": status == 0 or status >= 400,
+                        "originalRef": places[0][1]})
+        else:
+            rec["broken"] = kind == "missing"
+        images.append(rec)
 
-    ext = [i for i in images if i["external"]]
-    broken = [i for i in images if i["broken"]]
+    ext = [i for i in images if i["kind"] == "external"]
+    third = [i for i in ext if not i["githubHosted"]]
     return {
-        "repo": slug, "stars": stars, "defaultBranch": branch, "commit": sha,
-        "markdownFilesScanned": len(mds), "markdownFilesTotal": len(
-            [t for t in tree.get("tree", []) if t["type"] == "blob"
-             and t["path"].lower().endswith((".md", ".mdx"))]),
+        "repo": slug, "stars": meta.get("stargazers_count"),
+        "defaultBranch": branch, "commit": sha,
+        "treeTruncated": truncated,
+        "markdownFilesScanned": len(mds), "markdownFilesTotal": len(all_md),
         "imageRefs": sum(i["refCount"] for i in images),
         "uniqueImages": len(images),
-        "externalImages": len(ext),
-        "externalHosts": sorted({i["host"] for i in ext}),
-        "brokenImages": len(broken),
-        "brokenExternal": len([i for i in broken if i["external"]]),
+        "inRepo": len([i for i in images if i["kind"] == "in-repo"]),
+        "missingInRepo": len([i for i in images if i["kind"] == "missing"]),
+        "unresolvable": len([i for i in images if i["kind"] == "unresolvable"]),
+        "external": len(ext),
+        "externalThirdParty": len(third),
+        "externalBroken": len([i for i in ext if i["broken"]]),
+        "externalThirdPartyBroken": len([i for i in third if i["broken"]]),
+        "thirdPartyHosts": sorted({i["host"] for i in third}),
         "images": images,
     }
 
 
 def main():
-    slugs = [l.strip() for l in open(sys.argv[1]) if l.strip() and not l.startswith("#")]
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
+        tok_file = os.path.expanduser("~/.ghtok")
+        if os.path.isfile(tok_file):
+            token = open(tok_file).read().strip()
+    slugs = [l.strip() for l in open(sys.argv[1])
+             if l.strip() and not l.startswith("#")]
     out = sys.argv[2]
     repos = []
     for slug in slugs:
         t0 = time.time()
         try:
-            r = scan_repo(slug)
+            r = scan_repo(slug, token)
             repos.append(r)
-            print("%-40s %4d imgs  %3d ext  %3d broken  %.0fs" % (
-                slug, r["uniqueImages"], r["externalImages"], r["brokenImages"],
-                time.time() - t0), flush=True)
+            print("%-34s %4d img %4d 3p-ext %3d 3p-broken %3d missing %3d unres %.0fs"
+                  % (slug, r["uniqueImages"], r["externalThirdParty"],
+                     r["externalThirdPartyBroken"], r["missingInRepo"],
+                     r["unresolvable"], time.time() - t0), flush=True)
         except Exception as e:
-            print("%-40s FAILED %s: %s" % (slug, type(e).__name__, e), flush=True)
+            print("%-34s FAILED %s: %s" % (slug, type(e).__name__, e), flush=True)
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
-            json.dump({"tool": "docrot",
-                       "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                       "method": {
-                           "markdownFileCapPerRepo": MD_CAP,
-                           "timeoutSeconds": TIMEOUT,
-                           "brokenDefinition": "HTTP status >= 400 or no response",
-                           "userAgent": UA},
-                       "repos": repos}, f, indent=1)
+            json.dump({
+                "tool": "docrot", "version": 2,
+                "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "method": {
+                    "markdownFileCapPerRepo": MD_CAP,
+                    "timeoutSeconds": TIMEOUT,
+                    "inRepoVerifiedAgainst": "git tree at scanned commit",
+                    "externalBrokenDefinition": "HTTP status >= 400 or no response",
+                    "unresolvableExcludedFromRot": True,
+                    "userAgent": UA},
+                "repos": repos}, f, indent=1)
 
 
 if __name__ == "__main__":
