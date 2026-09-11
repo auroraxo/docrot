@@ -1,7 +1,7 @@
 <!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content='width=device-width,initial-scale=1'>
 <title>Documentation image rot in 40 popular open-source repositories</title>
-<meta name=description content='An open dataset: how many documentation images in popular OSS repositories point at hosts the project does not control, and how many of those have already stopped loading.'>
+<meta name=description content='An open dataset: how many documentation images in popular OSS repositories load from hosts outside GitHub and the repository itself, and how many of those have already stopped loading.'>
 <style>
 :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--fg:#e6e8ee;--dim:#9aa3b2;
 --bad:#ff6b6b;--ok:#4ec9a6;--warn:#e0b341;--link:#7aa2f7}
@@ -37,14 +37,14 @@ padding:1px 9px;font-size:12px;color:var(--dim);margin:0 4px 4px 0}
 <p class=sub>2026-09-11T06:39:27Z &middot; 1,015 unique image references across 3,352 markdown files &middot; raw data: <a href='docrot.json'>docrot.json</a> &middot; scanner: <a href='https://github.com/auroraxo/docrot'>docrot</a></p>
 <div class=grid>
 <div class=kpi><b class=''>2,352</b><span>image references found</span></div>
-<div class=kpi><b class='warn'>477</b><span>on hosts the project does not control</span></div>
+<div class=kpi><b class='warn'>477</b><span>on non-GitHub external hosts</span></div>
 <div class=kpi><b class='bad'>14</b><span>external images already broken</span></div>
 <div class=kpi><b class='bad'>7</b><span>in-repo images pointing nowhere</span></div>
 <div class=kpi><b class='bad'>6 / 40</b><span>repositories with at least one broken image</span></div>
 </div>
-<div class=box><h3 style='margin-top:0'>What this measures</h3><p>Documentation rots in a way nobody gets a notification for: a screenshot is hot-linked from a company CDN, the company rebrands, and the image is gone from every release of the docs at once. This scan reads the markdown of each repository at a named commit, resolves every image reference, and asks a single question per image &mdash; <em>does it still load, and who has to stay online for it to keep loading?</em></p><p class=small>Every figure is reproducible: the scanner is open, the commit SHA of each repository is in the dataset, and in-repo images are verified against the git tree rather than by HTTP, so encoding quirks and rate limits cannot manufacture a broken image.</p></div>
+<div class=box><h3 style='margin-top:0'>What this measures</h3><p>Documentation rots in a way nobody gets a notification for: a screenshot is hot-linked from a company CDN, the company rebrands, and the image is gone from every release of the docs at once. This scan reads the markdown of each repository at a named commit, resolves every image reference, and records for each image whether it still loads and whether it is stored in the repository, on GitHub, or on another host.</p><p class=small>Every figure is reproducible: the scanner is open, the commit SHA of each repository is in the dataset, and in-repo images are verified against the git tree rather than by HTTP, so encoding quirks and rate limits cannot manufacture a broken image.</p></div>
 <h2>Per repository</h2>
-<table><thead><tr><th>Repository</th><th>Stars</th><th>MD files</th><th>Images</th><th>In repo</th><th>3rd-party</th><th>Broken ext.</th><th>Missing in repo</th><th>Unresolvable</th></tr></thead><tbody>
+<table><thead><tr><th>Repository</th><th>Stars</th><th>MD files</th><th>Images</th><th>In repo</th><th>non-GH external</th><th>Broken ext.</th><th>Missing in repo</th><th>Unresolvable</th></tr></thead><tbody>
 <tr><td><a href='https://github.com/gradio-app/gradio'>gradio-app/gradio</a></td><td>43,515</td><td>150<span class='small'> / 325</span></td><td>132</td><td>18</td><td class='warn'>33</td><td class='bad'>4</td><td class='bad'>1</td><td class='small'>0</td></tr>
 <tr><td><a href='https://github.com/dbt-labs/dbt-core'>dbt-labs/dbt-core</a></td><td>13,803</td><td>123</td><td>26</td><td>0</td><td class='warn'>15</td><td class='bad'>5</td><td class='ok'>0</td><td class='small'>0</td></tr>
 <tr><td><a href='https://github.com/minio/minio'>minio/minio</a></td><td>61,364</td><td>82</td><td>52</td><td>0</td><td class='warn'>11</td><td class='bad'>2</td><td class='bad'>2</td><td class='small'>0</td></tr>

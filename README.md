@@ -67,13 +67,13 @@ the exclusion is the difference between a dataset and a scare.
 - Only images are checked. Dead links generally are a larger problem and a
   different tool.
 
-## Why external matters more than broken
+## Why off-repository hosting matters
 
-An image on a host the project does not control is a dependency the project did
-not choose to have. It is not broken today and nobody can promise anything about
-tomorrow: the CDN, the rebrand and the bucket policy belong to somebody else. The
-dataset therefore reports third-party image counts for every repository scanned,
-not only the ones where something has already failed.
+An image outside the repository is a dependency on another publishing surface.
+It may be operated by the project, GitHub, or somebody else; the scanner cannot
+infer ownership from a hostname and does not claim to. The dataset therefore
+reports GitHub-hosted and non-GitHub external image counts separately for every
+repository scanned, not only the ones where something has already failed.
 
 ## Licence
 

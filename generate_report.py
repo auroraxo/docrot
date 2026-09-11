@@ -71,7 +71,7 @@ def render(data):
     o.append("<!doctype html><html lang=en><head><meta charset=utf-8>")
     o.append("<meta name=viewport content='width=device-width,initial-scale=1'>")
     o.append("<title>Documentation image rot in %d popular open-source repositories</title>" % len(repos))
-    o.append("<meta name=description content='An open dataset: how many documentation images in popular OSS repositories point at hosts the project does not control, and how many of those have already stopped loading.'>")
+    o.append("<meta name=description content='An open dataset: how many documentation images in popular OSS repositories load from hosts outside GitHub and the repository itself, and how many of those have already stopped loading.'>")
     o.append("<style>%s</style></head><body><div class=wrap>" % CSS)
 
     o.append("<h1>Documentation image rot in %d popular open-source repositories</h1>" % len(repos))
@@ -82,7 +82,7 @@ def render(data):
     o.append("<div class=grid>")
     for label, val, cls in [
         ("image references found", f"{refs:,}", ""),
-        ("on hosts the project does not control", f"{third:,}", "warn"),
+        ("on non-GitHub external hosts", f"{third:,}", "warn"),
         ("external images already broken", f"{ext_broken:,}", "bad" if ext_broken else "ok"),
         ("in-repo images pointing nowhere", f"{missing:,}", "bad" if missing else "ok"),
         ("repositories with at least one broken image", "%d / %d" % (len(affected), len(repos)) if repos else "0 / 0",
@@ -95,9 +95,9 @@ def render(data):
              "<p>Documentation rots in a way nobody gets a notification for: a screenshot is "
              "hot-linked from a company CDN, the company rebrands, and the image is gone from "
              "every release of the docs at once. This scan reads the markdown of each repository "
-             "at a named commit, resolves every image reference, and asks a single question per "
-             "image &mdash; <em>does it still load, and who has to stay online for it to keep "
-             "loading?</em></p>"
+             "at a named commit, resolves every image reference, and records for each image "
+             "whether it still loads and whether it is stored in the repository, on GitHub, or "
+             "on another host.</p>"
              "<p class=small>Every figure is reproducible: the scanner is open, the commit SHA of "
              "each repository is in the dataset, and in-repo images are verified against the git "
              "tree rather than by HTTP, so encoding quirks and rate limits cannot manufacture a "
@@ -105,7 +105,7 @@ def render(data):
 
     o.append("<h2>Per repository</h2>")
     o.append("<table><thead><tr><th>Repository</th><th>Stars</th><th>MD files</th>"
-             "<th>Images</th><th>In repo</th><th>3rd-party</th>"
+             "<th>Images</th><th>In repo</th><th>non-GH external</th>"
              "<th>Broken ext.</th><th>Missing in repo</th><th>Unresolvable</th></tr></thead><tbody>")
     for r in sorted(repos, key=lambda r: (-(r["externalBroken"] + r["missingInRepo"]),
                                           -r["externalThirdParty"])):

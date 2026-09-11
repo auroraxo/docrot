@@ -9,8 +9,8 @@ Classification, deliberately conservative:
             cannot produce a false "broken".
   missing   a relative path that resolves nowhere in the tree AND whose
             containing document is not part of a docs site that rewrites roots.
-  external  an absolute http(s) URL on a host the repository does not control.
-            Checked by HTTP: >=400 or unreachable counts as broken.
+  external  an absolute http(s) URL. Checked by HTTP: >=400 or unreachable
+            counts as broken. GitHub-owned and other hosts are tallied separately.
   unresolvable
             root-relative paths inside a documentation site (mkdocs, docusaurus,
             mintlify, hugo...), template placeholders ({{ }}, {% %}, $VAR),
@@ -18,7 +18,8 @@ Classification, deliberately conservative:
             the published URL depends on build configuration a static scan
             cannot see. Reported separately and honestly.
 
-The headline number is external rot: an image a project links but does not own.
+The headline number is verified rot among references whose targets can be
+resolved statically or checked over HTTP.
 """
 import json
 import os
