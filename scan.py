@@ -101,16 +101,22 @@ def api(path, token):
             time.sleep(4 * (attempt + 1))
 
 
-def raw(owner, repo, sha, path):
+def raw(owner, repo, sha, path, token=""):
+    """Fetch raw markdown text. Returns (text, error_or_none)."""
     url = "https://raw.githubusercontent.com/%s/%s/%s/%s" % (
         urllib.parse.quote(owner), urllib.parse.quote(repo),
         urllib.parse.quote(sha), urllib.parse.quote(path))
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    headers = {"User-Agent": UA}
+    if token:
+        headers["Authorization"] = "Bearer " + token
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-            return r.read().decode("utf-8", "replace")
-    except Exception:
-        return ""
+            return r.read().decode("utf-8", "replace"), None
+    except urllib.error.HTTPError as e:
+        return "", "HTTP %d" % e.code
+    except Exception as e:
+        return "", type(e).__name__
 
 
 def check(url):
@@ -200,8 +206,12 @@ def scan_repo(slug, token):
         1 if p.lower().startswith(DOCSITE_HINTS) else 2, p))[:MD_CAP]
 
     refs = {}            # (kind, target) -> [[md_path, ref], ...]
+    fetch_errors = {}    # md_path -> error string
     for path in mds:
-        text = raw(owner, repo, sha, path)
+        text, err = raw(owner, repo, sha, path, token=token)
+        if err:
+            fetch_errors[path] = err
+            continue
         if not text:
             continue
         for ref in extract_image_refs(text):
@@ -236,7 +246,9 @@ def scan_repo(slug, token):
         "repo": slug, "stars": meta.get("stargazers_count"),
         "defaultBranch": branch, "commit": sha,
         "treeTruncated": truncated,
-        "markdownFilesScanned": len(mds), "markdownFilesTotal": len(all_md),
+        "markdownFilesScanned": len(mds) - len(fetch_errors),
+        "markdownFilesTotal": len(all_md),
+        "markdownFetchErrors": fetch_errors,
         "imageRefs": sum(i["refCount"] for i in images),
         "uniqueImages": len(images),
         "inRepo": len([i for i in images if i["kind"] == "in-repo"]),
@@ -275,7 +287,7 @@ def main():
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
             json.dump({
-                "tool": "docrot", "version": 3,
+                "tool": "docrot", "version": 4,
                 "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "method": {
                     "markdownFileCapPerRepo": MD_CAP,

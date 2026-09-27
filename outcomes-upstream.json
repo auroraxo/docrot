@@ -1,0 +1,22 @@
+[
+  {
+    "repo": "apache/airflow",
+    "status": "merged",
+    "text": "Stale version pin in README (==3.3.0 vs 3.4.0) reported in <a href='https://github.com/apache/airflow/issues/73769'>#73769</a>, fixed in <a href='https://github.com/apache/airflow/pull/73770'>#73770</a>, approved and <b>merged</b> into main by PMC chair Jarek Potiuk on 2026-09-27."
+  },
+  {
+    "repo": "appsmithorg/appsmith",
+    "status": "triaged",
+    "text": "82 broken image references in the ADS design-system docs (9 dead Notion S3 assets + 73 missing in-repo docs/ images) reported in <a href='https://github.com/appsmithorg/appsmith/issues/42298'>#42298</a>; taken into the team's internal tracker as <a href='https://linear.app/appsmith/issue/APP-16043'>APP-16043</a>."
+  },
+  {
+    "repo": "tensorflow/tensorflow",
+    "status": "triaged",
+    "text": "9 dead build-status badges in the README's Official Builds table (HTTP 403 on Google Cloud Storage) and discontinued Bintray link reported in <a href='https://github.com/tensorflow/tensorflow/issues/128150'>#128150</a>; assigned to Venkat6871 and triaged as type:docs-bug."
+  },
+  {
+    "repo": "vitejs/vite",
+    "status": "policy-closed",
+    "text": "2 broken announcement OG-image links in the changelog (caused by the .png to .webp asset rename in 91396071) submitted as <a href='https://github.com/vitejs/vite/pull/23594'>#23594</a>; automatically closed under the project's AI policy via agentscan without human review. Reproducible verification chain left in <a href='https://github.com/vitejs/vite/pull/23594#issuecomment-5856570501'>comment</a> for human maintainers."
+  }
+]

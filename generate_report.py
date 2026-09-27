@@ -121,7 +121,7 @@ def render_drift(drift):
     return "\n".join(o)
 
 
-def render(data, drift=None):
+def render(data, drift=None, outcomes=None):
     repos = [r for r in data["repos"] if "error" not in r]
     failed = [r for r in data["repos"] if "error" in r]
 
@@ -276,6 +276,16 @@ def render(data, drift=None):
     if not any_broken:
         o.append("<p class=ok>No broken images in this run.</p>")
 
+    if outcomes:
+        o.append("<h2>Where the findings went</h2>")
+        o.append("<p class=small>docrot is a measurement tool, not a drive-by reporter. "
+                 "Every headline finding was verified line by line and brought to the "
+                 "project it names. What came back:</p>")
+        o.append("<div class=box><ul>")
+        for oc in outcomes:
+            o.append("<li><b>%s</b> &mdash; %s</li>" % (e(oc["repo"]), oc["text"]))
+        o.append("</ul></div>")
+
     m = data.get("method", {})
     o.append("<h2>Method, and what it does not claim</h2><div class=box><ul>")
     o.append("<li>For each repository: the default branch HEAD is resolved to a commit SHA, the "
@@ -335,9 +345,13 @@ def main():
     if len(sys.argv) > 3:
         with open(sys.argv[3]) as f:
             drift = json.load(f)
+    outcomes = None
+    if len(sys.argv) > 4:
+        with open(sys.argv[4]) as f:
+            outcomes = json.load(f)
     out = sys.argv[2]
     with open(out, "w") as f:
-        f.write(render(data, drift))
+        f.write(render(data, drift, outcomes))
     print("wrote", out)
 
 
