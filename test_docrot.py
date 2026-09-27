@@ -296,6 +296,57 @@ class OutcomesReportTests(unittest.TestCase):
         self.assertIn("o/&lt;script&gt;", html)
 
 
+class Wave2ReportTests(unittest.TestCase):
+    WAVE2 = {
+        "tool": "docrot", "version": 5, "generatedAt": "2026-09-27T19:00:00Z",
+        "repos": [
+            {"repo": "o/wave2rot", "stars": 5, "commit": "c" * 40,
+             "defaultBranch": "main", "treeTruncated": False,
+             "markdownFilesScanned": 10, "markdownFilesTotal": 10,
+             "imageRefs": 4, "uniqueImages": 4, "inRepo": 1, "missingInRepo": 2,
+             "unresolvable": 0, "external": 3, "externalThirdParty": 2,
+             "externalBroken": 1, "externalThirdPartyBroken": 1,
+             "thirdPartyHosts": ["cdn.example"],
+             "markdownFetchErrors": {},
+             "images": []},
+            {"repo": "o/wave2clean", "stars": 4, "commit": "d" * 40,
+             "defaultBranch": "main", "treeTruncated": False,
+             "markdownFilesScanned": 2, "markdownFilesTotal": 2,
+             "imageRefs": 1, "uniqueImages": 1, "inRepo": 1, "missingInRepo": 0,
+             "unresolvable": 0, "external": 0, "externalThirdParty": 0,
+             "externalBroken": 0, "externalThirdPartyBroken": 0,
+             "thirdPartyHosts": [],
+             "markdownFetchErrors": {"a.md": "HTTP Error 502"},
+             "images": []},
+        ],
+    }
+
+    def test_wave2_section_absent_by_default(self):
+        self.assertNotIn("A second wave", generate_report.render(SAMPLE))
+
+    def test_wave2_section_renders_kpis_and_table(self):
+        html = generate_report.render(SAMPLE, None, None, self.WAVE2)
+        self.assertIn("A second wave", html)
+        self.assertIn("docrot-wave2.json", html)
+        self.assertIn("o/wave2rot", html)
+        # The clean repo appears only in the fetch-error disclosure, never in
+        # the findings table (which lists rows of "repository + findings").
+        self.assertNotIn("<tr><td><a href='https://github.com/o/wave2clean'>", html)
+        self.assertIn("rescanned under scanner v5", html)  # honesty ledger
+
+    def test_wave2_fetch_errors_disclosed(self):
+        html = generate_report.render(SAMPLE, None, None, self.WAVE2)
+        self.assertIn("transient fetch failures", html)
+        self.assertIn("o/wave2clean", html)      # fetch-error disclosure line
+
+    def test_wave2_repo_names_escaped(self):
+        bad = json.loads(json.dumps(self.WAVE2))
+        bad["repos"][0]["repo"] = "o/<script>"
+        html = generate_report.render(SAMPLE, None, None, bad)
+        self.assertNotIn("<script>", html)
+        self.assertIn("o/&lt;script&gt;", html)
+
+
 if __name__ == "__main__":
     unittest.main()
 

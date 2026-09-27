@@ -121,7 +121,72 @@ def render_drift(drift):
     return "\n".join(o)
 
 
-def render(data, drift=None, outcomes=None):
+def render_wave2(wave2, w1data):
+    """Render the second measurement wave as a companion section."""
+    w2 = [r for r in wave2.get("repos", []) if "error" not in r]
+    w1 = [r for r in w1data.get("repos", []) if "error" not in r]
+    t2 = lambda k: sum(r.get(k, 0) for r in w2)
+    t1 = lambda k: sum(r.get(k, 0) for r in w1)
+    affected = [r for r in w2 if r.get("externalBroken") or r.get("missingInRepo")]
+    affected_1 = [r for r in w1 if r.get("externalBroken") or r.get("missingInRepo")]
+    fetch_err = [r["repo"] for r in w2 if r.get("markdownFetchErrors")]
+    ext_share = round(100 * t2("external") / t2("uniqueImages")) if t2("uniqueImages") else 0
+    ext_share_1 = round(100 * t1("external") / t1("uniqueImages")) if t1("uniqueImages") else 0
+
+    o = []
+    o.append("<h2>A second wave: the next 100 repositories</h2>")
+    o.append("<p class=sub>%s &middot; %d repositories &middot; raw data: "
+             "<a href='docrot-wave2.json'>docrot-wave2.json</a> &middot; "
+             "scanner: <a href='https://github.com/auroraxo/docrot'>docrot</a></p>"
+             % (e(wave2.get("generatedAt", "")), len(w2)))
+
+    o.append("<div class=grid>")
+    for label, val, cls in [
+        ("repositories", str(len(w2)), ""),
+        ("unique images", f"{t2('uniqueImages'):,}", ""),
+        ("loaded from outside the repo", f"{ext_share}%", ""),
+        ("external images broken", str(t2("externalBroken")),
+         "bad" if t2("externalBroken") else "ok"),
+        ("missing in the repository", str(t2("missingInRepo")),
+         "bad" if t2("missingInRepo") else "ok"),
+        ("clean of both", "%d / %d" % (len(w2) - len(affected), len(w2)), ""),
+    ]:
+        o.append("<div class=kpi><b class='%s'>%s</b><span>%s</span></div>" % (cls, val, label))
+    o.append("</div>")
+
+    o.append("<div class=box><h3 style='margin-top:0'>Two waves, one method</h3>"
+             "<p>The first %d repositories were the most-starred by volume; this wave adds the "
+             "next %d by stars (&ge;15k, no overlap). The share of repositories carrying in-repo "
+             "missing images or broken external references barely moves (%d/100 then, %d/100 "
+             "now) &mdash; but the second wave is far more image-heavy (%s unique images vs %s) "
+             "and leans much harder on external hosts (%d%% external vs %d%%).</p>"
+             "<p class=small>Honesty ledger: wave 2 was rescanned under scanner v5 after the "
+             "HTML-entity false-positive class was caught in our own review process "
+             "(see <a href='https://github.com/auroraxo/docrot/releases/tag/v1.2.0'>v1.2.0</a>); "
+             "external broken fell 248 &rarr; 104 as a result. Every wave-2 finding reported "
+             "upstream survived line-by-line verification before it was filed.%s</p></div>"
+             % (len(w1), len(w2), len(affected_1),
+                len(affected), f"{t2('uniqueImages'):,}", f"{t1('uniqueImages'):,}",
+                ext_share, ext_share_1,
+                (" Repositories with transient fetch failures at scan time (disclosed per the "
+                 "scanner contract): %s." % e(", ".join(fetch_err))) if fetch_err else ""))
+
+    if affected:
+        o.append("<h2>Wave 2: repositories with findings</h2>")
+        o.append("<table><tr><th>repository</th><th>missing in repo</th>"
+                 "<th>broken external</th></tr>")
+        for r in sorted(affected, key=lambda r: -(r.get("missingInRepo", 0) +
+                                                  r.get("externalBroken", 0))):
+            o.append("<tr><td><a href='https://github.com/%s'>%s</a></td>"
+                     "<td>%s</td><td>%s</td></tr>"
+                     % (e(r["repo"]), e(r["repo"]),
+                        e(str(r.get("missingInRepo", 0))),
+                        e(str(r.get("externalBroken", 0)))))
+        o.append("</table>")
+    return "\n".join(o)
+
+
+def render(data, drift=None, outcomes=None, wave2=None):
     repos = [r for r in data["repos"] if "error" not in r]
     failed = [r for r in data["repos"] if "error" in r]
 
@@ -286,6 +351,9 @@ def render(data, drift=None, outcomes=None):
             o.append("<li><b>%s</b> &mdash; %s</li>" % (e(oc["repo"]), oc["text"]))
         o.append("</ul></div>")
 
+    if wave2:
+        o.append(render_wave2(wave2, data))
+
     m = data.get("method", {})
     o.append("<h2>Method, and what it does not claim</h2><div class=box><ul>")
     o.append("<li>For each repository: the default branch HEAD is resolved to a commit SHA, the "
@@ -352,9 +420,13 @@ def main():
     if len(sys.argv) > 4:
         with open(sys.argv[4]) as f:
             outcomes = json.load(f)
+    wave2 = None
+    if len(sys.argv) > 5:
+        with open(sys.argv[5]) as f:
+            wave2 = json.load(f)
     out = sys.argv[2]
     with open(out, "w") as f:
-        f.write(render(data, drift, outcomes))
+        f.write(render(data, drift, outcomes, wave2))
     print("wrote", out)
 
 
