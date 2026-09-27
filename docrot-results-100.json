@@ -1,6 +1,6 @@
 {
  "tool": "docrot",
- "version": 2,
+ "version": 3,
  "generatedAt": "2026-09-27T08:27:34Z",
  "method": {
   "markdownFileCapPerRepo": 150,
@@ -8,7 +8,14 @@
   "inRepoVerifiedAgainst": "git tree at scanned commit",
   "externalBrokenDefinition": "HTTP status >= 400 or no response",
   "unresolvableExcludedFromRot": true,
-  "userAgent": "docrot/2.0 (+https://codebyaurora.com/docrot/)"
+  "userAgent": "docrot/2.0 (+https://codebyaurora.com/docrot/)",
+  "postScanReclassifications": [
+   {
+    "repo": "angular/angular",
+    "moved": 18,
+    "reason": "adev/ is Angular's docs engine (angular.dev): content-tree markdown resolves images against the site root, not the repo root. All 13 distinct targets of the 18 flagged references verified HTTP 200 under https://angular.dev/assets/ on 2026-09-27. Scanner 2.1 adds adev/ to DOCSITE_HINTS; dataset reclassified to unresolvable/docsite-relative-missing."
+   }
+  ]
  },
  "repos": [
   {
@@ -30454,8 +30461,8 @@
    "imageRefs": 24,
    "uniqueImages": 24,
    "inRepo": 4,
-   "missingInRepo": 18,
-   "unresolvable": 0,
+   "missingInRepo": 0,
+   "unresolvable": 18,
    "external": 2,
    "externalThirdParty": 2,
    "externalBroken": 0,
@@ -30523,7 +30530,7 @@
      "broken": false
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/intro/assets/images/tutorials/first-app/homes-app-landing-page.png",
      "refCount": 1,
      "refs": [
@@ -30532,10 +30539,11 @@
        "assets/images/tutorials/first-app/homes-app-landing-page.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/01-hello-world/assets/images/tutorials/first-app/homes-app-lesson-01-browser.png",
      "refCount": 1,
      "refs": [
@@ -30544,10 +30552,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-01-browser.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/02-Home/assets/images/tutorials/first-app/homes-app-lesson-02-step-2.png",
      "refCount": 1,
      "refs": [
@@ -30556,10 +30565,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-02-step-2.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/02-Home/assets/images/tutorials/first-app/homes-app-lesson-02-step-3.png",
      "refCount": 1,
      "refs": [
@@ -30568,10 +30578,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-02-step-3.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/03-HousingLocation/assets/images/tutorials/first-app/homes-app-lesson-03-step-2.png",
      "refCount": 1,
      "refs": [
@@ -30580,10 +30591,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-03-step-2.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/04-interfaces/assets/images/tutorials/first-app/homes-app-lesson-03-step-2.png",
      "refCount": 1,
      "refs": [
@@ -30592,10 +30604,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-03-step-2.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/07-dynamic-template-values/assets/images/tutorials/first-app/homes-app-lesson-07-step-2.png",
      "refCount": 1,
      "refs": [
@@ -30604,10 +30617,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-07-step-2.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/08-ngFor/assets/images/tutorials/first-app/homes-app-lesson-08-step-2.png",
      "refCount": 1,
      "refs": [
@@ -30616,10 +30630,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-08-step-2.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/11-details-page/assets/images/tutorials/first-app/homes-app-lesson-11-step-1.png",
      "refCount": 1,
      "refs": [
@@ -30628,10 +30643,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-11-step-1.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/11-details-page/assets/images/tutorials/first-app/homes-app-lesson-11-step-3.png",
      "refCount": 1,
      "refs": [
@@ -30640,10 +30656,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-11-step-3.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/12-forms/assets/images/tutorials/first-app/homes-app-lesson-12-step-3.png",
      "refCount": 1,
      "refs": [
@@ -30652,10 +30669,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-12-step-3.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/first-app/steps/13-search/assets/images/tutorials/first-app/homes-app-lesson-13-step-3.png",
      "refCount": 1,
      "refs": [
@@ -30664,10 +30682,11 @@
        "assets/images/tutorials/first-app/homes-app-lesson-13-step-3.png"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/learn-angular/intro/assets/images/angie/greeting.svg",
      "refCount": 1,
      "refs": [
@@ -30676,10 +30695,11 @@
        "assets/images/angie/greeting.svg"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/learn-angular/steps/25-next-steps/assets/images/angie/superhero.svg",
      "refCount": 1,
      "refs": [
@@ -30688,10 +30708,11 @@
        "assets/images/angie/superhero.svg"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/signal-forms/intro/assets/images/angie/greeting.svg",
      "refCount": 1,
      "refs": [
@@ -30700,10 +30721,11 @@
        "assets/images/angie/greeting.svg"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/signal-forms/steps/6-next-steps/assets/images/angie/superhero.svg",
      "refCount": 1,
      "refs": [
@@ -30712,10 +30734,11 @@
        "assets/images/angie/superhero.svg"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/signals/intro/assets/images/angie/greeting.svg",
      "refCount": 1,
      "refs": [
@@ -30724,10 +30747,11 @@
        "assets/images/angie/greeting.svg"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
-     "kind": "missing",
+     "kind": "unresolvable",
      "target": "adev/src/content/tutorials/signals/steps/11-next-steps/assets/images/angie/superhero.svg",
      "refCount": 1,
      "refs": [
@@ -30736,7 +30760,8 @@
        "assets/images/angie/superhero.svg"
       ]
      ],
-     "broken": true
+     "note": "docsite-relative-missing",
+     "postScanReclassification": "adev/ docs-site tree (angular.dev, <base href=\"/\">); target verified HTTP 200 on https://angular.dev/assets/ 2026-09-27"
     },
     {
      "kind": "in-repo",

@@ -260,3 +260,33 @@ class ReportTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AdevDocsiteTests(unittest.TestCase):
+    """Angular's docs engine tree (adev/) rewrites image refs to the site root.
+
+    Found in the wild: 18 'missing' hits in angular/angular whose 13 distinct
+    targets all serve HTTP 200 from https://angular.dev/assets/ (2026-09-27).
+    A missing verdict from adev/ markdown is a misclassification, not rot.
+    """
+
+    def test_relative_miss_in_adev_content_is_unresolvable(self):
+        self.assertEqual(
+            c("assets/images/angie/greeting.svg", "adev/src/content/tutorials/signals/intro/README.md"),
+            ("unresolvable", "docsite-relative-missing"))
+
+    def test_root_relative_miss_in_adev_content_is_unresolvable(self):
+        self.assertEqual(
+            c("/assets/images/angie/greeting.svg", "adev/src/content/tutorials/signals/intro/README.md"),
+            ("unresolvable", "docsite-root-relative"))
+
+    def test_relative_hit_in_adev_tree_still_in_repo(self):
+        tree = TREE | {"adev/src/assets/images/angie/greeting.svg"}
+        self.assertEqual(
+            scan.classify("../../../../assets/images/angie/greeting.svg",
+                          "adev/src/content/tutorials/signals/intro/README.md", tree),
+            ("in-repo", "adev/src/assets/images/angie/greeting.svg"))
+
+    def test_outside_adev_unchanged(self):
+        self.assertEqual(c("img/none.png", "guide/README.md"),
+                         ("missing", "guide/img/none.png"))

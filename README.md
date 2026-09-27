@@ -24,12 +24,13 @@ First full pass over the **100 most-used repositories** from the corpus in
 interactive report: <https://codebyaurora.com/docrot/>.
 
 **Image rot.** 6,179 image references resolved. 1,791 of them (29%) load
-from hosts outside GitHub. 58 external images no longer load, and 105
-in-repo paths resolve to nothing in the tree they name — **27 of the 100
+from hosts outside GitHub. 58 external images no longer load, and 87
+in-repo paths resolve to nothing in the tree they name — **26 of the 100
 repositories carry at least one broken documentation image.** Extremes:
 `appsmithorg/appsmith` (9 dead Notion-hosted design-system screenshots, 73
-missing in-repo paths), `angular/angular` (18 tutorial images missing),
-`tensorflow/tensorflow` (all 9 build-status badges in the README's
+missing in-repo paths — reported as
+[appsmithorg/appsmith#42298](https://github.com/appsmithorg/appsmith/issues/42298))
+and `tensorflow/tensorflow` (all 9 build-status badges in the README's
 "Official Builds" table return 403, plus an artifact link to the
 discontinued Bintray returning 410 — reported as
 [tensorflow/tensorflow#128150](https://github.com/tensorflow/tensorflow/issues/128150)).
@@ -43,9 +44,12 @@ fixed by [apache/airflow#73770](https://github.com/apache/airflow/pull/73770).
 
 Every number above was line-verified before reporting. Several of the
 false-positive classes were found precisely by chasing a headline finding
-to its source — the last one surfaced when the 100-repo pass flagged an
-`"For example:"` release link that was teaching a URL shape, not
-advertising a version.
+to its source. The newest one was chased the same way: `angular/angular`'
+18 "missing" tutorial images all serve HTTP 200 from angular.dev — its
+docs engine (`adev/`) rewrites image roots against the site, not the
+repository root — so they are now excluded as docs-site references
+(dataset v3, regression-tested), which is why the missing count reads 87,
+not 105.
 
 ## Usage
 

@@ -249,7 +249,7 @@ def render(data, drift=None):
     o.append("<h2>Every broken image</h2>")
     any_broken = False
     for r in sorted(repos, key=lambda r: r["repo"].lower()):
-        bad = [i for i in r["images"] if i["broken"]]
+        bad = [i for i in r["images"] if i.get("broken")]
         if not bad:
             continue
         any_broken = True
@@ -295,6 +295,10 @@ def render(data, drift=None):
              "configuration this scan cannot see), template placeholders, data URIs and non-HTTP "
              "schemes. They are counted in their own column so the exclusion is visible rather "
              "than silent.</li>")
+    for rc in (m.get("postScanReclassifications") or []):
+        o.append("<li><b>Post-scan reclassification:</b> %d reference(s) in %s moved from "
+                 "<em>missing</em> to <em>unresolvable</em>: %s</li>"
+                 % (rc["moved"], e(rc["repo"]), e(rc["reason"])))
     o.append("<li>A repository with more markdown files than the cap shows both numbers; its "
              "figures are a sample of its documentation, not a census.</li>")
     o.append("<li>A host that refuses automated requests can appear broken when a browser would "

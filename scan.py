@@ -48,7 +48,12 @@ GITHUB_OWNED = ("raw.githubusercontent.com", "github.com", "gist.github.com",
 
 # A document under one of these trees belongs to a built docs site whose URL
 # root is not the repository root.
-DOCSITE_HINTS = ("docs/", "doc/", "website/", "web/", "site/", "documentation/")
+# `adev/` is Angular's docs engine (angular.dev): its content tree
+# (adev/src/content/**) rewrites references against the site root via
+# <base href="/">; all 13 image targets flagged from adev/ markdown were
+# verified serving HTTP 200 from https://angular.dev/assets/ on 2026-09-27.
+DOCSITE_HINTS = ("docs/", "doc/", "website/", "web/", "site/", "documentation/",
+                 "adev/")
 
 TEMPLATEY = re.compile(r"\{\{|\}\}|\{%|<%|\$\{|\$[A-Z_]{3,}|^\{.*\}$", re.S)
 
@@ -270,7 +275,7 @@ def main():
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
             json.dump({
-                "tool": "docrot", "version": 2,
+                "tool": "docrot", "version": 3,
                 "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "method": {
                     "markdownFileCapPerRepo": MD_CAP,
