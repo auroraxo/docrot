@@ -22,7 +22,7 @@
   {
     "repo": "minio/minio",
     "status": "archived",
-    "text": "2 missing in-repo images in vendored package READMEs (<code>internal/ringbuffer/Circular_Buffer_Animation.gif</code>, <code>internal/s3select/jstream/jstream.png</code>) verified 404 at HEAD — <b>not reportable</b>: the repository is archived and read-only. The finding remains in the dataset as historical rot."
+    "text": "2 missing in-repo images in vendored package READMEs (<code>internal/ringbuffer/Circular_Buffer_Animation.gif</code>, <code>internal/s3select/jstream/jstream.png</code>) verified 404 at HEAD \u2014 <b>not reportable</b>: the repository is archived and read-only. The finding remains in the dataset as historical rot."
   },
   {
     "repo": "istio/istio",
@@ -32,7 +32,7 @@
   {
     "repo": "moby/moby",
     "status": "reported",
-    "text": "CNM diagram broken in <code>daemon/libnetwork/docs/design.md</code> (root-relative <code>/docs/cnm-model.jpg</code> → 404 while the image sits next to the document at <code>daemon/libnetwork/docs/cnm-model.jpg</code>, 200) reported in <a href='https://github.com/moby/moby/issues/53789'>#53789</a> with a suggested one-line fix."
+    "text": "CNM diagram broken in <code>daemon/libnetwork/docs/design.md</code> (root-relative <code>/docs/cnm-model.jpg</code> \u2192 404 while the image sits next to the document at <code>daemon/libnetwork/docs/cnm-model.jpg</code>, 200) reported in <a href='https://github.com/moby/moby/issues/53789'>#53789</a> with a suggested one-line fix."
   },
   {
     "repo": "nocodb/nocodb",
@@ -42,6 +42,21 @@
   {
     "repo": "supabase/supabase",
     "status": "reported",
-    "text": "Missing BotFather screenshot in the elevenlabs-speech-to-text example README (root-relative <code>/assets/images/cookbooks/…</code> → 404, file exists nowhere in the tree) reported in <a href='https://github.com/supabase/supabase/issues/50948'>#50948</a> with a text-instructions fallback suggestion. The three Croatian/Sinhala README image breaks from the same corpus are separately covered by <a href='https://github.com/supabase/supabase/pull/50300'>#50300</a>."
+    "text": "Missing BotFather screenshot in the elevenlabs-speech-to-text example README (root-relative <code>/assets/images/cookbooks/\u2026</code> \u2192 404, file exists nowhere in the tree) reported in <a href='https://github.com/supabase/supabase/issues/50948'>#50948</a> with a text-instructions fallback suggestion. The three Croatian/Sinhala README image breaks from the same corpus are separately covered by <a href='https://github.com/supabase/supabase/pull/50300'>#50300</a>."
+  },
+  {
+    "repo": "microsoft/PowerToys",
+    "status": "reported",
+    "text": "Screenshot referenced in <code>tools/project_template/README.md</code> was deleted in 2021 (#14709) but reference survived (verified 404 at HEAD); reported in <a href=\"https://github.com/microsoft/PowerToys/issues/50821\">#50821</a>."
+  },
+  {
+    "repo": "firecrawl/firecrawl",
+    "status": "reported",
+    "text": "9 broken image links across two exported blog articles under <code>examples/blog-articles/</code> (referenced <code>notebook_files/</code> and <code>images/</code> directories were never committed to the repo, all 404); reported in <a href=\"https://github.com/firecrawl/firecrawl/issues/4776\">#4776</a>."
+  },
+  {
+    "repo": "flutter/flutter",
+    "status": "reported",
+    "text": "Two broken image references in <code>dev/snippets/README.md</code> (referenced <code>assets/</code> directory missing from tree, both URLs 404); reported in <a href=\"https://github.com/flutter/flutter/issues/193415\">#193415</a>."
   }
 ]
