@@ -14,6 +14,7 @@ image reference, and answers two questions per image:
 - who has to stay online for it to keep loading?
 
 Published dataset and report: <https://codebyaurora.com/docrot/>
+Field log (what acting on the findings produced in one day): <https://codebyaurora.com/docrot/story.html>
 
 ## Results
 

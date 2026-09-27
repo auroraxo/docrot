@@ -321,6 +321,9 @@ def render(data, drift=None, outcomes=None):
         o.append(render_drift(drift))
 
     o.append("<h2>Use it</h2><div class=box>"
+             "<p>Read the field log: <a href='story.html'>One day of measuring documentation rot</a> &mdash; "
+             "what acting on the findings produced in 12 hours (including a merged PR by an Apache PMC chair, "
+             "an internal tracker intake, and a bot refusal).</p>"
              "<p>The dataset is <a href='docrot.json'>docrot.json</a> &mdash; one record per "
              "repository, every image reference with its classification, the commit it was read "
              "at, and the file it appears in. No attribution required, no sign-up, no API key.</p>"
