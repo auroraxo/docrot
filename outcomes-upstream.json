@@ -58,5 +58,15 @@
     "repo": "flutter/flutter",
     "status": "reported",
     "text": "Two broken image references in <code>dev/snippets/README.md</code> (referenced <code>assets/</code> directory missing from tree, both URLs 404); reported in <a href=\"https://github.com/flutter/flutter/issues/193415\">#193415</a>."
+  },
+  {
+    "repo": "jackfrued/Python-100-Days",
+    "status": "reported",
+    "text": "Local macOS desktop path committed in markdown (<code>/Users/Hao/Desktop/...</code>), missing <code>res/</code> images (404), and unresolvable <code>localhost</code> URLs; reported in <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>."
+  },
+  {
+    "repo": "labuladong/fucking-algorithm",
+    "status": "reported",
+    "text": "22 broken image paths on author docsite (<code>labuladong.online/algo/images/...</code>, 404 while site root is 200) and missing <code>table_qr2.jpg</code> in repo; reported in <a href=\"https://github.com/labuladong/fucking-algorithm/issues/2653\">#2653</a>."
   }
 ]
