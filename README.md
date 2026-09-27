@@ -41,12 +41,23 @@ python3 version_drift.py repos.txt drift-results.json
 
 The declared version is read from `pyproject.toml`, `package.json`,
 `Cargo.toml`, or `VERSION` (monorepo placeholder `0.0.0` ignored; highest
-semver tag as fallback). Only pin contexts count as drift: release
-tag/download URLs, `pip` pins (`name==X.Y.Z`), `npm` pins (`name@X.Y.Z`),
-and shields version badges. Bare `vX.Y.Z` prose mentions are reported
-separately as `mentions` and never counted — they routinely belong to other
-projects (protocol versions like "Prometheus v0.0.4", runtime versions in
-payload samples). Changelog headings and runtime requirements are excluded.
+semver tag as fallback). Only pins that name *this project* count as drift:
+release tag/download URLs on this repository, pip pins whose distribution
+name matches the repo (`apache-airflow==3.3.0` in `apache/airflow`), npm
+pins likewise, and shields version badges. Everything else is a mention,
+never drift — other projects' release links (`google/jsonnet v0.16.0`
+inside prometheus docs), dependency pins (`botocore==1.31.81` in localstack
+docs), example placeholders (`"package==1.0.0"`), prerelease specs
+(`dbt-core==2.0.0rc1` is not a `2.0.0` pin), bare prose versions, and
+`CHANGELOG*`/`CHANGES*` files entirely. A pin matching the latest published
+release also counts as current: main-branch manifests often declare an
+unreleased version, and pinning the newest real release is honest.
+
+Every finding is verified against the source line before it is reported;
+the first full pass over the 40-repository corpus flagged six repos, four
+of which proved to be the false-positive classes above — the rules here are
+what the hardened scan removed them with. The dataset lives in
+`drift-results.json`.
 
 ## Classification
 
