@@ -40,7 +40,8 @@ release correctly, 10 declare no machine-readable version (skipped, never
 guessed), and **exactly one carries a stale pin**: `apache/airflow` pins
 `==3.3.0` in its README while the manifest declares 3.4.0 — reported as
 [apache/airflow#73769](https://github.com/apache/airflow/issues/73769) and
-fixed by [apache/airflow#73770](https://github.com/apache/airflow/pull/73770).
+fixed by [apache/airflow#73770](https://github.com/apache/airflow/pull/73770),
+merged into `main` by PMC chair Jarek Potiuk on 2026-09-27).
 
 Every number above was line-verified before reporting. Several of the
 false-positive classes were found precisely by chasing a headline finding
