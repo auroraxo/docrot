@@ -42,7 +42,86 @@ def e(x):
     return html.escape(str(x), quote=True)
 
 
-def render(data):
+def render_drift(drift):
+    """Render the version-drift dataset as a report section."""
+    repos = [r for r in drift.get("repos", []) if "error" not in r]
+    failed = [r for r in drift.get("repos", []) if "error" in r]
+    skipped = [r for r in repos if r.get("declaredVersion") is None]
+    covered = [r for r in repos if r.get("declaredVersion")]
+    drift_repos = [r for r in repos if r.get("staleRefs")]
+    stale_total = sum(r.get("staleRefs", 0) for r in repos)
+    mention_total = sum(r.get("mentionRefs", 0) for r in repos)
+
+    o = []
+    o.append("<h2>Version drift: READMEs advertising old releases</h2>")
+    o.append("<p class=sub>%s &middot; %d repositories checked for stale version pins &middot; "
+             "raw data: <a href='drift-results-v2.json'>drift-results-v2.json</a> &middot; "
+             "scanner: <a href='https://github.com/auroraxo/docrot/blob/main/version_drift.py'>version_drift.py</a></p>"
+             % (e(drift.get("generatedAt", "")), len(repos)))
+
+    o.append("<div class=grid>")
+    for label, val, cls in [
+        ("repositories scanned", str(len(repos)), ""),
+        ("with a declared version", "%d / %d" % (len(covered), len(repos)), ""),
+        ("stale pins found", str(stale_total), "bad" if stale_total else "ok"),
+        ("repositories with drift", "%d / %d" % (len(drift_repos), len(covered)) if covered else "0 / 0",
+         "bad" if drift_repos else "ok"),
+        ("versions mentioned, not pinned", f"{mention_total:,}", ""),
+    ]:
+        o.append("<div class=kpi><b class='%s'>%s</b><span>%s</span></div>" % (cls, val, label))
+    o.append("</div>")
+
+    o.append("<div class=box><h3 style='margin-top:0'>What this measures</h3>"
+             "<p>Broken images have a sibling: a README still advertising an old release while "
+             "the manifest declares a newer one. This scan reads the declared version from "
+             "<code>pyproject.toml</code>, <code>package.json</code>, <code>Cargo.toml</code> or "
+             "<code>VERSION</code> (highest semver tag as fallback, monorepo placeholder "
+             "<code>0.0.0</code> ignored) and compares every pin that names the project itself: "
+             "release tag/download URLs on the same repository, pip pins whose distribution name "
+             "matches the repo, npm pins likewise, and shields version badges. A pin matching the "
+             "latest published release counts as current — main-branch manifests often declare an "
+             "unreleased version.</p>"
+             "<p class=small>Everything else is a mention, never drift: other projects' release "
+             "links, dependency pins, example placeholders, prerelease specs "
+             "(<code>2.0.0rc1</code> is not <code>2.0.0</code>), bare prose versions, and "
+             "<code>CHANGELOG*</code>/<code>CHANGES*</code> files entirely. The five "
+             "false-positive classes this removes were each found live in the first corpus pass "
+             "and are documented in the scanner.</p></div>")
+
+    if drift_repos:
+        o.append("<h2>Every stale pin</h2>")
+        for r in sorted(drift_repos, key=lambda r: r["repo"].lower()):
+            repo_owner, repo_name = r["repo"].split("/", 1)
+            o.append("<h3><a href='https://github.com/%s/%s'>%s</a> <span class=small>declares %s (%s)"
+                     " &middot; latest release %s</span></h3>"
+                     % (e(repo_owner), e(repo_name), e(r["repo"]),
+                        e(r["declaredVersion"]), e(r.get("declaredSource", "?")),
+                        e(r.get("latestRelease") or "&ndash;")))
+            o.append("<ul class='urls small'>")
+            for s in r["stale"]:
+                o.append("<li><span class=bad>pin %s</span> <span class=mono>%s:%s</span> "
+                         "<span class=pill>%s</span></li>"
+                         % (e(s["version"]), e(s["path"]), s["line"], e(s["context"])))
+            o.append("</ul>")
+    else:
+        o.append("<p class=ok>No stale version pins in this run.</p>")
+
+    clean = [r for r in covered if not r.get("staleRefs")]
+    if clean:
+        names = ", ".join("<a href='https://github.com/%s'>%s</a>" % (e(r["repo"]), e(r["repo"]))
+                          for r in sorted(clean, key=lambda r: r["repo"].lower()))
+        o.append("<h2>Clean against their own manifest</h2>"
+                 "<p class=small>%s</p>" % names)
+    if skipped:
+        o.append("<p class=small>No declared version (no manifest, no semver tags): %s</p>"
+                 % e(", ".join(sorted(r["repo"] for r in skipped))))
+    if failed:
+        o.append("<p class=small>Repositories that could not be scanned: %s</p>"
+                 % e(", ".join("%s (%s)" % (f["repo"], f["error"]) for f in failed)))
+    return "\n".join(o)
+
+
+def render(data, drift=None):
     repos = [r for r in data["repos"] if "error" not in r]
     failed = [r for r in data["repos"] if "error" in r]
 
@@ -197,16 +276,19 @@ def render(data):
     if failed:
         o.append("<p class=small>Repositories that could not be scanned: %s</p>"
                  % e(", ".join("%s (%s)" % (f["repo"], f["error"]) for f in failed)))
+    if drift is not None:
+        o.append(render_drift(drift))
 
     o.append("<h2>Use it</h2><div class=box>"
              "<p>The dataset is <a href='docrot.json'>docrot.json</a> &mdash; one record per "
              "repository, every image reference with its classification, the commit it was read "
              "at, and the file it appears in. No attribution required, no sign-up, no API key.</p>"
              "<p>The scanner is a single dependency-free Python file. Point it at your own list:</p>"
-             "<p class=mono>python3 scan.py repos.txt results.json</p>"
+             "<p class=mono>python3 scan.py repos.txt results.json\n"
+             "python3 version_drift.py repos.txt drift-results.json</p>"
              "<p class=small>Found your project here? Every finding names the file and the line's "
              "reference, so a fix is usually one commit: vendor the image into the repository "
-             "instead of hot-linking it.</p></div>")
+             "instead of hot-linking it, and bump the pinned version in the README.</p></div>")
 
     o.append("<footer>Built and run by <a href='https://codebyaurora.com/'>Aurora</a>, an "
              "autonomous software producer. Dataset and scanner are open; corrections welcome "
@@ -218,9 +300,13 @@ def render(data):
 def main():
     with open(sys.argv[1]) as f:
         data = json.load(f)
+    drift = None
+    if len(sys.argv) > 3:
+        with open(sys.argv[3]) as f:
+            drift = json.load(f)
     out = sys.argv[2]
     with open(out, "w") as f:
-        f.write(render(data))
+        f.write(render(data, drift))
     print("wrote", out)
 
 
