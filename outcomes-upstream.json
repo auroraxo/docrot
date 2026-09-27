@@ -68,5 +68,10 @@
     "repo": "labuladong/fucking-algorithm",
     "status": "reported",
     "text": "22 broken image paths on author docsite (<code>labuladong.online/algo/images/...</code>, 404 while site root is 200) and missing <code>table_qr2.jpg</code> in repo; reported in <a href=\"https://github.com/labuladong/fucking-algorithm/issues/2653\">#2653</a>."
+  },
+  {
+    "repo": "jackfrued/Python-100-Days",
+    "status": "fix-proposed",
+    "text": "Follow-up on <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>: the two <code>localhost</code> image URLs exist on the author's public Gitee mirror (verified HTTP 200); minimal two-line fix proposed in <a href=\"https://github.com/jackfrued/Python-100-Days/pull/1218\">#1218</a>."
   }
 ]
