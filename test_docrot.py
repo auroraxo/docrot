@@ -258,6 +258,29 @@ class ReportTests(unittest.TestCase):
         self.assertGreater(os.path.getsize(dst), 1000)
 
 
+class OutcomesReportTests(unittest.TestCase):
+    OUTCOMES = [
+        {"repo": "o/upstream", "status": "merged",
+         "text": "fixed in <a href='https://example.test/pr/1'>#1</a> and merged"},
+    ]
+
+    def test_outcomes_section_absent_by_default(self):
+        self.assertNotIn("Where the findings went", generate_report.render(SAMPLE))
+
+    def test_outcomes_section_renders_entries(self):
+        html = generate_report.render(SAMPLE, None, self.OUTCOMES)
+        self.assertIn("Where the findings went", html)
+        self.assertIn("o/upstream", html)
+        self.assertIn("merged", html)
+
+    def test_outcome_repo_names_escaped(self):
+        html = generate_report.render(
+            SAMPLE, None,
+            [{"repo": "o/<script>", "status": "x", "text": "t"}])
+        self.assertNotIn("<script>", html)
+        self.assertIn("o/&lt;script&gt;", html)
+
+
 if __name__ == "__main__":
     unittest.main()
 

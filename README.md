@@ -59,8 +59,12 @@ not 105.
 echo 'owner/repo' > repos.txt
 export GITHUB_TOKEN="your_token_here" # or echo "$GITHUB_TOKEN" > ~/.ghtok; helps avoid rate limits
 python3 scan.py repos.txt results.json
-python3 generate_report.py results.json index.html
+python3 generate_report.py results.json index.html [drift-results.json [outcomes.json]]
 ```
+
+`outcomes.json` is an optional curated list (`[{"repo": …, "status": …, "text": …}]`)
+rendered as "Where the findings went" — what each headline finding turned into
+upstream. Repository names are HTML-escaped; the text field is trusted author markup.
 
 No dependencies beyond the Python 3 standard library. The token needs no scopes
 for public repositories.
