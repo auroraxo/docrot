@@ -1,7 +1,7 @@
 {
  "tool": "docrot",
- "version": 4,
- "generatedAt": "2026-09-27T18:44:15Z",
+ "version": 5,
+ "generatedAt": "2026-09-27T20:11:37Z",
  "method": {
   "markdownFileCapPerRepo": 150,
   "timeoutSeconds": 15,
@@ -13,7 +13,7 @@
  "repos": [
   {
    "repo": "codecrafters-io/build-your-own-x",
-   "stars": 550085,
+   "stars": 550111,
    "defaultBranch": "master",
    "commit": "aa17439b62f384511a5561ce308e9598b94d8989",
    "treeTruncated": false,
@@ -72,7 +72,7 @@
   },
   {
    "repo": "sindresorhus/awesome",
-   "stars": 511366,
+   "stars": 511395,
    "defaultBranch": "main",
    "commit": "bc98e517ddca672f55f9857d714fc3ea3c3540b2",
    "treeTruncated": false,
@@ -297,9 +297,9 @@
   },
   {
    "repo": "public-apis/public-apis",
-   "stars": 483769,
+   "stars": 483785,
    "defaultBranch": "master",
-   "commit": "659ecda42f3bc6a1bec58f2d5198448a0853f3b9",
+   "commit": "7598f906a610c6d6ebf7adc2e72b6b5fccc7eba0",
    "treeTruncated": false,
    "markdownFilesScanned": 5,
    "markdownFilesTotal": 5,
@@ -383,7 +383,7 @@
   },
   {
    "repo": "freeCodeCamp/freeCodeCamp",
-   "stars": 456341,
+   "stars": 456350,
    "defaultBranch": "main",
    "commit": "8917c7c8c0be657661ed205b3ffdeb5b7798857e",
    "treeTruncated": false,
@@ -495,7 +495,7 @@
   },
   {
    "repo": "EbookFoundation/free-programming-books",
-   "stars": 397961,
+   "stars": 397965,
    "defaultBranch": "main",
    "commit": "07fdc1d3cbafe8a7ff6e5dedf2aed35778092ac7",
    "treeTruncated": false,
@@ -893,9 +893,9 @@
   },
   {
    "repo": "openclaw/openclaw",
-   "stars": 390650,
+   "stars": 390654,
    "defaultBranch": "main",
-   "commit": "b17f71b1fbb4eedb5352f64257046d731221066c",
+   "commit": "6edbb47039a5a4a90a4235d557fb7e41d9f66c08",
    "treeTruncated": false,
    "markdownFilesScanned": 150,
    "markdownFilesTotal": 1981,
@@ -12149,7 +12149,7 @@
   },
   {
    "repo": "donnemartin/system-design-primer",
-   "stars": 372131,
+   "stars": 372142,
    "defaultBranch": "master",
    "commit": "ae9bbd7b02d90b9866215de185217d33f39ab733",
    "treeTruncated": false,
@@ -13494,7 +13494,7 @@
   },
   {
    "repo": "nilbuild/developer-roadmap",
-   "stars": 368320,
+   "stars": 368324,
    "defaultBranch": "master",
    "commit": "68253fc20036740210ed99f6513abd16a678d18f",
    "treeTruncated": false,
@@ -13733,7 +13733,7 @@
   },
   {
    "repo": "jwasham/coding-interview-university",
-   "stars": 362005,
+   "stars": 362008,
    "defaultBranch": "main",
    "commit": "717298bf219a30d7fb0671285c5f057b1bb74b27",
    "treeTruncated": false,
@@ -14012,7 +14012,7 @@
   },
   {
    "repo": "vinta/awesome-python",
-   "stars": 323504,
+   "stars": 323520,
    "defaultBranch": "master",
    "commit": "104361bccbca37ab27f79da658fd4e14c4096a17",
    "treeTruncated": false,
@@ -14104,7 +14104,7 @@
   },
   {
    "repo": "awesome-selfhosted/awesome-selfhosted",
-   "stars": 322195,
+   "stars": 322210,
    "defaultBranch": "master",
    "commit": "9c46157a85cff7fe010d9475857193bc6a4776e1",
    "treeTruncated": false,
@@ -14191,7 +14191,7 @@
   },
   {
    "repo": "obra/superpowers",
-   "stars": 292145,
+   "stars": 292160,
    "defaultBranch": "main",
    "commit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
    "treeTruncated": false,
@@ -14266,7 +14266,7 @@
   },
   {
    "repo": "practical-tutorials/project-based-learning",
-   "stars": 284922,
+   "stars": 284938,
    "defaultBranch": "master",
    "commit": "6117a66c910350beca28e1141ff3f6308dabc2b8",
    "treeTruncated": false,
@@ -14324,7 +14324,7 @@
   },
   {
    "repo": "996icu/996.ICU",
-   "stars": 277247,
+   "stars": 277248,
    "defaultBranch": "master",
    "commit": "f5e35f48d769bf92ed885888bfe911d3e5b5a63d",
    "treeTruncated": false,
@@ -20606,7 +20606,7 @@
   },
   {
    "repo": "mattpocock/skills",
-   "stars": 270602,
+   "stars": 270631,
    "defaultBranch": "main",
    "commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
    "treeTruncated": false,
@@ -20665,7 +20665,7 @@
   },
   {
    "repo": "affaan-m/ECC",
-   "stars": 268264,
+   "stars": 268295,
    "defaultBranch": "main",
    "commit": "e482e579415fde18357cafce70f177ae19fd7f03",
    "treeTruncated": false,
@@ -22180,7 +22180,7 @@
   },
   {
    "repo": "react/react",
-   "stars": 250776,
+   "stars": 250777,
    "defaultBranch": "main",
    "commit": "d083ec1da1e5252abd3ddfdde6dfbc09701a2c51",
    "treeTruncated": false,
@@ -22393,7 +22393,7 @@
   },
   {
    "repo": "torvalds/linux",
-   "stars": 250371,
+   "stars": 250376,
    "defaultBranch": "master",
    "commit": "d266640c6c760c9bc215bf5a3ece122ca488b6f5",
    "treeTruncated": true,
@@ -22414,52 +22414,36 @@
   },
   {
    "repo": "NousResearch/hermes-agent",
-   "stars": 249432,
+   "stars": 249459,
    "defaultBranch": "main",
-   "commit": "b07a3b46ed7579b7119c2b525e500d0994d42c24",
+   "commit": "8f897d2d23a338f7a062ebc4fa7aedc287d087de",
    "treeTruncated": false,
-   "markdownFilesScanned": 119,
+   "markdownFilesScanned": 135,
    "markdownFilesTotal": 1636,
    "markdownFetchErrors": {
-    ".github/actions/setup-pm/README.md": "HTTP 429",
-    "README.es.md": "HTTP 429",
-    "apps/desktop/README.md": "HTTP 429",
+    "evals/browser_use/README.md": "HTTP 429",
     "evals/desktop-pane-fixture/README.md": "HTTP 429",
-    "evals/desktop_bug_campaign/navigation-markdown-README.md": "HTTP 429",
+    "evals/desktop_bug_campaign/markdown-README.md": "HTTP 429",
     "evals/desktop_bug_campaign/thread-scroll/README.md": "HTTP 429",
-    "evals/desktop_mcp_oauth/README.md": "HTTP 429",
-    "evals/gateway_completion/README.md": "HTTP 429",
     "evals/gateway_failure_ownership/README.md": "HTTP 429",
     "evals/session_search_schema/README.md": "HTTP 429",
     "evals/tool_search/README.md": "HTTP 429",
     "native/fts5_cjk/README.md": "HTTP 429",
-    "optional-skills/creative/comfyui/workflows/README.md": "HTTP 429",
+    "optional-skills/research/research-paper-writing/templates/aaai2026/README.md": "HTTP 429",
     "optional-skills/research/research-paper-writing/templates/acl/README.md": "HTTP 429",
     "optional-skills/research/research-paper-writing/templates/colm2025/README.md": "HTTP 429",
-    "optional-skills/security/unbroker/README.md": "HTTP 429",
-    "optional-skills/software-development/code-wiki/templates/README.md": "HTTP 429",
-    "plugins/hermes-achievements/README.md": "HTTP 429",
-    "plugins/memory/openviking/README.md": "HTTP 429",
     "plugins/memory/supermemory/README.md": "HTTP 429",
-    "plugins/model-providers/README.md": "HTTP 429",
-    "skills/creative/ascii-video/README.md": "HTTP 429",
-    "skills/creative/manim-video/README.md": "HTTP 429",
-    "skills/creative/p5js/README.md": "HTTP 429",
-    "tests/compat/README.md": "HTTP 429",
-    "tests/install/README.md": "HTTP 429",
-    "tools/wakewords/README.md": "HTTP 429",
-    "web/AGENTS.md": "HTTP 429",
-    "website/docs/developer-guide/browser-supervisor.md": "HTTP 429",
-    "website/docs/guides/desktop-native-signin.md": "HTTP 429",
-    "website/docs/guides/github-pr-review-agent.md": "HTTP 429"
+    "website/docs/developer-guide/plugins/index.md": "HTTP 429",
+    "website/docs/getting-started/termux.md": "HTTP 429",
+    "website/docs/guides/aws-bedrock.md": "HTTP 429"
    },
-   "imageRefs": 22,
-   "uniqueImages": 9,
-   "inRepo": 1,
+   "imageRefs": 36,
+   "uniqueImages": 15,
+   "inRepo": 3,
    "missingInRepo": 0,
    "unresolvable": 0,
-   "external": 8,
-   "externalThirdParty": 8,
+   "external": 12,
+   "externalThirdParty": 12,
    "externalBroken": 0,
    "externalThirdPartyBroken": 0,
    "thirdPartyHosts": [
@@ -22469,8 +22453,12 @@
     {
      "kind": "in-repo",
      "target": "assets/banner.png",
-     "refCount": 3,
+     "refCount": 4,
      "refs": [
+      [
+       "README.es.md",
+       "assets/banner.png"
+      ],
       [
        "README.md",
        "assets/banner.png"
@@ -22489,8 +22477,12 @@
     {
      "kind": "external",
      "target": "https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge",
-     "refCount": 3,
+     "refCount": 5,
      "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge"
+      ],
       [
        "README.md",
        "https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge"
@@ -22501,6 +22493,10 @@
       ],
       [
        "README.zh-CN.md",
+       "https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge"
+      ],
+      [
+       "apps/desktop/README.md",
        "https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge"
       ]
      ],
@@ -22514,8 +22510,12 @@
     {
      "kind": "external",
      "target": "https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white",
-     "refCount": 3,
+     "refCount": 5,
      "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"
+      ],
       [
        "README.md",
        "https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"
@@ -22526,6 +22526,10 @@
       ],
       [
        "README.zh-CN.md",
+       "https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"
+      ],
+      [
+       "apps/desktop/README.md",
        "https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"
       ]
      ],
@@ -22538,8 +22542,109 @@
     },
     {
      "kind": "external",
-     "target": "https://img.shields.io/badge/License-MIT-green?style=for-the-badge",
+     "target": "https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge",
+     "refCount": 1,
+     "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge"
+      ]
+     ],
+     "host": "img.shields.io",
+     "status": 200,
+     "note": "image/svg+xml;charset=utf-8",
+     "githubHosted": false,
+     "broken": false,
+     "originalRef": "https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge"
+    },
+    {
+     "kind": "external",
+     "target": "https://img.shields.io/badge/Creado%20por-Nous%20Research-blueviolet?style=for-the-badge",
+     "refCount": 1,
+     "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Creado%20por-Nous%20Research-blueviolet?style=for-the-badge"
+      ]
+     ],
+     "host": "img.shields.io",
+     "status": 200,
+     "note": "image/svg+xml;charset=utf-8",
+     "githubHosted": false,
+     "broken": false,
+     "originalRef": "https://img.shields.io/badge/Creado%20por-Nous%20Research-blueviolet?style=for-the-badge"
+    },
+    {
+     "kind": "external",
+     "target": "https://img.shields.io/badge/Lang-English-blue?style=for-the-badge",
+     "refCount": 1,
+     "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Lang-English-blue?style=for-the-badge"
+      ]
+     ],
+     "host": "img.shields.io",
+     "status": 200,
+     "note": "image/svg+xml;charset=utf-8",
+     "githubHosted": false,
+     "broken": false,
+     "originalRef": "https://img.shields.io/badge/Lang-English-blue?style=for-the-badge"
+    },
+    {
+     "kind": "external",
+     "target": "https://img.shields.io/badge/Lang-%E4%B8%AD%E6%96%87-red?style=for-the-badge",
      "refCount": 3,
+     "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
+      ],
+      [
+       "README.md",
+       "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
+      ],
+      [
+       "README.ur-pk.md",
+       "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
+      ]
+     ],
+     "host": "img.shields.io",
+     "status": 200,
+     "note": "image/svg+xml;charset=utf-8",
+     "githubHosted": false,
+     "broken": false,
+     "originalRef": "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
+    },
+    {
+     "kind": "external",
+     "target": "https://img.shields.io/badge/Lang-%D8%A7%D8%B1%D8%AF%D9%88-green?style=for-the-badge",
+     "refCount": 3,
+     "refs": [
+      [
+       "README.es.md",
+       "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
+      ],
+      [
+       "README.md",
+       "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
+      ],
+      [
+       "README.zh-CN.md",
+       "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
+      ]
+     ],
+     "host": "img.shields.io",
+     "status": 200,
+     "note": "image/svg+xml;charset=utf-8",
+     "githubHosted": false,
+     "broken": false,
+     "originalRef": "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
+    },
+    {
+     "kind": "external",
+     "target": "https://img.shields.io/badge/License-MIT-green?style=for-the-badge",
+     "refCount": 4,
      "refs": [
       [
        "README.md",
@@ -22551,6 +22656,10 @@
       ],
       [
        "README.zh-CN.md",
+       "https://img.shields.io/badge/License-MIT-green?style=for-the-badge"
+      ],
+      [
+       "apps/desktop/README.md",
        "https://img.shields.io/badge/License-MIT-green?style=for-the-badge"
       ]
      ],
@@ -22585,48 +22694,6 @@
      "githubHosted": false,
      "broken": false,
      "originalRef": "https://img.shields.io/badge/Built%20by-Nous%20Research-blueviolet?style=for-the-badge"
-    },
-    {
-     "kind": "external",
-     "target": "https://img.shields.io/badge/Lang-%E4%B8%AD%E6%96%87-red?style=for-the-badge",
-     "refCount": 2,
-     "refs": [
-      [
-       "README.md",
-       "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
-      ],
-      [
-       "README.ur-pk.md",
-       "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
-      ]
-     ],
-     "host": "img.shields.io",
-     "status": 200,
-     "note": "image/svg+xml;charset=utf-8",
-     "githubHosted": false,
-     "broken": false,
-     "originalRef": "https://img.shields.io/badge/Lang-\u4e2d\u6587-red?style=for-the-badge"
-    },
-    {
-     "kind": "external",
-     "target": "https://img.shields.io/badge/Lang-%D8%A7%D8%B1%D8%AF%D9%88-green?style=for-the-badge",
-     "refCount": 2,
-     "refs": [
-      [
-       "README.md",
-       "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
-      ],
-      [
-       "README.zh-CN.md",
-       "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
-      ]
-     ],
-     "host": "img.shields.io",
-     "status": 200,
-     "note": "image/svg+xml;charset=utf-8",
-     "githubHosted": false,
-     "broken": false,
-     "originalRef": "https://img.shields.io/badge/Lang-\u0627\u0631\u062f\u0648-green?style=for-the-badge"
     },
     {
      "kind": "external",
@@ -22665,12 +22732,53 @@
      "githubHosted": false,
      "broken": false,
      "originalRef": "https://img.shields.io/badge/Lang-English-lightgrey?style=for-the-badge"
+    },
+    {
+     "kind": "external",
+     "target": "https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-FFD700?style=for-the-badge",
+     "refCount": 1,
+     "refs": [
+      [
+       "apps/desktop/README.md",
+       "https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-FFD700?style=for-the-badge"
+      ]
+     ],
+     "host": "img.shields.io",
+     "status": 200,
+     "note": "image/svg+xml;charset=utf-8",
+     "githubHosted": false,
+     "broken": false,
+     "originalRef": "https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-FFD700?style=for-the-badge"
+    },
+    {
+     "kind": "in-repo",
+     "target": "optional-skills/security/unbroker/assets/unbroker.png",
+     "refCount": 1,
+     "refs": [
+      [
+       "optional-skills/security/unbroker/README.md",
+       "assets/unbroker.png"
+      ]
+     ],
+     "broken": false
+    },
+    {
+     "kind": "in-repo",
+     "target": "plugins/hermes-achievements/docs/assets/achievements-dashboard-hd.png",
+     "refCount": 1,
+     "refs": [
+      [
+       "plugins/hermes-achievements/README.md",
+       "docs/assets/achievements-dashboard-hd.png"
+      ]
+     ],
+     "broken": false
     }
    ]
   },
   {
    "repo": "trimstray/the-book-of-secret-knowledge",
-   "stars": 246324,
+   "stars": 246347,
    "defaultBranch": "master",
    "commit": "7d37069a361d3fd9f214480755f7969744e866fa",
    "treeTruncated": false,
@@ -22797,7 +22905,7 @@
   },
   {
    "repo": "deepseek-ai/deepseek-harness",
-   "stars": 237578,
+   "stars": 237607,
    "defaultBranch": "master",
    "commit": "21638c56315ae6a2b552d6091945d3144c9af32e",
    "treeTruncated": false,
@@ -22872,7 +22980,7 @@
   },
   {
    "repo": "TheAlgorithms/Python",
-   "stars": 225060,
+   "stars": 225065,
    "defaultBranch": "master",
    "commit": "7f81fcd68c195ce71534de09d1b69d2b61665902",
    "treeTruncated": false,
@@ -23155,7 +23263,7 @@
   },
   {
    "repo": "multica-ai/andrej-karpathy-skills",
-   "stars": 215514,
+   "stars": 215520,
    "defaultBranch": "main",
    "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
    "treeTruncated": false,
@@ -23394,7 +23502,7 @@
   },
   {
    "repo": "anomalyco/opencode",
-   "stars": 210388,
+   "stars": 210399,
    "defaultBranch": "dev",
    "commit": "b471c2b4495747353af768fbf2e0790c9d820ce2",
    "treeTruncated": false,
@@ -23693,7 +23801,7 @@
   },
   {
    "repo": "ossu/computer-science",
-   "stars": 209501,
+   "stars": 209505,
    "defaultBranch": "master",
    "commit": "33d44a44e3526ede8e862bf1ad50ae5ae7a2f112",
    "treeTruncated": false,
@@ -23821,7 +23929,7 @@
   },
   {
    "repo": "DigitalPlatDev/FreeDomain",
-   "stars": 201385,
+   "stars": 201387,
    "defaultBranch": "main",
    "commit": "9c7c54110705760267b07b6e6a6d406d1172a1bf",
    "treeTruncated": false,
@@ -23939,7 +24047,7 @@
   },
   {
    "repo": "trekhleb/javascript-algorithms",
-   "stars": 196825,
+   "stars": 196826,
    "defaultBranch": "master",
    "commit": "85293e3e2b88f4d2ce330d956b139cf628aa1e82",
    "treeTruncated": false,
@@ -23953,8 +24061,8 @@
    "unresolvable": 0,
    "external": 180,
    "externalThirdParty": 157,
-   "externalBroken": 40,
-   "externalThirdPartyBroken": 40,
+   "externalBroken": 32,
+   "externalThirdPartyBroken": 32,
    "thirdPartyHosts": [
     "1.bp.blogspot.com",
     "3.bp.blogspot.com",
@@ -24993,10 +25101,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/gif",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/5/5c/MST_kruskal_en.gif"
     },
     {
@@ -25039,10 +25147,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Minimum_spanning_tree.svg"
     },
     {
@@ -25064,10 +25172,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Multiple_minimum_spanning_trees.svg"
     },
     {
@@ -25081,10 +25189,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Prim%27s_algorithm.svg"
     },
     {
@@ -25098,10 +25206,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Scc.png"
     },
     {
@@ -25115,10 +25223,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Topological_Ordering.svg"
     },
     {
@@ -25132,10 +25240,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/0/03/Directed_acyclic_graph_2.svg"
     },
     {
@@ -25149,10 +25257,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/1/11/GLPK_solution_of_a_travelling_salesman_problem.svg"
     },
     {
@@ -25166,10 +25274,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/3/30/Weighted_K4.svg"
     },
     {
@@ -25756,10 +25864,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 429,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/a/af/Complex_number_illustration.svg"
     },
     {
@@ -27606,10 +27714,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 200,
-     "note": "image/gif",
+     "status": 429,
+     "note": "http-error",
      "githubHosted": false,
-     "broken": false,
+     "broken": true,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif"
     },
     {
@@ -27836,10 +27944,10 @@
       ]
      ],
      "host": "upload.wikimedia.org",
-     "status": 200,
-     "note": "image/gif",
+     "status": 429,
+     "note": "http-error",
      "githubHosted": false,
-     "broken": false,
+     "broken": true,
      "originalRef": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif"
     },
     {
@@ -28358,9 +28466,9 @@
   },
   {
    "repo": "yt-dlp/yt-dlp",
-   "stars": 193919,
+   "stars": 193937,
    "defaultBranch": "master",
-   "commit": "c2901ed367e359e9b70309a10f99c0ba449edcf4",
+   "commit": "caf63903a1f59e1765bfb390df2d89f47ae7a310",
    "treeTruncated": false,
    "markdownFilesScanned": 10,
    "markdownFilesTotal": 10,
@@ -28661,9 +28769,9 @@
   },
   {
    "repo": "microsoft/vscode",
-   "stars": 193170,
+   "stars": 193173,
    "defaultBranch": "main",
-   "commit": "101c86fe138844c24b14ccb1a6636986f68e9bd2",
+   "commit": "7fbceca31b927645eda89716dfa3459f2c938d78",
    "treeTruncated": false,
    "markdownFilesScanned": 150,
    "markdownFilesTotal": 354,
@@ -29077,7 +29185,7 @@
   },
   {
    "repo": "massgravel/Microsoft-Activation-Scripts",
-   "stars": 192141,
+   "stars": 192146,
    "defaultBranch": "master",
    "commit": "6401d2f36975dc07bcb6d22ea823a8498a75ec01",
    "treeTruncated": false,
@@ -29118,7 +29226,7 @@
   },
   {
    "repo": "ohmyzsh/ohmyzsh",
-   "stars": 189961,
+   "stars": 189962,
    "defaultBranch": "master",
    "commit": "74965c96098134b192f00084f966b4b02438a739",
    "treeTruncated": false,
@@ -29474,9 +29582,9 @@
   },
   {
    "repo": "Significant-Gravitas/AutoGPT",
-   "stars": 187586,
+   "stars": 187589,
    "defaultBranch": "master",
-   "commit": "5e84f064d3779acc49c86c51e2167ba8f660c93d",
+   "commit": "c035ab1f91b8556f86e87be26dcaf31677f64ba5",
    "treeTruncated": false,
    "markdownFilesScanned": 150,
    "markdownFilesTotal": 748,
@@ -29688,7 +29796,7 @@
   },
   {
    "repo": "microsoft/markitdown",
-   "stars": 187293,
+   "stars": 187299,
    "defaultBranch": "main",
    "commit": "b8f79c57ebc0044be41323d89b2a45d3fda8460e",
    "treeTruncated": false,
@@ -29835,7 +29943,7 @@
   },
   {
    "repo": "jackfrued/Python-100-Days",
-   "stars": 186934,
+   "stars": 186933,
    "defaultBranch": "master",
    "commit": "44b2575bf42a02d0a38d9dada3f60335c95c5ec2",
    "treeTruncated": false,
@@ -29849,8 +29957,8 @@
    "unresolvable": 0,
    "external": 12,
    "externalThirdParty": 12,
-   "externalBroken": 2,
-   "externalThirdPartyBroken": 2,
+   "externalBroken": 3,
+   "externalThirdPartyBroken": 3,
    "thirdPartyHosts": [
     "gitee.com",
     "latex.codecogs.com",
@@ -30956,10 +31064,10 @@
       ]
      ],
      "host": "gitee.com",
-     "status": 200,
-     "note": "image/png",
+     "status": 0,
+     "note": "URLError",
      "githubHosted": false,
-     "broken": false,
+     "broken": true,
      "originalRef": "https://gitee.com/jackfrued/mypic/raw/master/20211107163448.png"
     },
     {
@@ -34425,7 +34533,7 @@
   },
   {
    "repo": "CyC2018/CS-Notes",
-   "stars": 186326,
+   "stars": 186327,
    "defaultBranch": "master",
    "commit": "b70121d377cb6005eb65f12b098cd5decd905669",
    "treeTruncated": false,
@@ -41186,7 +41294,7 @@
   },
   {
    "repo": "avelino/awesome-go",
-   "stars": 185863,
+   "stars": 185870,
    "defaultBranch": "main",
    "commit": "f2887529c4324be302ca72806d071798810d009e",
    "treeTruncated": false,
@@ -41403,7 +41511,7 @@
   },
   {
    "repo": "firecrawl/firecrawl",
-   "stars": 185452,
+   "stars": 185478,
    "defaultBranch": "main",
    "commit": "f75a8d40b103129f56f947418bfa06a04a9ad5b0",
    "treeTruncated": false,
@@ -42119,7 +42227,7 @@
   },
   {
    "repo": "getify/You-Dont-Know-JS",
-   "stars": 184977,
+   "stars": 184976,
    "defaultBranch": "2nd-ed",
    "commit": "044120ef55564939cd35f5ddaf3f6c0a45d7b02c",
    "treeTruncated": false,
@@ -42382,7 +42490,7 @@
   },
   {
    "repo": "flutter/flutter",
-   "stars": 179127,
+   "stars": 179128,
    "defaultBranch": "master",
    "commit": "8db55268667c738b90677d49857ff42938e9c9fa",
    "treeTruncated": false,
@@ -42694,7 +42802,7 @@
   },
   {
    "repo": "521xueweihan/HelloGitHub",
-   "stars": 178845,
+   "stars": 178853,
    "defaultBranch": "master",
    "commit": "8cfeaf35c1c7a9addf6a113472bc266a8ba2537e",
    "treeTruncated": false,
@@ -96555,7 +96663,7 @@
   },
   {
    "repo": "anthropics/skills",
-   "stars": 178648,
+   "stars": 178653,
    "defaultBranch": "main",
    "commit": "33375500bcea98d610eb30ce10ac4e59b89c390d",
    "treeTruncated": false,
@@ -96596,7 +96704,7 @@
   },
   {
    "repo": "github/gitignore",
-   "stars": 175951,
+   "stars": 175952,
    "defaultBranch": "main",
    "commit": "b06d69d5a0b82a187180dac3d46a4ebe1e40bce5",
    "treeTruncated": false,
@@ -96617,7 +96725,7 @@
   },
   {
    "repo": "twbs/bootstrap",
-   "stars": 174932,
+   "stars": 174933,
    "defaultBranch": "main",
    "commit": "46a88042b323d78c580352085ca60afca5c6c405",
    "treeTruncated": false,
@@ -97162,7 +97270,7 @@
   },
   {
    "repo": "f/prompts.chat",
-   "stars": 171410,
+   "stars": 171415,
    "defaultBranch": "main",
    "commit": "f78a1c5136fa080155d928e0d7e2b4a41ddef03e",
    "treeTruncated": false,
@@ -97574,7 +97682,7 @@
   },
   {
    "repo": "AUTOMATIC1111/stable-diffusion-webui",
-   "stars": 165140,
+   "stars": 165142,
    "defaultBranch": "master",
    "commit": "82a973c04367123ae98bd9abdf80d9eda9b910e2",
    "treeTruncated": false,
@@ -109803,7 +109911,7 @@
   },
   {
    "repo": "langgenius/dify",
-   "stars": 157331,
+   "stars": 157335,
    "defaultBranch": "main",
    "commit": "725611b2e9a425519e9fcb4dcc579bafea936d27",
    "treeTruncated": false,
@@ -111494,7 +111602,7 @@
   },
   {
    "repo": "msitarzewski/agency-agents",
-   "stars": 154885,
+   "stars": 154895,
    "defaultBranch": "main",
    "commit": "053ddbbf392a1688fc7043d81529f47ef2cf86c8",
    "treeTruncated": false,
@@ -111603,7 +111711,7 @@
   },
   {
    "repo": "Genymobile/scrcpy",
-   "stars": 150510,
+   "stars": 150514,
    "defaultBranch": "master",
    "commit": "19c1261d2e2cbf2b5e6a71a8b64cc1dd3ede06ac",
    "treeTruncated": false,
@@ -111720,7 +111828,7 @@
   },
   {
    "repo": "anthropics/claude-code",
-   "stars": 148319,
+   "stars": 148328,
    "defaultBranch": "main",
    "commit": "7779afb12e3635f46f56ec823979d68350ae000b",
    "treeTruncated": false,
@@ -111773,7 +111881,7 @@
   },
   {
    "repo": "airbnb/javascript",
-   "stars": 148291,
+   "stars": 148290,
    "defaultBranch": "master",
    "commit": "8ed19247bef145e3cc41b24a02dd1fe6d9b5e681",
    "treeTruncated": false,
@@ -112217,7 +112325,7 @@
   },
   {
    "repo": "clash-verge-rev/clash-verge-rev",
-   "stars": 147767,
+   "stars": 147772,
    "defaultBranch": "dev",
    "commit": "1638ab48d8b86e19063c4de49276ada008720bff",
    "treeTruncated": false,
@@ -112323,7 +112431,7 @@
   },
   {
    "repo": "DietrichGebert/ponytail",
-   "stars": 146838,
+   "stars": 146859,
    "defaultBranch": "main",
    "commit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
    "treeTruncated": false,
@@ -113304,7 +113412,7 @@
   },
   {
    "repo": "Shubhamsaboo/awesome-llm-apps",
-   "stars": 139974,
+   "stars": 139979,
    "defaultBranch": "main",
    "commit": "dc676965bc39bcd4fbe164bc3ea31bb75091e0c1",
    "treeTruncated": false,
@@ -113917,7 +114025,7 @@
   },
   {
    "repo": "iptv-org/iptv",
-   "stars": 139674,
+   "stars": 139679,
    "defaultBranch": "master",
    "commit": "5eaeec966cf0234a3b2d70e3f7ab1ceed7ca6d86",
    "treeTruncated": false,
@@ -114061,7 +114169,7 @@
   },
   {
    "repo": "github/spec-kit",
-   "stars": 139102,
+   "stars": 139114,
    "defaultBranch": "main",
    "commit": "c00dc0551583428a10a94443c58c6a41e5e0138c",
    "treeTruncated": false,
@@ -114261,7 +114369,7 @@
   },
   {
    "repo": "microsoft/PowerToys",
-   "stars": 139058,
+   "stars": 139057,
    "defaultBranch": "main",
    "commit": "62e60ca8580b06c013359aefcae3e4345503ee36",
    "treeTruncated": false,
@@ -115649,7 +115757,7 @@
   },
   {
    "repo": "golang/go",
-   "stars": 139053,
+   "stars": 139054,
    "defaultBranch": "master",
    "commit": "2ff5743d9fd52fac166225e75df0c2c1edf82abb",
    "treeTruncated": false,
@@ -116108,7 +116216,7 @@
   },
   {
    "repo": "ripienaar/free-for-dev",
-   "stars": 138692,
+   "stars": 138697,
    "defaultBranch": "master",
    "commit": "2ac9084aba62393b638bc09158ecf16030f58b66",
    "treeTruncated": false,
@@ -116149,7 +116257,7 @@
   },
   {
    "repo": "farion1231/cc-switch",
-   "stars": 137475,
+   "stars": 137478,
    "defaultBranch": "main",
    "commit": "1ee2fdc3a791f1e73476c631c7ab7ce8fac0638f",
    "treeTruncated": false,
@@ -124400,7 +124508,7 @@
   },
   {
    "repo": "Comfy-Org/ComfyUI",
-   "stars": 135191,
+   "stars": 135196,
    "defaultBranch": "master",
    "commit": "4ef23c34d950eecc37040a21ee1741a49d2e44b1",
    "treeTruncated": false,
@@ -124475,7 +124583,7 @@
   },
   {
    "repo": "garrytan/gstack",
-   "stars": 134333,
+   "stars": 134337,
    "defaultBranch": "main",
    "commit": "01593aa67c94780528e8f5121e47362502410ced",
    "treeTruncated": false,
@@ -124573,7 +124681,7 @@
   },
   {
    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
-   "stars": 131004,
+   "stars": 131007,
    "defaultBranch": "main",
    "commit": "09170eec67eefd46a7ae85de61b40c194020f997",
    "treeTruncated": false,
@@ -125050,7 +125158,7 @@
   },
   {
    "repo": "krahets/hello-algo",
-   "stars": 130510,
+   "stars": 130509,
    "defaultBranch": "main",
    "commit": "28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9",
    "treeTruncated": false,
@@ -125100,12 +125208,12 @@
     },
     {
      "kind": "external",
-     "target": "https://readme-typing-svg.demolab.com?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E7%AE%97%E6%B3%95+!",
+     "target": "https://readme-typing-svg.demolab.com?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8%C2%A2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E7%AE%97%E6%B3%95+!",
      "refCount": 1,
      "refs": [
       [
        "README.md",
-       "https://readme-typing-svg.demolab.com?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E7%AE%97%E6%B3%95+!"
+       "https://readme-typing-svg.demolab.com?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E7%AE%97%E6%B3%95+!"
       ]
      ],
      "host": "readme-typing-svg.demolab.com",
@@ -125113,7 +125221,7 @@
      "note": "image/svg+xml",
      "githubHosted": false,
      "broken": false,
-     "originalRef": "https://readme-typing-svg.demolab.com?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E7%AE%97%E6%B3%95+!"
+     "originalRef": "https://readme-typing-svg.demolab.com?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E7%AE%97%E6%B3%95+!"
     },
     {
      "kind": "external",
@@ -125700,12 +125808,12 @@
     },
     {
      "kind": "external",
-     "target": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+Algo!",
+     "target": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8%C2%A2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+Algo!",
      "refCount": 1,
      "refs": [
       [
        "en/README.md",
-       "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+Algo!"
+       "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+Algo!"
       ]
      ],
      "host": "readme-typing-svg.demolab.com",
@@ -125713,7 +125821,7 @@
      "note": "image/svg+xml",
      "githubHosted": false,
      "broken": false,
-     "originalRef": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+Algo!"
+     "originalRef": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+Algo!"
     },
     {
      "kind": "external",
@@ -125759,12 +125867,12 @@
     },
     {
      "kind": "external",
-     "target": "https://readme-typing-svg.demolab.com?font=Noto+Sans+JP&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello,+%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0+!",
+     "target": "https://readme-typing-svg.demolab.com?font=Noto+Sans+JP&weight=400&duration=3500&pause=2000&color=21C8B8%C2%A2er=true&vCenter=true&random=false&width=200&lines=Hello,+%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0+!",
      "refCount": 1,
      "refs": [
       [
        "ja/README.md",
-       "https://readme-typing-svg.demolab.com?font=Noto+Sans+JP&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello,+%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0+!"
+       "https://readme-typing-svg.demolab.com?font=Noto+Sans+JP&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello,+%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0+!"
       ]
      ],
      "host": "readme-typing-svg.demolab.com",
@@ -125772,16 +125880,16 @@
      "note": "image/svg+xml",
      "githubHosted": false,
      "broken": false,
-     "originalRef": "https://readme-typing-svg.demolab.com?font=Noto+Sans+JP&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello,+%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0+!"
+     "originalRef": "https://readme-typing-svg.demolab.com?font=Noto+Sans+JP&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello,+%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0+!"
     },
     {
      "kind": "external",
-     "target": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=260&lines=Hello%2C+%D0%90%D0%BB%D0%B3%D0%BE!",
+     "target": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8%C2%A2er=true&vCenter=true&random=false&width=260&lines=Hello%2C+%D0%90%D0%BB%D0%B3%D0%BE!",
      "refCount": 1,
      "refs": [
       [
        "ru/README.md",
-       "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=260&lines=Hello%2C+%D0%90%D0%BB%D0%B3%D0%BE!"
+       "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=260&lines=Hello%2C+%D0%90%D0%BB%D0%B3%D0%BE!"
       ]
      ],
      "host": "readme-typing-svg.demolab.com",
@@ -125789,16 +125897,16 @@
      "note": "image/svg+xml",
      "githubHosted": false,
      "broken": false,
-     "originalRef": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=260&lines=Hello%2C+%D0%90%D0%BB%D0%B3%D0%BE!"
+     "originalRef": "https://readme-typing-svg.demolab.com?font=Roboto&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=260&lines=Hello%2C+%D0%90%D0%BB%D0%B3%D0%BE!"
     },
     {
      "kind": "external",
-     "target": "https://readme-typing-svg.demolab.com/?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E6%BC%94%E7%AE%97%E6%B3%95+!",
+     "target": "https://readme-typing-svg.demolab.com/?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8%C2%A2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E6%BC%94%E7%AE%97%E6%B3%95+!",
      "refCount": 1,
      "refs": [
       [
        "zh-hant/README.md",
-       "https://readme-typing-svg.demolab.com/?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E6%BC%94%E7%AE%97%E6%B3%95+!"
+       "https://readme-typing-svg.demolab.com/?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E6%BC%94%E7%AE%97%E6%B3%95+!"
       ]
      ],
      "host": "readme-typing-svg.demolab.com",
@@ -125806,7 +125914,7 @@
      "note": "image/svg+xml",
      "githubHosted": false,
      "broken": false,
-     "originalRef": "https://readme-typing-svg.demolab.com/?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8&center=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E6%BC%94%E7%AE%97%E6%B3%95+!"
+     "originalRef": "https://readme-typing-svg.demolab.com/?font=Noto+Sans+SC&weight=400&duration=3500&pause=2000&color=21C8B8\u00a2er=true&vCenter=true&random=false&width=200&lines=Hello%2C+%E6%BC%94%E7%AE%97%E6%B3%95+!"
     },
     {
      "kind": "external",
@@ -131918,7 +132026,7 @@
   },
   {
    "repo": "ggml-org/llama.cpp",
-   "stars": 129690,
+   "stars": 129698,
    "defaultBranch": "master",
    "commit": "a97cce86a8addeb9f40cba7a261c94b1f0c576cb",
    "treeTruncated": false,
@@ -132608,9 +132716,9 @@
   },
   {
    "repo": "openai/codex",
-   "stars": 126756,
+   "stars": 126765,
    "defaultBranch": "main",
-   "commit": "32f578485143354d1c321840a3e990aabdbaca9c",
+   "commit": "89bf86d0bd8f575758dc7d75657886e0ba6a9e62",
    "treeTruncated": false,
    "markdownFilesScanned": 150,
    "markdownFilesTotal": 180,
@@ -132659,7 +132767,7 @@
   },
   {
    "repo": "react/react-native",
-   "stars": 126747,
+   "stars": 126748,
    "defaultBranch": "main",
    "commit": "d7ff82ebe4ed5155b955fd60b31e02bbc76a3c66",
    "treeTruncated": false,
@@ -132900,7 +133008,7 @@
   },
   {
    "repo": "harry0703/MoneyPrinterTurbo",
-   "stars": 126275,
+   "stars": 126288,
    "defaultBranch": "main",
    "commit": "8e259e9f072c9e08464f040cd658d4eb046a57d0",
    "treeTruncated": false,
@@ -133841,7 +133949,7 @@
   },
   {
    "repo": "shadcn-ui/ui",
-   "stars": 124696,
+   "stars": 124697,
    "defaultBranch": "main",
    "commit": "98a1fe67b439324ddc857f47fbdce056600a4329",
    "treeTruncated": false,
@@ -133930,7 +134038,7 @@
   },
   {
    "repo": "rustdesk/rustdesk",
-   "stars": 124633,
+   "stars": 124637,
    "defaultBranch": "master",
    "commit": "b5d8b979d8723921902eef9d33c83ff0580fed7b",
    "treeTruncated": false,
@@ -133944,8 +134052,8 @@
    "unresolvable": 1,
    "external": 44,
    "externalThirdParty": 35,
-   "externalBroken": 2,
-   "externalThirdPartyBroken": 2,
+   "externalBroken": 1,
+   "externalThirdPartyBroken": 1,
    "thirdPartyHosts": [
     "badges.gitter.im",
     "ci.appveyor.com",
@@ -134240,10 +134348,10 @@
       ]
      ],
      "host": "flathub.org",
-     "status": 500,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/svg+xml",
      "githubHosted": false,
-     "broken": true,
+     "broken": false,
      "originalRef": "https://flathub.org/api/badge?svg&locale=en"
     },
     {
@@ -134994,7 +135102,7 @@
   },
   {
    "repo": "electron/electron",
-   "stars": 123290,
+   "stars": 123289,
    "defaultBranch": "main",
    "commit": "d1e8dad9110845a2b62fc672ecd84a8b0d54e994",
    "treeTruncated": false,
@@ -135120,7 +135228,7 @@
   },
   {
    "repo": "Graphify-Labs/graphify",
-   "stars": 121831,
+   "stars": 121851,
    "defaultBranch": "v8",
    "commit": "4df8d4dcfadee5555203eaba585cc7dec1dee2fb",
    "treeTruncated": false,
@@ -135648,7 +135756,7 @@
   },
   {
    "repo": "Hack-with-Github/Awesome-Hacking",
-   "stars": 121349,
+   "stars": 121357,
    "defaultBranch": "master",
    "commit": "b2bb13aa69b4f568a1bab0cbb17b7a00a350dc36",
    "treeTruncated": false,
@@ -135719,7 +135827,7 @@
   },
   {
    "repo": "microsoft/generative-ai-for-beginners",
-   "stars": 120674,
+   "stars": 120673,
    "defaultBranch": "main",
    "commit": "d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8",
    "treeTruncated": false,
@@ -144563,7 +144671,7 @@
   },
   {
    "repo": "VoltAgent/awesome-design-md",
-   "stars": 118315,
+   "stars": 118326,
    "defaultBranch": "main",
    "commit": "f6961238d5cddcf8042a74a70fc400ec67181abb",
    "treeTruncated": false,
@@ -144742,7 +144850,7 @@
   },
   {
    "repo": "godotengine/godot",
-   "stars": 117860,
+   "stars": 117864,
    "defaultBranch": "master",
    "commit": "b13043816a0f234985030ec035363a005bc86c32",
    "treeTruncated": false,
@@ -144830,7 +144938,7 @@
   },
   {
    "repo": "2dust/v2rayN",
-   "stars": 117138,
+   "stars": 117139,
    "defaultBranch": "master",
    "commit": "d433aa3b0484c43d10e6de1c441e30d5e4a2525b",
    "treeTruncated": false,
@@ -144991,7 +145099,7 @@
   },
   {
    "repo": "browser-use/browser-use",
-   "stars": 116496,
+   "stars": 116500,
    "defaultBranch": "main",
    "commit": "4cbe921673b48a488f5415d9159249afd12a625b",
    "treeTruncated": false,
@@ -145313,7 +145421,7 @@
   },
   {
    "repo": "mrdoob/three.js",
-   "stars": 115985,
+   "stars": 115989,
    "defaultBranch": "dev",
    "commit": "eccc4224b57a5954c485f5dd9103bdc467bd87b3",
    "treeTruncated": false,
@@ -145359,7 +145467,7 @@
   },
   {
    "repo": "immich-app/immich",
-   "stars": 115147,
+   "stars": 115151,
    "defaultBranch": "main",
    "commit": "6b978d0c0d3dfddf43c9138314bc7d1c5e5295d2",
    "treeTruncated": false,
@@ -145989,7 +146097,7 @@
   },
   {
    "repo": "jaywcjlove/awesome-mac",
-   "stars": 114997,
+   "stars": 115001,
    "defaultBranch": "master",
    "commit": "41f30f7c1a4c09d575a2cf1d5ba41bd57c6b4ddc",
    "treeTruncated": false,
@@ -149324,7 +149432,7 @@
   },
   {
    "repo": "papers-we-love/papers-we-love",
-   "stars": 110035,
+   "stars": 110036,
    "defaultBranch": "main",
    "commit": "ed4bfd95f0f25dd67d7b2ab31c36200a9ee5c421",
    "treeTruncated": false,
@@ -149383,7 +149491,7 @@
   },
   {
    "repo": "earendil-works/pi",
-   "stars": 109741,
+   "stars": 109749,
    "defaultBranch": "main",
    "commit": "2b0a123de98318c2ff8069661721ce0c3794c34e",
    "treeTruncated": false,
@@ -149512,7 +149620,7 @@
   },
   {
    "repo": "fatedier/frp",
-   "stars": 109652,
+   "stars": 109653,
    "defaultBranch": "dev",
    "commit": "d20a232996007dfe6ab425abc0a39a3ae9a0889b",
    "treeTruncated": false,
@@ -149687,7 +149795,7 @@
   },
   {
    "repo": "openai/whisper",
-   "stars": 109649,
+   "stars": 109651,
    "defaultBranch": "main",
    "commit": "86098128c0b4f24f0e2aa2994de830614b474227",
    "treeTruncated": false,
@@ -149743,7 +149851,7 @@
   },
   {
    "repo": "axios/axios",
-   "stars": 109233,
+   "stars": 109232,
    "defaultBranch": "v1.x",
    "commit": "2426e03ba9020be31ed013873423cea6b7cd2e67",
    "treeTruncated": false,
@@ -149757,7 +149865,7 @@
    "unresolvable": 1,
    "external": 175,
    "externalThirdParty": 29,
-   "externalBroken": 136,
+   "externalBroken": 0,
    "externalThirdPartyBroken": 0,
    "thirdPartyHosts": [
     "agentfriendlycode.com",
@@ -150479,2417 +150587,2417 @@
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/175160345?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/175160345?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/175160345?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/175160345?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/175160345?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/175160345?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/71729144?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/71729144?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/71729144?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/71729144?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/71729144?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/71729144?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/128113546?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/128113546?v=4&s=18",
      "refCount": 3,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/128113546?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/128113546?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/128113546?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/128113546?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/128113546?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/128113546?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/128113546?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/128113546?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/4814473?v=4&s=18",
      "refCount": 12,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4814473?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4814473?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4814473?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4814473?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4814473?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/4814473?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/4814473?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/377911?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/377911?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/377911?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/377911?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/377911?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/377911?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/184285082?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/184285082?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/184285082?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/184285082?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/184285082?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/184285082?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/145687605?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/145687605?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/145687605?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/145687605?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/145687605?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/145687605?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/24915252?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/24915252?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/24915252?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/24915252?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/24915252?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/24915252?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/145078271?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/145078271?v=4&s=18",
      "refCount": 2,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/145078271?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/145078271?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/145078271?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/145078271?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/145078271?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/145078271?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/184138832?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/184138832?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/184138832?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/184138832?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/184138832?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/184138832?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/146366930?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/146366930?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/146366930?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/146366930?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/146366930?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/146366930?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/46827243?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/46827243?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/46827243?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/46827243?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/46827243?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/46827243?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/189698992?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/189698992?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/189698992?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/189698992?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/189698992?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/189698992?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/7225168?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/7225168?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/7225168?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/7225168?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/7225168?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/7225168?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/915045?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/915045?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/915045?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/915045?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/915045?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/915045?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/23138717?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/23138717?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/23138717?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/23138717?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/23138717?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/23138717?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/21505?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/21505?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/21505?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/21505?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/21505?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/21505?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/4273631?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/4273631?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4273631?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4273631?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/4273631?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/4273631?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/39668736?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/39668736?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/39668736?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/39668736?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/39668736?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/39668736?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/30316250?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/30316250?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/30316250?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/30316250?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/30316250?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/30316250?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/184506226?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/184506226?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/184506226?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/184506226?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/184506226?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/184506226?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/187598667?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/187598667?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/187598667?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/187598667?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/187598667?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/187598667?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/115612815?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/115612815?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/115612815?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/115612815?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/115612815?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/115612815?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/123884782?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/123884782?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/123884782?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/123884782?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/123884782?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/123884782?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/12529395?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/12529395?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12529395?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12529395?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/12529395?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/12529395?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/709451?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/709451?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/709451?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/709451?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/709451?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/709451?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/17907922?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/17907922?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/17907922?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/17907922?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/17907922?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/17907922?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/177472603?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/177472603?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/177472603?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/177472603?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/177472603?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/177472603?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/6473925?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/6473925?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/6473925?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/6473925?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/6473925?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/6473925?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/184906930?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/184906930?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/184906930?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/184906930?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/184906930?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/184906930?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/6703955?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/6703955?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/6703955?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/6703955?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/6703955?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/6703955?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/9452325?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/9452325?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/9452325?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/9452325?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/9452325?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/9452325?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/12586868?v=4&s=18",
      "refCount": 38,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12586868?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12586868?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12586868?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12586868?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12586868?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/12586868?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1174718?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1174718?v=4&s=18",
      "refCount": 2,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1174718?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1174718?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1174718?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1174718?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1174718?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1174718?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/189505037?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/189505037?v=4&s=18",
      "refCount": 4,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/189505037?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/189505037?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/189505037?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/189505037?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/189505037?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/189505037?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/189505037?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/189505037?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/189505037?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/189505037?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/195581631?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/195581631?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/195581631?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/195581631?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/195581631?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/195581631?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/181717941?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/181717941?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/181717941?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/181717941?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/181717941?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/181717941?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/141911040?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/141911040?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/141911040?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/141911040?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/141911040?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/141911040?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/146073621?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/146073621?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/146073621?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/146073621?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/146073621?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/146073621?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/148716794?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/148716794?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/148716794?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/148716794?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/148716794?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/148716794?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/141427581?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/141427581?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/141427581?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/141427581?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/141427581?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/141427581?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/91522146?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/91522146?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/91522146?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/91522146?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/91522146?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/91522146?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/41838423?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/41838423?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/41838423?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/41838423?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/41838423?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/41838423?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/79366821?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/79366821?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/79366821?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/79366821?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/79366821?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/79366821?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/74639234?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/74639234?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/74639234?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/74639234?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/74639234?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/74639234?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/200562195?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/200562195?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/200562195?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/200562195?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/200562195?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/200562195?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/78318848?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/78318848?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/78318848?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/78318848?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/78318848?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/78318848?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/134518?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/134518?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/134518?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/134518?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/134518?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/134518?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/13148112?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/13148112?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/13148112?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/13148112?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/13148112?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/13148112?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/22686401?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/22686401?v=4&s=18",
      "refCount": 4,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/22686401?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/22686401?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/22686401?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/22686401?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/22686401?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/22686401?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/22686401?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/22686401?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/22686401?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/22686401?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/53833811?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/53833811?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/53833811?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/53833811?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/53833811?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/53833811?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/7712804?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/7712804?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/7712804?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/7712804?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/7712804?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/7712804?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/70265727?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/70265727?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/70265727?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/70265727?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/70265727?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/70265727?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/47859767?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/47859767?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/47859767?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/47859767?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/47859767?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/47859767?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/13010755?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/13010755?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/13010755?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/13010755?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/13010755?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/13010755?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/7002604?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/7002604?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/7002604?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/7002604?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/7002604?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/7002604?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/15893?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/15893?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/15893?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/15893?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/15893?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/15893?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/12534341?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/12534341?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/12534341?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/12534341?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/12534341?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/12534341?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/142807367?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/142807367?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/142807367?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/142807367?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/142807367?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/142807367?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/392612?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/392612?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/392612?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/392612?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/392612?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/392612?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/163745239?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/163745239?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/163745239?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/163745239?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/163745239?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/163745239?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/48370490?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/48370490?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/48370490?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/48370490?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/48370490?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/48370490?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/71047946?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/71047946?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/71047946?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/71047946?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/71047946?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/71047946?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/16129206?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/16129206?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/16129206?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/16129206?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/16129206?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/16129206?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/6788611?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/6788611?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/6788611?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/6788611?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/6788611?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/6788611?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/20028934?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/20028934?v=4&s=18",
      "refCount": 2,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/20028934?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/20028934?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/20028934?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/20028934?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/20028934?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/20028934?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/2500247?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/2500247?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/2500247?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/2500247?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/2500247?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/2500247?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/30260221?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/30260221?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/30260221?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/30260221?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/30260221?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/30260221?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/49002?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/49002?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/49002?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/49002?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/49002?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/49002?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/8029107?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/8029107?v=4&s=18",
      "refCount": 2,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/8029107?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/8029107?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/8029107?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/8029107?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/8029107?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/8029107?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/3238291?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/3238291?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/3238291?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/3238291?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/3238291?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/3238291?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/28559054?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/28559054?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/28559054?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/28559054?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/28559054?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/28559054?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/14166260?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/14166260?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/14166260?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/14166260?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/14166260?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/14166260?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/7661715?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/7661715?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/7661715?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/7661715?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/7661715?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/7661715?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/72578270?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/72578270?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/72578270?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/72578270?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/72578270?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/72578270?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/47430686?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/47430686?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/47430686?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/47430686?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/47430686?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/47430686?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/30925732?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/30925732?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/30925732?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/30925732?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/30925732?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/30925732?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/534166?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/534166?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/534166?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/534166?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/534166?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/534166?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/33569?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/33569?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/33569?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/33569?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/33569?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/33569?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/16476523?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/16476523?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/16476523?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/16476523?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/16476523?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/16476523?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/152275799?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/152275799?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/152275799?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/152275799?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/152275799?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/152275799?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/127725897?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/127725897?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/127725897?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/127725897?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/127725897?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/127725897?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/54869395?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/54869395?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/54869395?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/54869395?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/54869395?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/54869395?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/14969290?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/14969290?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/14969290?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/14969290?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/14969290?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/14969290?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/117800149?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/117800149?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/117800149?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/117800149?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/117800149?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/117800149?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/67861627?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/67861627?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/67861627?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/67861627?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/gif",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/67861627?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/67861627?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/779047?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/779047?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/779047?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/779047?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/779047?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/779047?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/140250471?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/140250471?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/140250471?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/140250471?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/140250471?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/140250471?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/479715?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/479715?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/479715?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/479715?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/479715?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/479715?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/60218780?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/60218780?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/60218780?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/60218780?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/60218780?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/60218780?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/19817867?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/19817867?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/19817867?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/19817867?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/19817867?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/19817867?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/63336443?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/63336443?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/63336443?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/63336443?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/63336443?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/63336443?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/3709715?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/3709715?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/3709715?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/3709715?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/3709715?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/3709715?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1639119?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1639119?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1639119?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1639119?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1639119?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1639119?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/5742900?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/5742900?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/5742900?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/5742900?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/5742900?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/5742900?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/79452224?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/79452224?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/79452224?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/79452224?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/79452224?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/79452224?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/50064240?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/50064240?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/50064240?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/50064240?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/50064240?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/50064240?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1262198?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1262198?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1262198?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1262198?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/gif",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1262198?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1262198?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/149003676?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/149003676?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/149003676?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/149003676?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/149003676?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/149003676?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1304290?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1304290?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1304290?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1304290?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1304290?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1304290?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/10539109?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/10539109?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/10539109?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/10539109?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/10539109?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/10539109?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/3534453?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/3534453?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/3534453?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/3534453?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/3534453?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/3534453?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/53894505?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/53894505?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/53894505?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/53894505?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/53894505?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/53894505?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/2495809?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/2495809?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/2495809?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/2495809?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/2495809?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/2495809?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/5406212?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/5406212?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/5406212?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/5406212?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/5406212?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/5406212?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/31389480?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/31389480?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/31389480?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/31389480?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/31389480?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/31389480?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/41283691?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/41283691?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/41283691?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/41283691?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/41283691?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/41283691?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/10867286?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/10867286?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/10867286?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/10867286?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/10867286?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/10867286?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/8599535?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/8599535?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/8599535?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/8599535?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/8599535?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/8599535?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/16711696?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/16711696?v=4&s=18",
      "refCount": 2,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/16711696?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/16711696?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/16711696?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/16711696?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/16711696?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/16711696?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/68230846?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/68230846?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/68230846?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/68230846?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/68230846?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/68230846?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/53797821?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/53797821?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/53797821?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/53797821?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/gif",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/53797821?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/53797821?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/44109284?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/44109284?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/44109284?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/44109284?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/44109284?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/44109284?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/72791488?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/72791488?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/72791488?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/72791488?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/72791488?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/72791488?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/46135319?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/46135319?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/46135319?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/46135319?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/46135319?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/46135319?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/73059627?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/73059627?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/73059627?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/73059627?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/73059627?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/73059627?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1186084?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1186084?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1186084?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1186084?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1186084?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1186084?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1884246?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1884246?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1884246?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1884246?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1884246?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1884246?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/1402060?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/1402060?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/1402060?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/1402060?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/1402060?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/1402060?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/79681367?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/79681367?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/79681367?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/79681367?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/79681367?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/79681367?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/9162827?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/9162827?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/9162827?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/9162827?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/9162827?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/9162827?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/3982806?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/3982806?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/3982806?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/3982806?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/3982806?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/3982806?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/63700910?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/63700910?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/63700910?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/63700910?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/63700910?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/63700910?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/76877078?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/76877078?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/76877078?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/76877078?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/76877078?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/76877078?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/110460234?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/110460234?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/110460234?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/110460234?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/110460234?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/110460234?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/71556073?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/71556073?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/71556073?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/71556073?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/71556073?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/71556073?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/4294069?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/4294069?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/4294069?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/4294069?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/gif",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/4294069?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/4294069?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/132928043?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/132928043?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/132928043?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/132928043?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/132928043?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/132928043?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/5492927?v=4&s=18",
      "refCount": 4,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/5492927?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/5492927?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/5492927?v=4&s=18"
       ],
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/5492927?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/5492927?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/102841186?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/102841186?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/102841186?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/102841186?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/102841186?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/102841186?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/65978976?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/65978976?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/65978976?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/65978976?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/65978976?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/65978976?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/47537704?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/47537704?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/47537704?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/47537704?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/47537704?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/47537704?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/43876655?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/43876655?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/43876655?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/43876655?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/43876655?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/43876655?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/19550000?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/19550000?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/19550000?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/19550000?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/19550000?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/19550000?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/19842213?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/19842213?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/19842213?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/19842213?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/jpeg",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/19842213?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/19842213?v=4&s=18"
     },
     {
      "kind": "external",
-     "target": "https://avatars.githubusercontent.com/u/35015993?v&#x3D;4&amp;s&#x3D;18",
+     "target": "https://avatars.githubusercontent.com/u/35015993?v=4&s=18",
      "refCount": 1,
      "refs": [
       [
        "CHANGELOG.md",
-       "https://avatars.githubusercontent.com/u/35015993?v&#x3D;4&amp;s&#x3D;18"
+       "https://avatars.githubusercontent.com/u/35015993?v=4&s=18"
       ]
      ],
      "host": "avatars.githubusercontent.com",
-     "status": 400,
-     "note": "http-error",
+     "status": 200,
+     "note": "image/png",
      "githubHosted": true,
-     "broken": true,
-     "originalRef": "https://avatars.githubusercontent.com/u/35015993?v&#x3D;4&amp;s&#x3D;18"
+     "broken": false,
+     "originalRef": "https://avatars.githubusercontent.com/u/35015993?v=4&s=18"
     }
    ]
   },
   {
    "repo": "TauricResearch/TradingAgents",
-   "stars": 108887,
+   "stars": 108897,
    "defaultBranch": "main",
    "commit": "35543d0248bf89fcb92b17a15858ad0c0e940687",
    "treeTruncated": false,
@@ -153107,7 +153215,7 @@
   },
   {
    "repo": "JuliusBrussee/caveman",
-   "stars": 108049,
+   "stars": 108057,
    "defaultBranch": "main",
    "commit": "2fd153c67988e980fb0b2455c90832159a6a5a25",
    "treeTruncated": false,
@@ -153311,12 +153419,12 @@
     },
     {
      "kind": "external",
-     "target": "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1220849&amp;theme=light&amp;t=1786634691828",
+     "target": "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1220849&theme=light&t=1786634691828",
      "refCount": 1,
      "refs": [
       [
        "README.md",
-       "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1220849&amp;theme=light&amp;t=1786634691828"
+       "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1220849&theme=light&t=1786634691828"
       ]
      ],
      "host": "api.producthunt.com",
@@ -153324,7 +153432,7 @@
      "note": "image/svg+xml",
      "githubHosted": false,
      "broken": false,
-     "originalRef": "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1220849&amp;theme=light&amp;t=1786634691828"
+     "originalRef": "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1220849&theme=light&t=1786634691828"
     },
     {
      "kind": "external",
