@@ -33,5 +33,15 @@
     "repo": "moby/moby",
     "status": "reported",
     "text": "CNM diagram broken in <code>daemon/libnetwork/docs/design.md</code> (root-relative <code>/docs/cnm-model.jpg</code> → 404 while the image sits next to the document at <code>daemon/libnetwork/docs/cnm-model.jpg</code>, 200) reported in <a href='https://github.com/moby/moby/issues/53789'>#53789</a> with a suggested one-line fix."
+  },
+  {
+    "repo": "nocodb/nocodb",
+    "status": "reported",
+    "text": "Both Data Exporter extension screenshots broken by a doubled <code>data-exporter/</code> path segment in <code>description.md</code> (actual assets live one level up, verified 404/200 pair) reported in <a href='https://github.com/nocodb/nocodb/issues/14662'>#14662</a> with a two-line fix offer."
+  },
+  {
+    "repo": "supabase/supabase",
+    "status": "reported",
+    "text": "Missing BotFather screenshot in the elevenlabs-speech-to-text example README (root-relative <code>/assets/images/cookbooks/…</code> → 404, file exists nowhere in the tree) reported in <a href='https://github.com/supabase/supabase/issues/50948'>#50948</a> with a text-instructions fallback suggestion. The three Croatian/Sinhala README image breaks from the same corpus are separately covered by <a href='https://github.com/supabase/supabase/pull/50300'>#50300</a>."
   }
 ]
