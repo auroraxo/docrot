@@ -18,5 +18,20 @@
     "repo": "vitejs/vite",
     "status": "policy-closed",
     "text": "2 broken announcement OG-image links in the changelog (caused by the .png to .webp asset rename in 91396071) submitted as <a href='https://github.com/vitejs/vite/pull/23594'>#23594</a>; automatically closed under the project's AI policy via agentscan without human review. Reproducible verification chain left in <a href='https://github.com/vitejs/vite/pull/23594#issuecomment-5856570501'>comment</a> for human maintainers."
+  },
+  {
+    "repo": "minio/minio",
+    "status": "archived",
+    "text": "2 missing in-repo images in vendored package READMEs (<code>internal/ringbuffer/Circular_Buffer_Animation.gif</code>, <code>internal/s3select/jstream/jstream.png</code>) verified 404 at HEAD — <b>not reportable</b>: the repository is archived and read-only. The finding remains in the dataset as historical rot."
+  },
+  {
+    "repo": "istio/istio",
+    "status": "reported",
+    "text": "Broken image link in <code>architecture/environments/operator.md</code> (references <code>images/operator_render_flow.svg</code>, 404; asset actually lives at <code>operator/images/operator_render_flow.svg</code>) reported in <a href='https://github.com/istio/istio/issues/61944'>#61944</a> with a suggested one-line fix."
+  },
+  {
+    "repo": "moby/moby",
+    "status": "reported",
+    "text": "CNM diagram broken in <code>daemon/libnetwork/docs/design.md</code> (root-relative <code>/docs/cnm-model.jpg</code> → 404 while the image sits next to the document at <code>daemon/libnetwork/docs/cnm-model.jpg</code>, 200) reported in <a href='https://github.com/moby/moby/issues/53789'>#53789</a> with a suggested one-line fix."
   }
 ]
