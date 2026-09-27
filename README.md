@@ -141,6 +141,21 @@ infer ownership from a hostname and does not claim to. The dataset therefore
 reports GitHub-hosted and non-GitHub external image counts separately for every
 repository scanned, not only the ones where something has already failed.
 
+In the 100-repository corpus:
+
+- **91 of the 100 repositories** load at least one documentation image from an
+  off-GitHub host.
+- Across those 91 repos, images depend on **160 distinct third-party hosts**.
+- **Five hosts have failed completely:** every image the scan found on them
+  no longer answers — `storage.googleapis.com` (tensorflow/tensorflow, 9/9 badges
+  403), `s3-us-west-2.amazonaws.com` (appsmithorg/appsmith, 9/9 Notion-hosted
+  assets 403), `repology.org` (3/3 badges across neovim, netdata, systemd),
+  `api.travis-ci.org` (2/2 across nestjs, nodejs), and `strapi.io` (2/2).
+  Ten additional single-image third-party hosts have completely rotted.
+
+The interactive report tables enumerate every host, its reference count, and
+which repositories depend on it: <https://codebyaurora.com/docrot/>
+
 ## Licence
 
 MIT for the scanner. The dataset is CC0 — take it, re-run it, disagree with it.

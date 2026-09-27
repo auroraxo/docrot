@@ -136,15 +136,28 @@ def render(data, drift=None):
     affected = [r for r in repos if r["externalBroken"] or r["missingInRepo"]]
 
     host_rot = {}
+    tp_rot = {}
     for r in repos:
         for i in r["images"]:
             if i["kind"] == "external":
-                h = host_rot.setdefault(i["host"], [0, 0, set()])
+                h = host_rot.setdefault(i["host"], [0, 0, set(), set()])
                 h[0] += 1
+                h[3].add(r["repo"])
                 if i["broken"]:
                     h[1] += 1
                     h[2].add(r["repo"])
+                if not i.get("githubHosted"):
+                    t = tp_rot.setdefault(i["host"], [0, 0, set()])
+                    t[0] += 1
+                    t[2].add(r["repo"])
+                    if i["broken"]:
+                        t[1] += 1
     hosts = sorted(host_rot.items(), key=lambda kv: (-kv[1][1], -kv[1][0]))
+    tp_repos = {rp for _, (_, _, s) in tp_rot.items() for rp in s}
+    tp_urls = sum(v[0] for v in tp_rot.values())
+    tp_broken = sum(v[1] for v in tp_rot.values())
+    dead_tp = sorted([(h, v) for h, v in tp_rot.items() if v[1] and v[1] == v[0]],
+                     key=lambda kv: (-kv[1][0], kv[0]))
 
     o = []
     o.append("<!doctype html><html lang=en><head><meta charset=utf-8>")
@@ -162,6 +175,7 @@ def render(data, drift=None):
     for label, val, cls in [
         ("image references found", f"{refs:,}", ""),
         ("on non-GitHub external hosts", f"{third:,}", "warn"),
+        ("distinct off-GitHub image hosts", f"{len(tp_rot):,}", "warn"),
         ("external images already broken", f"{ext_broken:,}", "bad" if ext_broken else "ok"),
         ("in-repo images pointing nowhere", f"{missing:,}", "bad" if missing else "ok"),
         ("repositories with at least one broken image", "%d / %d" % (len(affected), len(repos)) if repos else "0 / 0",
@@ -208,16 +222,29 @@ def render(data, drift=None):
     o.append("</tbody></table>")
 
     o.append("<h2>Which hosts the docs depend on</h2>")
-    o.append("<p class=small>Every host outside the repository itself that at least one "
-             "documentation image is loaded from, with how many of those images no longer "
-             "answer.</p>")
-    o.append("<table><thead><tr><th>Host</th><th>Images</th><th>Broken</th>"
-             "<th>Repositories affected</th></tr></thead><tbody>")
-    for host, (n, nb, rp) in hosts:
-        o.append("<tr><td class=mono>%s</td><td>%d</td><td class=%s>%d</td><td class=small>%s</td></tr>"
-                 % (e(host), n, "bad" if nb else "ok", nb,
+    o.append("<p class=small>%d of the %d repositories load at least one documentation image "
+             "from a host that is neither GitHub nor the repository itself &mdash; %d distinct "
+             "hosts, %s images in total. Every one of those hosts has to stay online, stay "
+             "un-moved and keep its URL shape for the image to keep rendering; %d of these "
+             "images have already stopped.</p>"
+             % (len(tp_repos), len(repos), len(tp_rot), f"{tp_urls:,}", tp_broken))
+    o.append("<table><thead><tr><th>Host</th><th>Images</th><th>Repos</th><th>Broken</th>"
+             "<th>Repositories with a dead image</th></tr></thead><tbody>")
+    for host, (n, nb, rp, ra) in hosts:
+        o.append("<tr><td class=mono>%s</td><td>%d</td><td>%d</td><td class=%s>%d</td>"
+                 "<td class=small>%s</td></tr>"
+                 % (e(host), n, len(ra), "bad" if nb else "ok", nb,
                     e(", ".join(sorted(rp))) if rp else "&ndash;"))
     o.append("</tbody></table>")
+    multi = [(h, v) for h, v in dead_tp if v[0] >= 2]
+    singles = [(h, v) for h, v in dead_tp if v[0] == 1]
+    parts = ["%s (%d/%d: %s)" % (h, v[1], v[0], ", ".join(sorted(v[2]))) for h, v in multi]
+    if singles:
+        parts.append("%d single-image hosts (%s)"
+                     % (len(singles), ", ".join(sorted(h for h, _ in singles))))
+    if parts:
+        o.append("<p class=small>Off-GitHub hosts where <em>every</em> image this scan found "
+                 "has already stopped loading: %s.</p>" % e("; ".join(parts)))
 
     o.append("<h2>Every broken image</h2>")
     any_broken = False
