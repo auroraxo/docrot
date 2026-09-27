@@ -27,6 +27,27 @@ python3 generate_report.py results.json index.html
 No dependencies beyond the Python 3 standard library. The token needs no scopes
 for public repositories.
 
+### Version drift
+
+Broken images have a sibling rot class: READMEs that still advertise an old
+release while the manifest declares a newer one. Five hardcoded `"0.1.5"`
+fallback literals shipped inside a released Python package, and a product
+landing page advertised v0.1.4 while v0.1.8 was live — nothing failed, the
+documentation just lied. `version_drift.py` pins that class down:
+
+```sh
+python3 version_drift.py repos.txt drift-results.json
+```
+
+The declared version is read from `pyproject.toml`, `package.json`,
+`Cargo.toml`, or `VERSION` (monorepo placeholder `0.0.0` ignored; highest
+semver tag as fallback). Only pin contexts count as drift: release
+tag/download URLs, `pip` pins (`name==X.Y.Z`), `npm` pins (`name@X.Y.Z`),
+and shields version badges. Bare `vX.Y.Z` prose mentions are reported
+separately as `mentions` and never counted — they routinely belong to other
+projects (protocol versions like "Prometheus v0.0.4", runtime versions in
+payload samples). Changelog headings and runtime requirements are excluded.
+
 ## Classification
 
 Every image reference falls into exactly one bucket.
