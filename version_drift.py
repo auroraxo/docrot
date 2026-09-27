@@ -26,8 +26,12 @@ Method, deliberately conservative:
                     dependency pins (botocore==1.31.81 in localstack
                     docs), example placeholders ("package==1.0.0"),
                     prerelease specs (dbt-core==2.0.0rc1 is not a 2.0.0
-                    pin), and CHANGELOG*/CHANGES* files entirely —
-                    those are historical records by definition.
+                    pin), example release links ("For example:
+                    github.com/envoyproxy/envoy/releases/tag/v1.39.0"
+                    teaches the URL shape, it does not advertise the
+                    current version), and CHANGELOG*/CHANGES* files
+                    entirely — those are historical records by
+                    definition.
   classification    current | stale against the declared version.
                     Stale pins are the headline number.
 """
@@ -90,6 +94,15 @@ def _release_repo(text, pos):
     if m:
         return m.group(1), m.group(2)
     return None
+
+
+_EXAMPLE = re.compile(r"\bfor example\b", re.I)
+
+
+def _line_of(text, pos):
+    start = text.rfind("\n", 0, pos) + 1
+    end = text.find("\n", pos)
+    return text[start:] if end == -1 else text[start:end]
 
 RUNTIME_NEAR = re.compile(r"(python|cpython|node\.?js?|ruby|go1\.)\s*v?$", re.I)
 HEADING = re.compile(r"^\s{0,3}#+\s")
@@ -178,6 +191,8 @@ def extract_version_literals(text, md_path="README.md", repo_full=None):
             owner_repo = _release_repo(text, m.start())
             if owner_repo and "/".join(owner_repo).lower() != repo_full.lower():
                 ctx = "ext-release-link"
+        if ctx == "release-link" and _EXAMPLE.search(_line_of(text, m.start())):
+            ctx = "example-link"
         line_no = text.count("\n", 0, m.start()) + 1
         out.append((line_no, ctx, normalize(m.group(1))))
     for pattern, self_ctx in ((PIP_PIN, "pip-pin"), (NPM_PIN, "npm-pin")):

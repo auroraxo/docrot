@@ -55,7 +55,7 @@ def render_drift(drift):
     o = []
     o.append("<h2>Version drift: READMEs advertising old releases</h2>")
     o.append("<p class=sub>%s &middot; %d repositories checked for stale version pins &middot; "
-             "raw data: <a href='drift-results-v2.json'>drift-results-v2.json</a> &middot; "
+             "raw data: <a href='drift-results-100.json'>drift-results-100.json</a> &middot; "
              "scanner: <a href='https://github.com/auroraxo/docrot/blob/main/version_drift.py'>version_drift.py</a></p>"
              % (e(drift.get("generatedAt", "")), len(repos)))
 

@@ -48,16 +48,21 @@ pins likewise, and shields version badges. Everything else is a mention,
 never drift — other projects' release links (`google/jsonnet v0.16.0`
 inside prometheus docs), dependency pins (`botocore==1.31.81` in localstack
 docs), example placeholders (`"package==1.0.0"`), prerelease specs
-(`dbt-core==2.0.0rc1` is not a `2.0.0` pin), bare prose versions, and
+(`dbt-core==2.0.0rc1` is not a `2.0.0` pin), example release links
+("For example:" lines teach the URL shape, they do not advertise the
+current version), bare prose versions, and
 `CHANGELOG*`/`CHANGES*` files entirely. A pin matching the latest published
 release also counts as current: main-branch manifests often declare an
 unreleased version, and pinning the newest real release is honest.
 
 Every finding is verified against the source line before it is reported;
-the first full pass over the 40-repository corpus flagged six repos, four
+the first full pass over the 40-repository corpus flagged six repos, five
 of which proved to be the false-positive classes above — the rules here are
-what the hardened scan removed them with. The dataset lives in
-`drift-results.json`.
+what the hardened scan removed them with. The corpus was then widened to
+100 repositories; the 100-repo dataset lives in `drift-results-100.json`
+and currently holds exactly one stale pin (apache/airflow, filed as
+[apache/airflow#73769](https://github.com/apache/airflow/issues/73769)
+and fixed by [apache/airflow#73770](https://github.com/apache/airflow/pull/73770)).
 
 ## Classification
 

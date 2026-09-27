@@ -1,0 +1,5460 @@
+{
+  "tool": "docrot-version-drift",
+  "version": 1,
+  "generatedAt": "2026-09-27T07:40:42Z",
+  "method": {
+    "declaredVersionSources": [
+      "pyproject.toml",
+      "package.json",
+      "Cargo.toml",
+      "VERSION",
+      "highest-semver-tag"
+    ],
+    "markdownFileCapPerRepo": 30,
+    "literalContexts": [
+      "release-link",
+      "pip-pin",
+      "npm-pin",
+      "badge",
+      "text"
+    ],
+    "excluded": [
+      "changelog headings",
+      "runtime mentions near python/cpython/node",
+      "non-semver manifest values"
+    ],
+    "staleDefinition": "literal != declared version"
+  },
+  "repos": [
+    {
+      "repo": "The-PR-Agent/pr-agent",
+      "commit": "0978e4336a090299859169cc20de1cf58ce4824e",
+      "defaultBranch": "main",
+      "declaredVersion": "0.46.0",
+      "declaredSource": "pyproject.toml",
+      "latestRelease": "0.46.0",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 13,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 62,
+          "context": "text",
+          "version": "0.34.2"
+        },
+        {
+          "path": "README.md",
+          "line": 62,
+          "context": "text",
+          "version": "0.34.2"
+        },
+        {
+          "path": "README.md",
+          "line": 137,
+          "context": "text",
+          "version": "0.36.1"
+        },
+        {
+          "path": "docker/mosaico/README.md",
+          "line": 7,
+          "context": "text",
+          "version": "0.36.0"
+        },
+        {
+          "path": "docker/mosaico/README.md",
+          "line": 13,
+          "context": "text",
+          "version": "0.36.0"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "line": 46,
+          "context": "text",
+          "version": "1.3.0"
+        },
+        {
+          "path": "RELEASE_NOTES.md",
+          "line": 7,
+          "context": "text",
+          "version": "0.34.2"
+        },
+        {
+          "path": "docs/docs/index.md",
+          "line": 52,
+          "context": "text",
+          "version": "0.36.1"
+        },
+        {
+          "path": "docs/docs/installation/github.md",
+          "line": 615,
+          "context": "text",
+          "version": "0.41.0"
+        },
+        {
+          "path": "docs/docs/installation/index.md",
+          "line": 62,
+          "context": "text",
+          "version": "0.34.2"
+        },
+        {
+          "path": "docs/docs/installation/index.md",
+          "line": 62,
+          "context": "text",
+          "version": "0.34.2"
+        },
+        {
+          "path": "docs/docs/installation/index.md",
+          "line": 68,
+          "context": "text",
+          "version": "0.40.0"
+        },
+        {
+          "path": "docs/docs/installation/mosaico_server.md",
+          "line": 8,
+          "context": "text",
+          "version": "0.36.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "home-assistant/core",
+      "commit": "a9196e0470add6a83de9a713499848d0c8e45a48",
+      "defaultBranch": "dev",
+      "declaredVersion": "2026.9.3",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2026.9.3",
+      "markdownFilesScanned": 25,
+      "markdownFilesTotal": 25,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 8,
+      "mentions": [
+        {
+          "path": ".claude/agents/raise-pull-request.md",
+          "line": 113,
+          "context": "text",
+          "version": "1.5.0"
+        },
+        {
+          "path": ".claude/agents/raise-pull-request.md",
+          "line": 114,
+          "context": "text",
+          "version": "2.7.1"
+        },
+        {
+          "path": ".claude/skills/bump-dependency/SKILL.md",
+          "line": 13,
+          "context": "text",
+          "version": "1.2.3"
+        },
+        {
+          "path": ".claude/skills/bump-dependency/SKILL.md",
+          "line": 13,
+          "context": "text",
+          "version": "1.2.3"
+        },
+        {
+          "path": ".claude/skills/bump-dependency/SKILL.md",
+          "line": 33,
+          "context": "dep-pin",
+          "version": "1.0.0"
+        },
+        {
+          "path": ".claude/skills/bump-dependency/SKILL.md",
+          "line": 33,
+          "context": "dep-pin",
+          "version": "1.1.0"
+        },
+        {
+          "path": ".github/workflows/check-requirements.md",
+          "line": 50,
+          "context": "text",
+          "version": "8.0.1"
+        },
+        {
+          "path": ".github/workflows/check-requirements.md",
+          "line": 67,
+          "context": "text",
+          "version": "8.0.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "grafana/grafana",
+      "commit": "3bd23d9455efd3fabd2979e65315aa6e64bb0f52",
+      "defaultBranch": "main",
+      "declaredVersion": "13.2.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "13.2.2",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "devenv/docker/blocks/auth/jwt_proxy/readme.md",
+          "line": 128,
+          "context": "text",
+          "version": "4.11.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "prometheus/prometheus",
+      "commit": "ea954809ceafceb53ecfa295ab0947753929de9e",
+      "defaultBranch": "main",
+      "declaredVersion": "3.14.0",
+      "declaredSource": "VERSION",
+      "latestRelease": "3.15.0",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 12,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 194,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "README.md",
+          "line": 203,
+          "context": "text",
+          "version": "2.35.0"
+        },
+        {
+          "path": "documentation/prometheus-mixin/README.md",
+          "line": 18,
+          "context": "text",
+          "version": "0.16.0"
+        },
+        {
+          "path": "documentation/prometheus-mixin/README.md",
+          "line": 18,
+          "context": "ext-release-link",
+          "version": "0.16.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 68,
+          "context": "text",
+          "version": "0.0.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 89,
+          "context": "text",
+          "version": "0.0.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 114,
+          "context": "text",
+          "version": "3.7.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 114,
+          "context": "text",
+          "version": "3.6.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 122,
+          "context": "text",
+          "version": "3.11.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 122,
+          "context": "text",
+          "version": "3.11.1"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 185,
+          "context": "text",
+          "version": "3.5.2"
+        },
+        {
+          "path": "docs/configuration/configuration.md",
+          "line": 3217,
+          "context": "text",
+          "version": "1.7.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "n8n-io/n8n",
+      "commit": "2f2bac4645472e5efc72c4efedaadff6ef50348e",
+      "defaultBranch": "master",
+      "declaredVersion": "2.41.0",
+      "declaredSource": "package.json",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "docker/images/n8n/README.md",
+          "line": 220,
+          "context": "text",
+          "version": "1.101.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "commit": "80b74090515a594cc8421fb2d82e98f4e256c29f",
+      "defaultBranch": "master",
+      "declaredVersion": "0.1.16",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 5,
+      "mentions": [
+        {
+          "path": "AGENTS.md",
+          "line": 305,
+          "context": "text",
+          "version": "0.2.6"
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 307,
+          "context": "text",
+          "version": "0.2.1"
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 307,
+          "context": "text",
+          "version": "0.2.2"
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 307,
+          "context": "text",
+          "version": "0.2.3"
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 307,
+          "context": "text",
+          "version": "0.2.4"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "run-llama/llama_index",
+      "commit": "169e450aa54d26ed3e0536b1a0f1ea537871aa5d",
+      "defaultBranch": "main",
+      "declaredVersion": "0.14.25",
+      "declaredSource": "pyproject.toml",
+      "latestRelease": "0.14.25",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "llama-index-integrations/embeddings/llama-index-embeddings-azure-inference/README.md",
+          "line": 9,
+          "context": "text",
+          "version": "0.2.4"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "hwchase17/notion-qa",
+      "commit": "71610847545c97041b93ecb3b19d9746623ce80f",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "ollama/ollama",
+      "commit": "16b4376aeadbec58a18b9817d49c37b1b64e33d0",
+      "defaultBranch": "main",
+      "declaredVersion": "0.34.4",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "0.34.4",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 4,
+      "mentions": [
+        {
+          "path": "app/README.md",
+          "line": 65,
+          "context": "text",
+          "version": "0.6.8"
+        },
+        {
+          "path": "app/README.md",
+          "line": 91,
+          "context": "text",
+          "version": "0.6.8"
+        },
+        {
+          "path": "docs/api.md",
+          "line": 1841,
+          "context": "text",
+          "version": "0.5.1"
+        },
+        {
+          "path": "docs/api/openai-compatibility.mdx",
+          "line": 322,
+          "context": "text",
+          "version": "0.13.3"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "open-webui/open-webui",
+      "commit": "8bd8b4fac5e059578ac0c74b3c18d11139f88b7d",
+      "defaultBranch": "main",
+      "declaredVersion": "0.11.4",
+      "declaredSource": "package.json",
+      "latestRelease": "0.11.4",
+      "markdownFilesScanned": 11,
+      "markdownFilesTotal": 12,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "localstack/localstack",
+      "commit": "8b9a79f05846835cf4dff63ab7eefdde9df83783",
+      "defaultBranch": "main",
+      "declaredVersion": "4.14.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "4.14.0",
+      "markdownFilesScanned": 23,
+      "markdownFilesTotal": 23,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 9,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 104,
+          "context": "text",
+          "version": "4.9.0"
+        },
+        {
+          "path": "docs/development-environment-setup/README.md",
+          "line": 111,
+          "context": "text",
+          "version": "0.13.7"
+        },
+        {
+          "path": "docs/development-environment-setup/README.md",
+          "line": 111,
+          "context": "text",
+          "version": "0.13.7"
+        },
+        {
+          "path": "docs/end_user_license_agreement/README.md",
+          "line": 63,
+          "context": "text",
+          "version": "0.7.0"
+        },
+        {
+          "path": "docs/end_user_license_agreement/README.md",
+          "line": 65,
+          "context": "text",
+          "version": "0.6.2"
+        },
+        {
+          "path": "localstack-core/localstack/aws/data/sqs-query/2012-11-05/README.md",
+          "line": 1,
+          "context": "dep-pin",
+          "version": "1.31.81"
+        },
+        {
+          "path": "tests/aws/services/lambda_/functions/common/README.md",
+          "line": 50,
+          "context": "text",
+          "version": "1.76.0"
+        },
+        {
+          "path": "DOCKER.md",
+          "line": 61,
+          "context": "text",
+          "version": "1.9.0"
+        },
+        {
+          "path": "DOCKER.md",
+          "line": 130,
+          "context": "text",
+          "version": "3.0.2"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "apache/airflow",
+      "commit": "1d916545b2b1bb36ca79c8d7691f7b662419348c",
+      "defaultBranch": "main",
+      "declaredVersion": "3.4.0",
+      "declaredSource": "pyproject.toml",
+      "latestRelease": "3.3.2",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 1,
+      "currentRefs": 0,
+      "staleRefs": 1,
+      "stale": [
+        {
+          "path": "README.md",
+          "line": 177,
+          "context": "pip-pin",
+          "version": "3.3.0"
+        }
+      ],
+      "mentionRefs": 71,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 104,
+          "context": "text",
+          "version": "3.3.0"
+        },
+        {
+          "path": "README.md",
+          "line": 104,
+          "context": "text",
+          "version": "2.11.2"
+        },
+        {
+          "path": "README.md",
+          "line": 111,
+          "context": "text",
+          "version": "3.15.0"
+        },
+        {
+          "path": "README.md",
+          "line": 111,
+          "context": "text",
+          "version": "3.15.0"
+        },
+        {
+          "path": "README.md",
+          "line": 111,
+          "context": "text",
+          "version": "3.15.0"
+        },
+        {
+          "path": "README.md",
+          "line": 266,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "README.md",
+          "line": 275,
+          "context": "text",
+          "version": "4.1.0"
+        },
+        {
+          "path": "README.md",
+          "line": 275,
+          "context": "text",
+          "version": "3.1.1"
+        },
+        {
+          "path": "README.md",
+          "line": 276,
+          "context": "text",
+          "version": "2.1.2"
+        },
+        {
+          "path": "README.md",
+          "line": 299,
+          "context": "text",
+          "version": "3.3.2"
+        },
+        {
+          "path": "README.md",
+          "line": 300,
+          "context": "text",
+          "version": "2.11.2"
+        },
+        {
+          "path": "README.md",
+          "line": 301,
+          "context": "text",
+          "version": "1.10.15"
+        },
+        {
+          "path": "README.md",
+          "line": 302,
+          "context": "text",
+          "version": "1.9.0"
+        },
+        {
+          "path": "README.md",
+          "line": 303,
+          "context": "text",
+          "version": "1.8.2"
+        },
+        {
+          "path": "README.md",
+          "line": 324,
+          "context": "text",
+          "version": "27.06.2023"
+        },
+        {
+          "path": "README.md",
+          "line": 356,
+          "context": "text",
+          "version": "2.8.0"
+        },
+        {
+          "path": "README.md",
+          "line": 543,
+          "context": "text",
+          "version": "2.7.3"
+        },
+        {
+          "path": "README.md",
+          "line": 544,
+          "context": "text",
+          "version": "2.8.0"
+        },
+        {
+          "path": "README.md",
+          "line": 544,
+          "context": "text",
+          "version": "2.8.0"
+        },
+        {
+          "path": "README.md",
+          "line": 546,
+          "context": "text",
+          "version": "2.8.1"
+        }
+      ],
+      "status": "drift"
+    },
+    {
+      "repo": "dbt-labs/dbt-core",
+      "commit": "56cf8733485e2c97ef1e49682620045fc5726bf8",
+      "defaultBranch": "main",
+      "declaredVersion": "2.0.5",
+      "declaredSource": "Cargo.toml",
+      "latestRelease": "2.0.5",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 9,
+      "mentions": [
+        {
+          "path": "crates/dbt-adbc/README.md",
+          "line": 167,
+          "context": "text",
+          "version": "0.18.0"
+        },
+        {
+          "path": "crates/dbt-adbc/README.md",
+          "line": 169,
+          "context": "text",
+          "version": "0.18.0"
+        },
+        {
+          "path": "crates/dbt-cloud-api/README.md",
+          "line": 82,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "crates/dbt-cloud-api/README.md",
+          "line": 83,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "crates/dbt-cloud-api/README.md",
+          "line": 84,
+          "context": "text",
+          "version": "7.14.0"
+        },
+        {
+          "path": "crates/dbt-jinja/README.md",
+          "line": 8,
+          "context": "text",
+          "version": "1.63.0"
+        },
+        {
+          "path": "crates/dbt-jinja/README.md",
+          "line": 27,
+          "context": "text",
+          "version": "0.1.0"
+        },
+        {
+          "path": "crates/dbt-jinja/README.md",
+          "line": 28,
+          "context": "text",
+          "version": "2.5.0"
+        },
+        {
+          "path": "crates/dbt-jinja/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "1.0.144"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "streamlit/streamlit",
+      "commit": "6229d752673ffd98e7dbd11a08435a219cfd17cb",
+      "defaultBranch": "develop",
+      "declaredVersion": "1.64.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.64.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "gradio-app/gradio",
+      "commit": "653efff8332c7ea50a91d447d671ef982ccfad37",
+      "defaultBranch": "main",
+      "declaredVersion": "0.0.1",
+      "declaredSource": "package.json",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "encode/django-rest-framework",
+      "commit": "b578eab1cad040414b758131af1e17aa000b51e2",
+      "defaultBranch": "main",
+      "declaredVersion": "3.18.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.18.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 5,
+      "mentions": [
+        {
+          "path": "docs/api-guide/authentication.md",
+          "line": 260,
+          "context": "text",
+          "version": "3.6.4"
+        },
+        {
+          "path": "docs/api-guide/format-suffixes.md",
+          "line": 8,
+          "context": "text",
+          "version": "6.2.1"
+        },
+        {
+          "path": "docs/api-guide/schemas.md",
+          "line": 101,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "docs/api-guide/schemas.md",
+          "line": 179,
+          "context": "text",
+          "version": "0.1.0"
+        },
+        {
+          "path": "docs/api-guide/serializers.md",
+          "line": 520,
+          "context": "text",
+          "version": "3.3.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "tiangolo/fastapi",
+      "commit": "192b12197eb04c2b4a691cce7d87261b21716714",
+      "defaultBranch": "master",
+      "declaredVersion": "0.141.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "0.141.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 17,
+      "mentions": [
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 74,
+          "context": "text",
+          "version": "0.121.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 82,
+          "context": "text",
+          "version": "0.121.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 92,
+          "context": "text",
+          "version": "0.118.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 100,
+          "context": "text",
+          "version": "0.118.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 104,
+          "context": "text",
+          "version": "0.106.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 142,
+          "context": "text",
+          "version": "0.110.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 144,
+          "context": "text",
+          "version": "0.110.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 148,
+          "context": "text",
+          "version": "0.106.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/advanced-dependencies.md",
+          "line": 152,
+          "context": "text",
+          "version": "0.106.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/behind-a-proxy.md",
+          "line": 151,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/behind-a-proxy.md",
+          "line": 409,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/dataclasses.md",
+          "line": 95,
+          "context": "text",
+          "version": "0.67.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/openapi-webhooks.md",
+          "line": 27,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/openapi-webhooks.md",
+          "line": 27,
+          "context": "text",
+          "version": "0.99.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/path-operation-advanced-configuration.md",
+          "line": 99,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/path-operation-advanced-configuration.md",
+          "line": 102,
+          "context": "text",
+          "version": "0.1.0"
+        },
+        {
+          "path": "docs/de/docs/advanced/strict-content-type.md",
+          "line": 86,
+          "context": "text",
+          "version": "0.132.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "pallets/flask",
+      "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "defaultBranch": "main",
+      "declaredVersion": "3.1.3",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.1.3",
+      "markdownFilesScanned": 6,
+      "markdownFilesTotal": 6,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "psf/requests",
+      "commit": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "defaultBranch": "main",
+      "declaredVersion": "2.34.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.34.2",
+      "markdownFilesScanned": 13,
+      "markdownFilesTotal": 13,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 191,
+      "mentions": [
+        {
+          "path": ".github/ISSUE_TEMPLATE.md",
+          "line": 26,
+          "context": "text",
+          "version": "2.16.4"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/Bug_report.md",
+          "line": 34,
+          "context": "text",
+          "version": "2.16.4"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 10,
+          "context": "text",
+          "version": "2.34.2"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 17,
+          "context": "text",
+          "version": "2.34.1"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 31,
+          "context": "text",
+          "version": "2.34.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 35,
+          "context": "text",
+          "version": "2.34.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 58,
+          "context": "text",
+          "version": "2.7.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 61,
+          "context": "text",
+          "version": "2.33.1"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 70,
+          "context": "text",
+          "version": "2.33.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 99,
+          "context": "text",
+          "version": "2.32.5"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 104,
+          "context": "text",
+          "version": "2.32.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 113,
+          "context": "text",
+          "version": "2.32.4"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 129,
+          "context": "text",
+          "version": "2.32.3"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 138,
+          "context": "text",
+          "version": "2.32.2"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 143,
+          "context": "text",
+          "version": "2.32.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 152,
+          "context": "text",
+          "version": "2.32.1"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 159,
+          "context": "text",
+          "version": "2.32.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 200,
+          "context": "text",
+          "version": "2.33.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 205,
+          "context": "text",
+          "version": "2.31.0"
+        },
+        {
+          "path": "HISTORY.md",
+          "line": 209,
+          "context": "text",
+          "version": "2.3.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "scrapy/scrapy",
+      "commit": "e4eda778f99dd13e3e91f67b12ec2bf30c44f7cb",
+      "defaultBranch": "master",
+      "declaredVersion": "2.19.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.19.0",
+      "markdownFilesScanned": 9,
+      "markdownFilesTotal": 9,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "huggingface/transformers",
+      "commit": "96331a9f93b72697f160a958d2883d4b49a56739",
+      "defaultBranch": "main",
+      "declaredVersion": "5.17.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "5.17.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 51,
+      "mentions": [
+        {
+          "path": "examples/README.md",
+          "line": 44,
+          "context": "text",
+          "version": "4.21.0"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 45,
+          "context": "text",
+          "version": "4.20.1"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 46,
+          "context": "text",
+          "version": "4.19.4"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 47,
+          "context": "text",
+          "version": "4.18.0"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 48,
+          "context": "text",
+          "version": "4.17.0"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 49,
+          "context": "text",
+          "version": "4.16.2"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 50,
+          "context": "text",
+          "version": "4.15.0"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 51,
+          "context": "text",
+          "version": "4.14.1"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 52,
+          "context": "text",
+          "version": "4.13.0"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "4.12.5"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 54,
+          "context": "text",
+          "version": "4.11.3"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 55,
+          "context": "text",
+          "version": "4.10.3"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 56,
+          "context": "text",
+          "version": "4.9.2"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 57,
+          "context": "text",
+          "version": "4.8.2"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 58,
+          "context": "text",
+          "version": "4.7.0"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 59,
+          "context": "text",
+          "version": "4.6.1"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 60,
+          "context": "text",
+          "version": "4.5.1"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 61,
+          "context": "text",
+          "version": "4.4.2"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 62,
+          "context": "text",
+          "version": "4.3.3"
+        },
+        {
+          "path": "examples/README.md",
+          "line": 63,
+          "context": "text",
+          "version": "4.2.2"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "commit": "03943c7f9ea8c146348e5a12f9fc75e32ee21fdc",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "keras-team/keras",
+      "commit": "4ae0aa905310ac72cbe54f5860071f19d37cf220",
+      "defaultBranch": "master",
+      "declaredVersion": "3.15.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.12.4",
+      "markdownFilesScanned": 8,
+      "markdownFilesTotal": 8,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 4,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 64,
+          "context": "text",
+          "version": "2.16.1"
+        },
+        {
+          "path": "README.md",
+          "line": 65,
+          "context": "text",
+          "version": "0.4.20"
+        },
+        {
+          "path": "README.md",
+          "line": 66,
+          "context": "text",
+          "version": "2.1.0"
+        },
+        {
+          "path": "README.md",
+          "line": 67,
+          "context": "text",
+          "version": "2026.2.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "numpy/numpy",
+      "commit": "a98529dfd92d73fd4d40ebaaf285cf2463bb92b1",
+      "defaultBranch": "main",
+      "declaredVersion": "2.5.3",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.5.3",
+      "markdownFilesScanned": 14,
+      "markdownFilesTotal": 14,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": "pixi-packages/README.md",
+          "line": 109,
+          "context": "text",
+          "version": "0.63.0"
+        },
+        {
+          "path": "building_with_meson.md",
+          "line": 55,
+          "context": "text",
+          "version": "0.3.19"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "pandas-dev/pandas",
+      "commit": "7aac4015369fe20bde6641276fc2fd1b11ca554b",
+      "defaultBranch": "main",
+      "declaredVersion": "3.0.6",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.0.6",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 11,
+      "mentions": [
+        {
+          "path": "web/pandas/community/blog/extension-arrays.md",
+          "line": 49,
+          "context": "text",
+          "version": "0.24.0"
+        },
+        {
+          "path": "web/pandas/community/blog/extension-arrays.md",
+          "line": 58,
+          "context": "text",
+          "version": "0.24.0"
+        },
+        {
+          "path": "web/pandas/community/blog/pandas-1.0.md",
+          "line": 6,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "web/pandas/community/blog/pandas-1.0.md",
+          "line": 24,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "web/pandas/community/blog/pandas-3.0-release-candidate.md",
+          "line": 1,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "web/pandas/community/blog/pandas-3.0-release-candidate.md",
+          "line": 101,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "web/pandas/community/coc.md",
+          "line": 54,
+          "context": "text",
+          "version": "1.3.0"
+        },
+        {
+          "path": "web/pandas/community/ecosystem.md",
+          "line": 342,
+          "context": "text",
+          "version": "2.2.0"
+        },
+        {
+          "path": "web/pandas/pdeps/0001-purpose-and-guidelines.md",
+          "line": 172,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "web/pandas/pdeps/0004-consistent-to-datetime-parsing.md",
+          "line": 92,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "web/pandas/pdeps/0006-ban-upcasting.md",
+          "line": 244,
+          "context": "text",
+          "version": "2.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "matplotlib/matplotlib",
+      "commit": "2d0352ae25bd3be72b1585f70e36b5e4cd07bc9c",
+      "defaultBranch": "main",
+      "declaredVersion": "3.11.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.11.2",
+      "markdownFilesScanned": 8,
+      "markdownFilesTotal": 8,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "scikit-learn/scikit-learn",
+      "commit": "857849927da6e988d7d026b17aef214d43e5f26e",
+      "defaultBranch": "main",
+      "declaredVersion": "1.9.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.9.1",
+      "markdownFilesScanned": 10,
+      "markdownFilesTotal": 10,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": "SECURITY.md",
+          "line": 7,
+          "context": "text",
+          "version": "1.9.1"
+        },
+        {
+          "path": "SECURITY.md",
+          "line": 8,
+          "context": "text",
+          "version": "1.9.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "jupyter/notebook",
+      "commit": "38b1b190d84b7bdf75c124ee100d6bb5b5f47318",
+      "defaultBranch": "main",
+      "declaredVersion": "0.1.0",
+      "declaredSource": "package.json",
+      "latestRelease": "7.6.3",
+      "markdownFilesScanned": 28,
+      "markdownFilesTotal": 29,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+          "line": 56,
+          "context": "text",
+          "version": "3.1.7"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "line": 64,
+          "context": "text",
+          "version": "3.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "netdata/netdata",
+      "commit": "4464a9ed71c8a7351b540ce4ca207e1418faffea",
+      "defaultBranch": "master",
+      "declaredVersion": "2.11.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.11.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 12,
+      "mentions": [
+        {
+          "path": "docs/guides/ceph/README.md",
+          "line": 181,
+          "context": "text",
+          "version": "18.2.8"
+        },
+        {
+          "path": "docs/guides/ceph/README.md",
+          "line": 182,
+          "context": "text",
+          "version": "19.2.5"
+        },
+        {
+          "path": "docs/guides/ceph/README.md",
+          "line": 183,
+          "context": "text",
+          "version": "20.2.3"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 15,
+          "context": "text",
+          "version": "2.6.0"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 185,
+          "context": "text",
+          "version": "2.6.0"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 200,
+          "context": "text",
+          "version": "2.6.0"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 201,
+          "context": "text",
+          "version": "2.7.2"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 202,
+          "context": "text",
+          "version": "2.7.2"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 204,
+          "context": "text",
+          "version": "2.7.2"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 228,
+          "context": "text",
+          "version": "2.7.2"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 384,
+          "context": "text",
+          "version": "2.7.2"
+        },
+        {
+          "path": "docs/netdata-ai/mcp/README.md",
+          "line": 391,
+          "context": "text",
+          "version": "2.7.2"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "traefik/traefik",
+      "commit": "f08964179357f5170d1bc515213b16e120d02e6d",
+      "defaultBranch": "master",
+      "declaredVersion": "3.7.13",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.7.13",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 17,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 138,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "README.md",
+          "line": 138,
+          "context": "text",
+          "version": "1.2.0"
+        },
+        {
+          "path": "README.md",
+          "line": 138,
+          "context": "text",
+          "version": "1.3.0"
+        },
+        {
+          "path": "README.md",
+          "line": 139,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "README.md",
+          "line": 140,
+          "context": "text",
+          "version": "1.1.1"
+        },
+        {
+          "path": "README.md",
+          "line": 140,
+          "context": "text",
+          "version": "1.1.2"
+        },
+        {
+          "path": "README.md",
+          "line": 140,
+          "context": "text",
+          "version": "1.2.1"
+        },
+        {
+          "path": "README.md",
+          "line": 140,
+          "context": "text",
+          "version": "1.2.3"
+        },
+        {
+          "path": "README.md",
+          "line": 142,
+          "context": "text",
+          "version": "1.2.0"
+        },
+        {
+          "path": "script/release/README.md",
+          "line": 14,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": "script/release/README.md",
+          "line": 32,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": "script/release/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": "script/release/README.md",
+          "line": 70,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": "script/release/README.md",
+          "line": 74,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": ".claude/skills/release/SKILL.md",
+          "line": 12,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": ".claude/skills/release/SKILL.md",
+          "line": 28,
+          "context": "text",
+          "version": "2.11.51"
+        },
+        {
+          "path": "docs/content/contributing/documentation.md",
+          "line": 61,
+          "context": "text",
+          "version": "1.5.2"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "caddyserver/caddy",
+      "commit": "ea1e94b89972b83b189cbb946352abd9acec0f8c",
+      "defaultBranch": "master",
+      "declaredVersion": "2.11.4",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.11.4",
+      "markdownFilesScanned": 6,
+      "markdownFilesTotal": 6,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 108,
+          "context": "text",
+          "version": "1.25.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "nextcloud/server",
+      "commit": "54d6e468f64b8f7671f4a6692aa079b4520b4d98",
+      "defaultBranch": "master",
+      "declaredVersion": "1.0.0",
+      "declaredSource": "package.json",
+      "latestRelease": "35.0.1",
+      "markdownFilesScanned": 18,
+      "markdownFilesTotal": 19,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "minio/minio",
+      "commit": "7aac2a2c5b7c882e68c1ce017d8256be2feea27f",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "supabase/supabase",
+      "commit": "36371de15127206280d2d40786e8578dfe1b681a",
+      "defaultBranch": "master",
+      "declaredVersion": "1.26.08",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.26.08",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "appwrite/appwrite",
+      "commit": "6d8c6e55c28cd7829da1e07bde604856c5077f80",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "directus/directus",
+      "commit": "1694b19048c8523bc90dd1fd11566b748b155ec4",
+      "defaultBranch": "main",
+      "declaredVersion": "12.4.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "12.4.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "packages/cli/readme.md",
+          "line": 37,
+          "context": "text",
+          "version": "12.2.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "strapi/strapi",
+      "commit": "f10112c566bc827a9ce31d8c806384326fa785a7",
+      "defaultBranch": "develop",
+      "declaredVersion": "5.55.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "5.55.1",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": ".github/actions/draft-release/README.md",
+          "line": 81,
+          "context": "text",
+          "version": "5.52.3"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "PostHog/posthog",
+      "commit": "fc46b497c23921c5affd2f5689b72bc2261bc47b",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "commit": "69778e6e995cd72c6cb524449d8e08ee3d231628",
+      "defaultBranch": "develop",
+      "declaredVersion": "10.2.4",
+      "declaredSource": "package.json",
+      "latestRelease": null,
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 6,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 93,
+          "context": "text",
+          "version": "10.289.395"
+        },
+        {
+          "path": "README.md",
+          "line": 93,
+          "context": "text",
+          "version": "1.111.574"
+        },
+        {
+          "path": "README.md",
+          "line": 93,
+          "context": "text",
+          "version": "1.936.681"
+        },
+        {
+          "path": "README.md",
+          "line": 93,
+          "context": "text",
+          "version": "4.337.753"
+        },
+        {
+          "path": "README.md",
+          "line": 93,
+          "context": "text",
+          "version": "1.211.39"
+        },
+        {
+          "path": "README.md",
+          "line": 93,
+          "context": "text",
+          "version": "2.466.39"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "excalidraw/excalidraw",
+      "commit": "afed9e6e27dd1cd5cc52857a405f7bea5312d813",
+      "defaultBranch": "master",
+      "declaredVersion": "0.18.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "0.18.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "dev-docs/docs/@excalidraw/excalidraw/api/props/excalidraw-api.mdx",
+          "line": 45,
+          "context": "text",
+          "version": "0.17.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "kubernetes/kubernetes",
+      "commit": "6c1c7702cf2052245ef10e699d45f071af306f59",
+      "defaultBranch": "master",
+      "declaredVersion": "1.37.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.37.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": "cluster/addons/fluentd-gcp/README.md",
+          "line": 13,
+          "context": "text",
+          "version": "1.10.0"
+        },
+        {
+          "path": "cluster/addons/metrics-server/README.md",
+          "line": 10,
+          "context": "text",
+          "version": "1.9.2"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "tensorflow/tensorflow",
+      "commit": "b5d8801b1e0db562ced3f7f940c65f25d7aea453",
+      "defaultBranch": "master",
+      "declaredVersion": "2.21.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.21.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "nodejs/node",
+      "commit": "7d79ed37de404bb137074eead038e32d679cc1a5",
+      "defaultBranch": "main",
+      "declaredVersion": "26.10.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "26.10.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 36,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 84,
+          "context": "text",
+          "version": "22.0.0"
+        },
+        {
+          "path": "deps/LIEF/README.md",
+          "line": 78,
+          "context": "text",
+          "version": "0.0.1"
+        },
+        {
+          "path": "deps/LIEF/README.md",
+          "line": 82,
+          "context": "text",
+          "version": "0.17.1"
+        },
+        {
+          "path": "deps/LIEF/README.md",
+          "line": 105,
+          "context": "text",
+          "version": "0.17.1"
+        },
+        {
+          "path": "deps/LIEF/README.md",
+          "line": 105,
+          "context": "ext-release-link",
+          "version": "0.17.1"
+        },
+        {
+          "path": "deps/LIEF/README.md",
+          "line": 96,
+          "context": "dep-pin",
+          "version": "1.0.0"
+        },
+        {
+          "path": "deps/LIEF/third-party/mbedtls/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "3.10.2"
+        },
+        {
+          "path": "deps/LIEF/third-party/mbedtls/README.md",
+          "line": 55,
+          "context": "text",
+          "version": "1.8.11"
+        },
+        {
+          "path": "deps/LIEF/third-party/spdlog/README.md",
+          "line": 43,
+          "context": "text",
+          "version": "1.8.2"
+        },
+        {
+          "path": "deps/amaro/README.md",
+          "line": 39,
+          "context": "text",
+          "version": "22.18.0"
+        },
+        {
+          "path": "deps/corepack/README.md",
+          "line": 14,
+          "context": "text",
+          "version": "14.19.0"
+        },
+        {
+          "path": "deps/corepack/README.md",
+          "line": 99,
+          "context": "text",
+          "version": "3.2.3"
+        },
+        {
+          "path": "deps/corepack/README.md",
+          "line": 139,
+          "context": "text",
+          "version": "3.2.3"
+        },
+        {
+          "path": "deps/corepack/README.md",
+          "line": 95,
+          "context": "dep-pin",
+          "version": "3.2.3"
+        },
+        {
+          "path": "deps/crates/vendor/autocfg-v1/README.md",
+          "line": 46,
+          "context": "text",
+          "version": "1.5.0"
+        },
+        {
+          "path": "deps/crates/vendor/autocfg-v1/README.md",
+          "line": 51,
+          "context": "text",
+          "version": "1.4.0"
+        },
+        {
+          "path": "deps/crates/vendor/autocfg-v1/README.md",
+          "line": 58,
+          "context": "text",
+          "version": "1.3.0"
+        },
+        {
+          "path": "deps/crates/vendor/autocfg-v1/README.md",
+          "line": 63,
+          "context": "text",
+          "version": "1.2.0"
+        },
+        {
+          "path": "deps/crates/vendor/autocfg-v1/README.md",
+          "line": 68,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "deps/crates/vendor/autocfg-v1/README.md",
+          "line": 71,
+          "context": "text",
+          "version": "1.0.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "rust-lang/rust",
+      "commit": "b373574eea1fa546ae5a757d07a8a3ea207c0fe5",
+      "defaultBranch": "main",
+      "declaredVersion": "1.98.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.98.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": "library/compiler-builtins/libm/README.md",
+          "line": 15,
+          "context": "text",
+          "version": "0.2.11"
+        },
+        {
+          "path": "library/rustc-std-workspace-core/README.md",
+          "line": 24,
+          "context": "text",
+          "version": "1.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "denoland/deno",
+      "commit": "b157cd27e153f0a3e2ef10a6a31edfd105fcbf93",
+      "defaultBranch": "main",
+      "declaredVersion": "2.9.7",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.9.7",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "cli/tsc/README.md",
+          "line": 28,
+          "context": "text",
+          "version": "3.9.7"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "neovim/neovim",
+      "commit": "521eddec7c243a8166609bf1734cb940e9510fc5",
+      "defaultBranch": "master",
+      "declaredVersion": "0.12.5",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "0.12.5",
+      "markdownFilesScanned": 14,
+      "markdownFilesTotal": 14,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": "src/lpeg/README.md",
+          "line": 6,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "BUILD.md",
+          "line": 146,
+          "context": "text",
+          "version": "2.10.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "ansible/ansible",
+      "commit": "7ec731bfd2dbfd7b5a11ac53bf32ad2a4bf57ed4",
+      "defaultBranch": "devel",
+      "declaredVersion": "2.21.4",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.21.4",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "hashicorp/terraform",
+      "commit": "db4eef44f5bbd39a115f939304279caee7cf9b12",
+      "defaultBranch": "main",
+      "declaredVersion": "1.16.4",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.16.4",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 10,
+      "mentions": [
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 20,
+          "context": "text",
+          "version": "0.12.0"
+        },
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 106,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 108,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 111,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 115,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 116,
+          "context": "text",
+          "version": "2.34.0"
+        },
+        {
+          "path": "docs/plugin-protocol/README.md",
+          "line": 119,
+          "context": "text",
+          "version": "2.34.0"
+        },
+        {
+          "path": "tools/terraform-bundle/README.md",
+          "line": 16,
+          "context": "text",
+          "version": "0.13.0"
+        },
+        {
+          "path": "tools/terraform-bundle/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "0.13.0"
+        },
+        {
+          "path": ".github/CONTRIBUTING.md",
+          "line": 291,
+          "context": "text",
+          "version": "2.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "envoyproxy/envoy",
+      "commit": "c1dccc0b278268e05425f3e5d087f853e5ece663",
+      "defaultBranch": "main",
+      "declaredVersion": "1.39.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.39.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": ".devcontainer/README.md",
+          "line": 279,
+          "context": "text",
+          "version": "0.2.0"
+        },
+        {
+          "path": "bazel/README.md",
+          "line": 33,
+          "context": "example-link",
+          "version": "1.39.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "istio/istio",
+      "commit": "9c8ba319f1d5744fdcc9bc6a6f8ffd5d72473d68",
+      "defaultBranch": "master",
+      "declaredVersion": "1.31.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.31.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 3,
+      "mentions": [
+        {
+          "path": "samples/ambient-argo/README.md",
+          "line": 76,
+          "context": "text",
+          "version": "1.18.5"
+        },
+        {
+          "path": "samples/ambient-argo/README.md",
+          "line": 76,
+          "context": "text",
+          "version": "1.20.0"
+        },
+        {
+          "path": "samples/ambient-argo/README.md",
+          "line": 76,
+          "context": "text",
+          "version": "1.20.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "keycloak/keycloak",
+      "commit": "6688a3d63f59e0c4a9131bfdd556c4312799f04e",
+      "defaultBranch": "main",
+      "declaredVersion": "26.7.4",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "26.7.4",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": ".github/scripts/ansible/roles/aws_ec2/README.md",
+          "line": 8,
+          "context": "text",
+          "version": "6.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "elastic/elasticsearch",
+      "commit": "9438d0a669470822054ce2f2278b1613d07a678e",
+      "defaultBranch": "main",
+      "declaredVersion": "9.5.4",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "9.5.4",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 23,
+      "mentions": [
+        {
+          "path": "distribution/docker/README.md",
+          "line": 104,
+          "context": "text",
+          "version": "20.10.21"
+        },
+        {
+          "path": "distribution/docker/README.md",
+          "line": 118,
+          "context": "text",
+          "version": "20.10.21"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 14,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 34,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 51,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 183,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 190,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 216,
+          "context": "text",
+          "version": "9.4.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 226,
+          "context": "text",
+          "version": "9.5.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 257,
+          "context": "text",
+          "version": "9.3.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 287,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 287,
+          "context": "text",
+          "version": "9.1.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 301,
+          "context": "text",
+          "version": "9.3.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 302,
+          "context": "text",
+          "version": "9.3.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 327,
+          "context": "text",
+          "version": "9.0.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 364,
+          "context": "text",
+          "version": "9.1.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 365,
+          "context": "text",
+          "version": "9.1.0"
+        },
+        {
+          "path": "docs/reference/query-languages/esql/README.md",
+          "line": 365,
+          "context": "text",
+          "version": "9.3.0"
+        },
+        {
+          "path": "libs/entitlement/README.md",
+          "line": 120,
+          "context": "text",
+          "version": "9.1.0"
+        },
+        {
+          "path": "libs/entitlement/README.md",
+          "line": 147,
+          "context": "text",
+          "version": "9.1.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "opensearch-project/OpenSearch",
+      "commit": "dc9bf3bc09585c57673526bbe9eed6ce70a56980",
+      "defaultBranch": "main",
+      "declaredVersion": "3.8.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.8.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 13,
+      "mentions": [
+        {
+          "path": "benchmarks/README.md",
+          "line": 73,
+          "context": "ext-release-link",
+          "version": "1.2.2"
+        },
+        {
+          "path": "libs/ssl-config/src/test/resources/certs/pem-utils/README.md",
+          "line": 213,
+          "context": "text",
+          "version": "21.0.2"
+        },
+        {
+          "path": "libs/ssl-config/src/test/resources/certs/pem-utils/README.md",
+          "line": 228,
+          "context": "text",
+          "version": "21.0.2"
+        },
+        {
+          "path": "modules/transport-grpc/README.md",
+          "line": 192,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "rest-api-spec/README.md",
+          "line": 93,
+          "context": "text",
+          "version": "7.0.0"
+        },
+        {
+          "path": "rest-api-spec/README.md",
+          "line": 126,
+          "context": "text",
+          "version": "7.0.0"
+        },
+        {
+          "path": "rest-api-spec/README.md",
+          "line": 147,
+          "context": "text",
+          "version": "7.0.0"
+        },
+        {
+          "path": "rest-api-spec/src/main/resources/rest-api-spec/test/README.md",
+          "line": 67,
+          "context": "text",
+          "version": "0.20.1"
+        },
+        {
+          "path": "rest-api-spec/src/main/resources/rest-api-spec/test/README.md",
+          "line": 67,
+          "context": "text",
+          "version": "0.90.2"
+        },
+        {
+          "path": "rest-api-spec/src/main/resources/rest-api-spec/test/README.md",
+          "line": 283,
+          "context": "text",
+          "version": "6.9.99"
+        },
+        {
+          "path": "sandbox/libs/dataformat-native/rust/patches/README.md",
+          "line": 24,
+          "context": "text",
+          "version": "58.3.0"
+        },
+        {
+          "path": "sandbox/libs/dataformat-native/rust/patches/README.md",
+          "line": 37,
+          "context": "text",
+          "version": "54.0.0"
+        },
+        {
+          "path": "sandbox/libs/dataformat-native/rust/patches/README.md",
+          "line": 37,
+          "context": "text",
+          "version": "58.3.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "mongodb/mongo",
+      "commit": "bbf7c490f477135baca0de5cb2758fb0eaf22a32",
+      "defaultBranch": "master",
+      "declaredVersion": "1.0.0",
+      "declaredSource": "pyproject.toml",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 40,
+      "mentions": [
+        {
+          "path": "README.third_party.md",
+          "line": 27,
+          "context": "text",
+          "version": "1.34.2"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 28,
+          "context": "text",
+          "version": "1.5.2"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 29,
+          "context": "text",
+          "version": "1.88.0"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 30,
+          "context": "text",
+          "version": "1.0.8"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 31,
+          "context": "text",
+          "version": "1.27.0"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 32,
+          "context": "text",
+          "version": "1.0.3"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 33,
+          "context": "text",
+          "version": "3.0.1"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 34,
+          "context": "text",
+          "version": "2.1.28"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 35,
+          "context": "text",
+          "version": "11.2.0"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 38,
+          "context": "text",
+          "version": "1.17.0"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 39,
+          "context": "text",
+          "version": "2.9.1"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 40,
+          "context": "text",
+          "version": "1.74.1"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 42,
+          "context": "text",
+          "version": "0.9.1"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 43,
+          "context": "text",
+          "version": "2.0.1"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 47,
+          "context": "text",
+          "version": "2.1.0"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 48,
+          "context": "text",
+          "version": "1.18.2"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 49,
+          "context": "text",
+          "version": "1.8.1"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 53,
+          "context": "text",
+          "version": "3.11.3"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 54,
+          "context": "text",
+          "version": "22.1.0"
+        },
+        {
+          "path": "README.third_party.md",
+          "line": 55,
+          "context": "text",
+          "version": "1.24.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "redis/redis",
+      "commit": "20bb2cfc54aa08c8fdfb8c4c0a8b8258e811711e",
+      "defaultBranch": "unstable",
+      "declaredVersion": "8.10.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "8.10.2",
+      "markdownFilesScanned": 27,
+      "markdownFilesTotal": 28,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 17,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 219,
+          "context": "text",
+          "version": "3.31.6"
+        },
+        {
+          "path": "README.md",
+          "line": 221,
+          "context": "text",
+          "version": "3.31.6"
+        },
+        {
+          "path": "README.md",
+          "line": 221,
+          "context": "dep-pin",
+          "version": "3.31.6"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 4,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 35,
+          "context": "text",
+          "version": "1.0.1"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 37,
+          "context": "text",
+          "version": "1.0.2"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 37,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 41,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 68,
+          "context": "text",
+          "version": "0.9.0"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 70,
+          "context": "text",
+          "version": "0.9.0"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 71,
+          "context": "text",
+          "version": "0.0.1"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 265,
+          "context": "text",
+          "version": "6.0.6"
+        },
+        {
+          "path": "deps/hiredis/README.md",
+          "line": 280,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "TLS.md",
+          "line": 208,
+          "context": "text",
+          "version": "1.0.2"
+        },
+        {
+          "path": "deps/jemalloc/TUNING.md",
+          "line": 2,
+          "context": "text",
+          "version": "5.3.0"
+        },
+        {
+          "path": "modules/MODULES.md",
+          "line": 47,
+          "context": "text",
+          "version": "8.7.90"
+        },
+        {
+          "path": "modules/MODULES.md",
+          "line": 488,
+          "context": "text",
+          "version": "8.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "nginx/nginx",
+      "commit": "939334efff3575ce52597cc8c13d55821044ac57",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "clickhouse/clickhouse",
+      "commit": "80f656734cadf17a4b36afe2517297aa13085f21",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "duckdb/duckdb",
+      "commit": "d8a1bd4f4fbccdf3d22d8f1fe27a94c11c805d0a",
+      "defaultBranch": "v2.0-cyanoptera",
+      "declaredVersion": "1.5.5",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.5.5",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "apache/kafka",
+      "commit": "2a3d4a6b80507edefb1f969b3de6378235a5c34f",
+      "defaultBranch": "trunk",
+      "declaredVersion": "4.3.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 22,
+      "mentions": [
+        {
+          "path": "docker/README.md",
+          "line": 99,
+          "context": "text",
+          "version": "3.6.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 105,
+          "context": "text",
+          "version": "3.6.1"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 125,
+          "context": "text",
+          "version": "3.6.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 129,
+          "context": "text",
+          "version": "3.8.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 144,
+          "context": "text",
+          "version": "3.6.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 150,
+          "context": "text",
+          "version": "3.8.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 191,
+          "context": "text",
+          "version": "3.7.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 207,
+          "context": "text",
+          "version": "3.7.0"
+        },
+        {
+          "path": "docker/examples/README.md",
+          "line": 19,
+          "context": "text",
+          "version": "20.10.4"
+        },
+        {
+          "path": "docker/examples/README.md",
+          "line": 33,
+          "context": "text",
+          "version": "20.10.4"
+        },
+        {
+          "path": "gradle/wrapper/README.md",
+          "line": 11,
+          "context": "text",
+          "version": "9.2.0"
+        },
+        {
+          "path": "tests/README.md",
+          "line": 13,
+          "context": "text",
+          "version": "1.12.3"
+        },
+        {
+          "path": "tests/README.md",
+          "line": 49,
+          "context": "text",
+          "version": "2.4.1"
+        },
+        {
+          "path": "tests/README.md",
+          "line": 96,
+          "context": "text",
+          "version": "0.2.0"
+        },
+        {
+          "path": "tests/README.md",
+          "line": 170,
+          "context": "text",
+          "version": "1.6.4"
+        },
+        {
+          "path": "vagrant/README.md",
+          "line": 6,
+          "context": "text",
+          "version": "1.6.4"
+        },
+        {
+          "path": "docs/apis/_index.md",
+          "line": 51,
+          "context": "text",
+          "version": "4.3.1"
+        },
+        {
+          "path": "docs/apis/_index.md",
+          "line": 67,
+          "context": "text",
+          "version": "4.3.1"
+        },
+        {
+          "path": "docs/apis/_index.md",
+          "line": 83,
+          "context": "text",
+          "version": "4.3.1"
+        },
+        {
+          "path": "docs/apis/_index.md",
+          "line": 101,
+          "context": "text",
+          "version": "4.3.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "apache/spark",
+      "commit": "f5498a9dab976099d83f5230f7600b52960b63ce",
+      "defaultBranch": "master",
+      "declaredVersion": "4.2.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 20,
+      "mentions": [
+        {
+          "path": "common/config/README.md",
+          "line": 43,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "common/config/README.md",
+          "line": 82,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/credential-aws-integration-tests/README.md",
+          "line": 27,
+          "context": "text",
+          "version": "6.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 58,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 66,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 74,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 83,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 91,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 101,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "connector/profiler/README.md",
+          "line": 109,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 39,
+          "context": "text",
+          "version": "2.4.22"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 64,
+          "context": "text",
+          "version": "7.1.2"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 65,
+          "context": "text",
+          "version": "2.0.1"
+        },
+        {
+          "path": "docs/README.md",
+          "line": 69,
+          "context": "text",
+          "version": "7.1.2"
+        },
+        {
+          "path": "python/benchmarks/README.md",
+          "line": 41,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "resource-managers/kubernetes/integration-tests/README.md",
+          "line": 43,
+          "context": "text",
+          "version": "1.38.0"
+        },
+        {
+          "path": "resource-managers/kubernetes/integration-tests/README.md",
+          "line": 422,
+          "context": "text",
+          "version": "1.9.0"
+        },
+        {
+          "path": "sql/connect/common/src/main/protobuf/README.md",
+          "line": 61,
+          "context": "dep-pin",
+          "version": "1.19.1"
+        },
+        {
+          "path": "sql/connect/common/src/main/protobuf/README.md",
+          "line": 61,
+          "context": "dep-pin",
+          "version": "3.3.0"
+        },
+        {
+          "path": "sql/connect/common/src/main/protobuf/README.md",
+          "line": 61,
+          "context": "dep-pin",
+          "version": "0.14.8"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "apache/superset",
+      "commit": "eb2ffa28ccf7dfa4f00a6b998c1567a83a3b051d",
+      "defaultBranch": "master",
+      "declaredVersion": "2021.41.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "6.1.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 54,
+      "mentions": [
+        {
+          "path": "RELEASING/README.md",
+          "line": 144,
+          "context": "text",
+          "version": "1.5.0"
+        },
+        {
+          "path": "RELEASING/README.md",
+          "line": 154,
+          "context": "text",
+          "version": "1.5.1"
+        },
+        {
+          "path": "RELEASING/README.md",
+          "line": 247,
+          "context": "text",
+          "version": "1.5.0"
+        },
+        {
+          "path": "RELEASING/README.md",
+          "line": 257,
+          "context": "text",
+          "version": "1.5.0"
+        },
+        {
+          "path": "RELEASING/README.md",
+          "line": 260,
+          "context": "text",
+          "version": "1.5.0"
+        },
+        {
+          "path": "RELEASING/README.md",
+          "line": 268,
+          "context": "text",
+          "version": "0.38.0"
+        },
+        {
+          "path": "RELEASING/README.md",
+          "line": 521,
+          "context": "text",
+          "version": "3.1.1"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 151,
+          "context": "text",
+          "version": "0.38.0"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 179,
+          "context": "text",
+          "version": "5.5.0"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 180,
+          "context": "text",
+          "version": "3.9.0"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 180,
+          "context": "text",
+          "version": "3.12.2"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 184,
+          "context": "text",
+          "version": "3.2.1"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 184,
+          "context": "text",
+          "version": "3.6.5"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 185,
+          "context": "text",
+          "version": "0.11.4"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 185,
+          "context": "text",
+          "version": "0.11.5"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 188,
+          "context": "text",
+          "version": "2.4.2"
+        },
+        {
+          "path": "RELEASING/release-notes-1-0/README.md",
+          "line": 188,
+          "context": "text",
+          "version": "3.2.1"
+        },
+        {
+          "path": "RELEASING/release-notes-1-1/README.md",
+          "line": 22,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "RELEASING/release-notes-1-1/README.md",
+          "line": 38,
+          "context": "text",
+          "version": "5.0.2"
+        },
+        {
+          "path": "RELEASING/release-notes-1-2/README.md",
+          "line": 122,
+          "context": "text",
+          "version": "1.2.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "jupyterlab/jupyterlab",
+      "commit": "a62365d745fee48f7d59c60bda377a2ed14415a8",
+      "defaultBranch": "main",
+      "declaredVersion": "0.0.1",
+      "declaredSource": "package.json",
+      "latestRelease": "4.6.4",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "microsoft/TypeScript",
+      "commit": "4f5ddae224b9529a69b571f631fe3a2cb283162f",
+      "defaultBranch": "main",
+      "declaredVersion": "7.0.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "7.0.2",
+      "markdownFilesScanned": 28,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 2,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "facebook/react",
+      "commit": "d083ec1da1e5252abd3ddfdde6dfbc09701a2c51",
+      "defaultBranch": "main",
+      "declaredVersion": "19.3.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "19.3.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "vuejs/core",
+      "commit": "4ab865a848a1da3d10fb674f857e5fff13094644",
+      "defaultBranch": "main",
+      "declaredVersion": "3.5.43",
+      "declaredSource": "package.json",
+      "latestRelease": "3.5.43",
+      "markdownFilesScanned": 25,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 5,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 9,
+      "mentions": [
+        {
+          "path": "packages/compiler-sfc/README.md",
+          "line": 5,
+          "context": "text",
+          "version": "3.2.13"
+        },
+        {
+          "path": "packages/server-renderer/README.md",
+          "line": 3,
+          "context": "text",
+          "version": "3.2.13"
+        },
+        {
+          "path": "packages/vue-compat/README.md",
+          "line": 44,
+          "context": "text",
+          "version": "16.0.0"
+        },
+        {
+          "path": "packages/vue-compat/README.md",
+          "line": 52,
+          "context": "text",
+          "version": "2.6.12"
+        },
+        {
+          "path": "packages/vue-compat/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "packages/vue-compat/README.md",
+          "line": 54,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "packages/vue-compat/README.md",
+          "line": 58,
+          "context": "text",
+          "version": "2.6.12"
+        },
+        {
+          "path": "packages/vue-compat/README.md",
+          "line": 59,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": ".github/maintenance.md",
+          "line": 107,
+          "context": "text",
+          "version": "3.4.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "angular/angular",
+      "commit": "319a3c4f3268f4f96ac4acdbb118737d2261e0be",
+      "defaultBranch": "main",
+      "declaredVersion": "22.2.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "22.2.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "sveltejs/svelte",
+      "commit": "f90853565966bc0bab57c99fe7d669a91bef0f4c",
+      "defaultBranch": "main",
+      "declaredVersion": "0.0.1",
+      "declaredSource": "package.json",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "documentation/docs/02-runes/05-$props.md",
+          "line": 226,
+          "context": "text",
+          "version": "5.20.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "vercel/next.js",
+      "commit": "0423222b7eb3a1373b5bff4c939fd69858928993",
+      "defaultBranch": "canary",
+      "declaredVersion": "16.3.6",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "16.3.6",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": ".github/actions/pr-stack-ci-gate/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "6.0.2"
+        },
+        {
+          "path": ".github/actions/pr-stack-ci-gate/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "29.4.5"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "nuxt/nuxt",
+      "commit": "3867d5bc909bb2d9c9f12ea2cfc273fb3bbbcf89",
+      "defaultBranch": "main",
+      "declaredVersion": "4.5.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "4.5.2",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 3,
+      "mentions": [
+        {
+          "path": "docs/1.getting-started/18.upgrade.md",
+          "line": 479,
+          "context": "text",
+          "version": "8.3.0"
+        },
+        {
+          "path": "docs/1.getting-started/18.upgrade.md",
+          "line": 1137,
+          "context": "text",
+          "version": "1.2.0"
+        },
+        {
+          "path": "docs/1.getting-started/18.upgrade.md",
+          "line": 1137,
+          "context": "text",
+          "version": "1.2.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "expressjs/express",
+      "commit": "9a34acf03cb818ff3f8bc40e44176e277a25cbb9",
+      "defaultBranch": "master",
+      "declaredVersion": "5.2.1",
+      "declaredSource": "package.json",
+      "latestRelease": "5.2.1",
+      "markdownFilesScanned": 4,
+      "markdownFilesTotal": 4,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1358,
+      "mentions": [
+        {
+          "path": "History.md",
+          "line": 30,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "History.md",
+          "line": 39,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "History.md",
+          "line": 47,
+          "context": "text",
+          "version": "2.3.0"
+        },
+        {
+          "path": "History.md",
+          "line": 53,
+          "context": "text",
+          "version": "5.2.1"
+        },
+        {
+          "path": "History.md",
+          "line": 57,
+          "context": "text",
+          "version": "5.2.0"
+        },
+        {
+          "path": "History.md",
+          "line": 59,
+          "context": "text",
+          "version": "5.2.0"
+        },
+        {
+          "path": "History.md",
+          "line": 63,
+          "context": "text",
+          "version": "2.2.1"
+        },
+        {
+          "path": "History.md",
+          "line": 66,
+          "context": "text",
+          "version": "5.1.0"
+        },
+        {
+          "path": "History.md",
+          "line": 80,
+          "context": "text",
+          "version": "4.4.0"
+        },
+        {
+          "path": "History.md",
+          "line": 81,
+          "context": "text",
+          "version": "2.2.0"
+        },
+        {
+          "path": "History.md",
+          "line": 82,
+          "context": "text",
+          "version": "2.2.0"
+        },
+        {
+          "path": "History.md",
+          "line": 83,
+          "context": "text",
+          "version": "1.0.5"
+        },
+        {
+          "path": "History.md",
+          "line": 84,
+          "context": "text",
+          "version": "2.1.0"
+        },
+        {
+          "path": "History.md",
+          "line": 85,
+          "context": "text",
+          "version": "6.14.0"
+        },
+        {
+          "path": "History.md",
+          "line": 89,
+          "context": "text",
+          "version": "5.0.1"
+        },
+        {
+          "path": "History.md",
+          "line": 94,
+          "context": "text",
+          "version": "5.0.0"
+        },
+        {
+          "path": "History.md",
+          "line": 106,
+          "context": "text",
+          "version": "1.2.1"
+        },
+        {
+          "path": "History.md",
+          "line": 108,
+          "context": "text",
+          "version": "2.0.0"
+        },
+        {
+          "path": "History.md",
+          "line": 109,
+          "context": "text",
+          "version": "2.1.0"
+        },
+        {
+          "path": "History.md",
+          "line": 111,
+          "context": "text",
+          "version": "2.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "nestjs/nest",
+      "commit": "b58554ea5857445841674963211e4f3f41b0a3a4",
+      "defaultBranch": "master",
+      "declaredVersion": "12.0.0",
+      "declaredSource": "package.json",
+      "latestRelease": "12.1.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "fastify/fastify",
+      "commit": "bc25b7499acedb803ef3cef644d0d56cf4e7c725",
+      "defaultBranch": "main",
+      "declaredVersion": "5.12.5",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "5.12.5",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 14,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 207,
+          "context": "text",
+          "version": "4.17.3"
+        },
+        {
+          "path": "README.md",
+          "line": 208,
+          "context": "text",
+          "version": "20.2.1"
+        },
+        {
+          "path": "README.md",
+          "line": 209,
+          "context": "text",
+          "version": "8.6.1"
+        },
+        {
+          "path": "README.md",
+          "line": 210,
+          "context": "text",
+          "version": "2.13.0"
+        },
+        {
+          "path": "README.md",
+          "line": 211,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "README.md",
+          "line": 213,
+          "context": "text",
+          "version": "16.14.2"
+        },
+        {
+          "path": "SECURITY.md",
+          "line": 148,
+          "context": "text",
+          "version": "1.2.4"
+        },
+        {
+          "path": "docs/Guides/Benchmarking.md",
+          "line": 19,
+          "context": "dep-pin",
+          "version": "5.2.0"
+        },
+        {
+          "path": "docs/Guides/Contributing.md",
+          "line": 132,
+          "context": "text",
+          "version": "1.50.0"
+        },
+        {
+          "path": "docs/Guides/Delay-Accepting-Requests.md",
+          "line": 60,
+          "context": "text",
+          "version": "8.5.0"
+        },
+        {
+          "path": "docs/Guides/Delay-Accepting-Requests.md",
+          "line": 62,
+          "context": "text",
+          "version": "3.0.1"
+        },
+        {
+          "path": "docs/Guides/Delay-Accepting-Requests.md",
+          "line": 63,
+          "context": "text",
+          "version": "5.0.0"
+        },
+        {
+          "path": "docs/Guides/Plugins-Guide.md",
+          "line": 429,
+          "context": "text",
+          "version": "13.3.0"
+        },
+        {
+          "path": "docs/Reference/ContentTypeParser.md",
+          "line": 85,
+          "context": "text",
+          "version": "8.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "vitejs/vite",
+      "commit": "bc598a6a8a6b7d6e157e9f19c16911cff8d2360c",
+      "defaultBranch": "main",
+      "declaredVersion": "8.3.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "8.3.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 13,
+      "mentions": [
+        {
+          "path": "packages/plugin-legacy/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "8.1.4"
+        },
+        {
+          "path": "docs/blog/announcing-vite3.md",
+          "line": 111,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite3.md",
+          "line": 216,
+          "context": "text",
+          "version": "2.9.14"
+        },
+        {
+          "path": "docs/blog/announcing-vite3.md",
+          "line": 217,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 73,
+          "context": "text",
+          "version": "4.2.1"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 73,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 74,
+          "context": "text",
+          "version": "4.3.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 75,
+          "context": "text",
+          "version": "4.2.1"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 75,
+          "context": "text",
+          "version": "3.2.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 76,
+          "context": "text",
+          "version": "4.3.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite4-3.md",
+          "line": 76,
+          "context": "text",
+          "version": "3.3.0"
+        },
+        {
+          "path": "docs/blog/announcing-vite4.md",
+          "line": 116,
+          "context": "text",
+          "version": "3.2.5"
+        },
+        {
+          "path": "docs/blog/announcing-vite4.md",
+          "line": 38,
+          "context": "ext-release-link",
+          "version": "3.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "webpack/webpack",
+      "commit": "b54c5e2aa26dd0267bc904d45402f811f100186c",
+      "defaultBranch": "main",
+      "declaredVersion": "5.111.1",
+      "declaredSource": "package.json",
+      "latestRelease": "5.111.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 4,
+      "mentions": [
+        {
+          "path": "examples/add-exports/README.md",
+          "line": 89,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "examples/add-exports/README.md",
+          "line": 121,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "examples/add-imports/README.md",
+          "line": 115,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "examples/add-imports/README.md",
+          "line": 160,
+          "context": "text",
+          "version": "1.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "eslint/eslint",
+      "commit": "02e34ffba6adbed72365177c7caee71d950834e5",
+      "defaultBranch": "main",
+      "declaredVersion": "10.11.0",
+      "declaredSource": "package.json",
+      "latestRelease": "10.11.0",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 6,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 48,
+          "context": "text",
+          "version": "20.19.0"
+        },
+        {
+          "path": "README.md",
+          "line": 48,
+          "context": "text",
+          "version": "22.13.0"
+        },
+        {
+          "path": "README.md",
+          "line": 211,
+          "context": "text",
+          "version": "3.1.0"
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 92,
+          "context": "text",
+          "version": "20.19.0"
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 92,
+          "context": "text",
+          "version": "22.13.0"
+        },
+        {
+          "path": "docs/src/extend/custom-formatters.md",
+          "line": 27,
+          "context": "text",
+          "version": "8.4.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "pnpm/pnpm",
+      "commit": "20a364e42b172a335fbdc4d1743b7326fe52e412",
+      "defaultBranch": "main",
+      "declaredVersion": "12.7.0",
+      "declaredSource": "package.json",
+      "latestRelease": "12.6.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 3,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 269,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "docker/README.md",
+          "line": 15,
+          "context": "text",
+          "version": "11.0.0"
+        },
+        {
+          "path": "pnpm11/__utils__/assert-store/README.md",
+          "line": 21,
+          "context": "text",
+          "version": "3.1.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "TryGhost/Ghost",
+      "commit": "019da35dd9c9cdc59a8f1b142309e26374cee75c",
+      "defaultBranch": "main",
+      "declaredVersion": "6.65.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "6.65.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 4,
+      "mentions": [
+        {
+          "path": "apps/ember-admin/vendor/keymaster/README.md",
+          "line": 7,
+          "context": "text",
+          "version": "1.6.3"
+        },
+        {
+          "path": "apps/ember-admin/vendor/keymaster/README.md",
+          "line": 16,
+          "context": "text",
+          "version": "1.6.2"
+        },
+        {
+          "path": "apps/ember-admin/vendor/keymaster/README.md",
+          "line": 17,
+          "context": "text",
+          "version": "1.6.3"
+        },
+        {
+          "path": "apps/ember-admin/vendor/keymaster/README.md",
+          "line": 18,
+          "context": "text",
+          "version": "1.6.2"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "discourse/discourse",
+      "commit": "bf55a44c2872738f7ae2664d6fec3d6d8779190f",
+      "defaultBranch": "main",
+      "declaredVersion": "2026.9.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 4,
+      "mentions": [
+        {
+          "path": "plugins/discourse-adplugin/README.md",
+          "line": 9,
+          "context": "text",
+          "version": "1.2.5"
+        },
+        {
+          "path": "plugins/discourse-events/vendor/holidays/README.md",
+          "line": 17,
+          "context": "text",
+          "version": "2.4.5"
+        },
+        {
+          "path": "plugins/discourse-events/vendor/holidays/README.md",
+          "line": 18,
+          "context": "text",
+          "version": "2.5.3"
+        },
+        {
+          "path": "plugins/discourse-events/vendor/holidays/README.md",
+          "line": 19,
+          "context": "text",
+          "version": "2.6.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "mattermost/mattermost",
+      "commit": "1f33d75c0c2f9d26cd9be109ae66b24c0bc3f28b",
+      "defaultBranch": "master",
+      "declaredVersion": "11.11.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "11.11.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 13,
+      "mentions": [
+        {
+          "path": ".cursor/README.md",
+          "line": 10,
+          "context": "text",
+          "version": "28.5.2"
+        },
+        {
+          "path": ".cursor/README.md",
+          "line": 11,
+          "context": "text",
+          "version": "1.26.7"
+        },
+        {
+          "path": ".cursor/README.md",
+          "line": 12,
+          "context": "text",
+          "version": "24.11.1"
+        },
+        {
+          "path": "e2e-tests/playwright/lib/README.md",
+          "line": 26,
+          "context": "text",
+          "version": "1.55.0"
+        },
+        {
+          "path": "e2e-tests/playwright/lib/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "1.55.0"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 15,
+          "context": "text",
+          "version": "5.8.0"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 16,
+          "context": "text",
+          "version": "5.9.0"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 16,
+          "context": "text",
+          "version": "5.15.0"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 17,
+          "context": "text",
+          "version": "1.12.9"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 17,
+          "context": "text",
+          "version": "5.16.0"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 18,
+          "context": "text",
+          "version": "1.14.1"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 19,
+          "context": "text",
+          "version": "1.14.6"
+        },
+        {
+          "path": "server/build/README.md",
+          "line": 20,
+          "context": "text",
+          "version": "1.15.5"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "zulip/zulip",
+      "commit": "b54af44a7e1abe23823d81e17611387a894a6909",
+      "defaultBranch": "main",
+      "declaredVersion": "0.1.0",
+      "declaredSource": "pyproject.toml",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "portainer/portainer",
+      "commit": "d661cbc0bbe2fb67dcc320ac8600b127c7f8cb9b",
+      "defaultBranch": "develop",
+      "declaredVersion": "2.45.0",
+      "declaredSource": "package.json",
+      "latestRelease": "2.45.1",
+      "markdownFilesScanned": 17,
+      "markdownFilesTotal": 17,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 2,
+      "mentions": [
+        {
+          "path": "build/docker-extension/README.md",
+          "line": 7,
+          "context": "text",
+          "version": "4.8.0"
+        },
+        {
+          "path": "CLAUDE.md",
+          "line": 25,
+          "context": "text",
+          "version": "1.26.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "syncthing/syncthing",
+      "commit": "94c3c1cdef718d568686620cbff268eeaaf2c87d",
+      "defaultBranch": "main",
+      "declaredVersion": "2.1.5",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.1.5",
+      "markdownFilesScanned": 28,
+      "markdownFilesTotal": 28,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 3,
+      "mentions": [
+        {
+          "path": "gui/default/vendor/angular/README.md",
+          "line": 3,
+          "context": "text",
+          "version": "1.3.20"
+        },
+        {
+          "path": "gui/default/vendor/angular/README.md",
+          "line": 5,
+          "context": "text",
+          "version": "2.11.0"
+        },
+        {
+          "path": "relnotes/README.md",
+          "line": 7,
+          "context": "text",
+          "version": "1.2.3"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "go-gitea/gitea",
+      "commit": "3c5d2d1b63935429490b9f149da38f9deb5055ce",
+      "defaultBranch": "main",
+      "declaredVersion": "1.27.3",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.27.3",
+      "markdownFilesScanned": 26,
+      "markdownFilesTotal": 28,
+      "changelogFilesSkipped": 2,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 9,
+      "mentions": [
+        {
+          "path": "docs/release-management.md",
+          "line": 63,
+          "context": "text",
+          "version": "1.26.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 64,
+          "context": "text",
+          "version": "1.27.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 65,
+          "context": "text",
+          "version": "1.28.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 66,
+          "context": "text",
+          "version": "1.29.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 70,
+          "context": "text",
+          "version": "1.26.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 80,
+          "context": "text",
+          "version": "1.1.1"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 91,
+          "context": "text",
+          "version": "1.19.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 91,
+          "context": "text",
+          "version": "1.19.0"
+        },
+        {
+          "path": "docs/release-management.md",
+          "line": 92,
+          "context": "text",
+          "version": "1.19.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "appsmithorg/appsmith",
+      "commit": "a6ab36cb26011b185e822f9bf8429140e9a76286",
+      "defaultBranch": "release",
+      "declaredVersion": "2.4.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.4.2",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 11,
+      "mentions": [
+        {
+          "path": "app/client/src/assets/icons/blueprintjs/readme.md",
+          "line": 1,
+          "context": "text",
+          "version": "403.33.0"
+        },
+        {
+          "path": "app/client/src/assets/icons/blueprintjs/readme.md",
+          "line": 17,
+          "context": "text",
+          "version": "3.27.0"
+        },
+        {
+          "path": "app/client/src/assets/icons/blueprintjs/readme.md",
+          "line": 20,
+          "context": "text",
+          "version": "3.33.0"
+        },
+        {
+          "path": "app/client/src/assets/icons/blueprintjs/readme.md",
+          "line": 33,
+          "context": "dep-pin",
+          "version": "3.0.2"
+        },
+        {
+          "path": "deploy/docker/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "20.10.7"
+        },
+        {
+          "path": "deploy/docker/README.md",
+          "line": 31,
+          "context": "text",
+          "version": "1.29.2"
+        },
+        {
+          "path": "deploy/helm/README.md",
+          "line": 81,
+          "context": "text",
+          "version": "7.4.9"
+        },
+        {
+          "path": "deploy/helm/README.md",
+          "line": 108,
+          "context": "text",
+          "version": "6.0.27"
+        },
+        {
+          "path": "deploy/helm/README.md",
+          "line": 122,
+          "context": "text",
+          "version": "8.0.20"
+        },
+        {
+          "path": "deploy/helm/README.md",
+          "line": 151,
+          "context": "text",
+          "version": "14.12.0"
+        },
+        {
+          "path": "deploy/helm/README.md",
+          "line": 172,
+          "context": "text",
+          "version": "0.74.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "nocodb/nocodb",
+      "commit": "2c956e3296fc5b41553f98847e57ec52a5272a92",
+      "defaultBranch": "develop",
+      "declaredVersion": "2026.09.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2026.09.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "charts/nocodb/README.md",
+          "line": 10,
+          "context": "text",
+          "version": "1.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "budibase/budibase",
+      "commit": "df976e8aa08c096bb2c8f1c396e3306f5e1d02d7",
+      "defaultBranch": "master",
+      "declaredVersion": "3.46.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.46.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 22,
+      "mentions": [
+        {
+          "path": "charts/budibase/README.md",
+          "line": 31,
+          "context": "text",
+          "version": "3.3.4"
+        },
+        {
+          "path": "charts/budibase/README.md",
+          "line": 31,
+          "context": "text",
+          "version": "4.3.0"
+        },
+        {
+          "path": "charts/budibase/README.md",
+          "line": 33,
+          "context": "text",
+          "version": "3.1.1"
+        },
+        {
+          "path": "charts/budibase/README.md",
+          "line": 264,
+          "context": "text",
+          "version": "1.14.2"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 3,
+          "context": "text",
+          "version": "4.5.3"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 3,
+          "context": "text",
+          "version": "3.3.3"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 106,
+          "context": "text",
+          "version": "0.2.3"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 106,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 111,
+          "context": "text",
+          "version": "3.0.0"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 176,
+          "context": "text",
+          "version": "3.3.3"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 179,
+          "context": "text",
+          "version": "0.1.0"
+        },
+        {
+          "path": "charts/budibase/charts/couchdb/README.md",
+          "line": 246,
+          "context": "text",
+          "version": "0.1.0"
+        },
+        {
+          "path": "hosting/single/README.md",
+          "line": 60,
+          "context": "text",
+          "version": "22.11.0"
+        },
+        {
+          "path": "hosting/single/README.md",
+          "line": 61,
+          "context": "text",
+          "version": "16.15.1"
+        },
+        {
+          "path": "hosting/single/README.md",
+          "line": 62,
+          "context": "text",
+          "version": "1.22.19"
+        },
+        {
+          "path": "hosting/single/README.md",
+          "line": 63,
+          "context": "text",
+          "version": "5.1.4"
+        },
+        {
+          "path": "hosting/tests/README.md",
+          "line": 40,
+          "context": "text",
+          "version": "22.11.0"
+        },
+        {
+          "path": "hosting/tests/README.md",
+          "line": 41,
+          "context": "text",
+          "version": "16.15.1"
+        },
+        {
+          "path": "hosting/tests/README.md",
+          "line": 42,
+          "context": "text",
+          "version": "1.22.19"
+        },
+        {
+          "path": "hosting/tests/README.md",
+          "line": 43,
+          "context": "text",
+          "version": "5.1.4"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "RocketChat/Rocket.Chat",
+      "commit": "01204df7088b1362f14438d99c44bc4f6d6e840e",
+      "defaultBranch": "develop",
+      "declaredVersion": "8.8.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "8.8.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 5,
+      "mentions": [
+        {
+          "path": "apps/meteor/packages/linkedin-oauth/README.md",
+          "line": 9,
+          "context": "text",
+          "version": "4.0.0"
+        },
+        {
+          "path": "apps/meteor/packages/linkedin-oauth/README.md",
+          "line": 9,
+          "context": "dep-pin",
+          "version": "1.6.1"
+        },
+        {
+          "path": "docs/features/video-conference-persistent-chat/README.md",
+          "line": 784,
+          "context": "text",
+          "version": "2.1.1"
+        },
+        {
+          "path": "docs/features/video-conference-persistent-chat/qa/README.md",
+          "line": 192,
+          "context": "text",
+          "version": "2.1.1"
+        },
+        {
+          "path": "docs/proposals/apps-converters-zod/README.md",
+          "line": 59,
+          "context": "text",
+          "version": "4.3.6"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "grafana/loki",
+      "commit": "83d5c2bfb29e69a3090389cab7e8249206a5c856",
+      "defaultBranch": "main",
+      "declaredVersion": "3.7.8",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.7.8",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 52,
+      "mentions": [
+        {
+          "path": "pkg/logql/bench/README.md",
+          "line": 132,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 51,
+          "context": "text",
+          "version": "4.4.3"
+        },
+        {
+          "path": "production/README.md",
+          "line": 51,
+          "context": "text",
+          "version": "2.7.3"
+        },
+        {
+          "path": "production/README.md",
+          "line": 51,
+          "context": "text",
+          "version": "1.6.1"
+        },
+        {
+          "path": "production/README.md",
+          "line": 52,
+          "context": "text",
+          "version": "4.4.2"
+        },
+        {
+          "path": "production/README.md",
+          "line": 52,
+          "context": "text",
+          "version": "2.7.2"
+        },
+        {
+          "path": "production/README.md",
+          "line": 52,
+          "context": "text",
+          "version": "1.6.1"
+        },
+        {
+          "path": "production/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "4.4.1"
+        },
+        {
+          "path": "production/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "2.7.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 53,
+          "context": "text",
+          "version": "1.6.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 54,
+          "context": "text",
+          "version": "4.4.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 54,
+          "context": "text",
+          "version": "2.7.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 54,
+          "context": "text",
+          "version": "1.6.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 55,
+          "context": "text",
+          "version": "4.3.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 55,
+          "context": "text",
+          "version": "2.7.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 55,
+          "context": "text",
+          "version": "1.6.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 56,
+          "context": "text",
+          "version": "4.2.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 56,
+          "context": "text",
+          "version": "2.7.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 56,
+          "context": "text",
+          "version": "1.6.0"
+        },
+        {
+          "path": "production/README.md",
+          "line": 57,
+          "context": "text",
+          "version": "4.1.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "hashicorp/vault",
+      "commit": "ae269540b773f0f81fc8c34c36c75d15515e4ec4",
+      "defaultBranch": "main",
+      "declaredVersion": "2.1.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.1.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 23,
+      "mentions": [
+        {
+          "path": "physical/foundationdb/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "5.2.4"
+        },
+        {
+          "path": "sdk/README.md",
+          "line": 9,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 28,
+          "context": "text",
+          "version": "5.8.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 28,
+          "context": "text",
+          "version": "5.8.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 28,
+          "context": "text",
+          "version": "5.3.2"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "5.4.2"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "5.4.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 29,
+          "context": "text",
+          "version": "4.12.4"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "4.12.1"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "4.12.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 30,
+          "context": "text",
+          "version": "4.11.3"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 31,
+          "context": "text",
+          "version": "4.4.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 31,
+          "context": "text",
+          "version": "4.4.4"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 31,
+          "context": "text",
+          "version": "4.5.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 32,
+          "context": "text",
+          "version": "3.28.5"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 32,
+          "context": "text",
+          "version": "3.28.10"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 32,
+          "context": "text",
+          "version": "3.28.6"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 33,
+          "context": "text",
+          "version": "3.24.0"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 33,
+          "context": "text",
+          "version": "3.24.7"
+        },
+        {
+          "path": "ui/README.md",
+          "line": 33,
+          "context": "text",
+          "version": "3.24.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "influxdata/influxdb",
+      "commit": "06200ef96ba82c5f6727e5038a83af8e722c6875",
+      "defaultBranch": "main",
+      "declaredVersion": "3.11.5",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "3.11.4",
+      "markdownFilesScanned": 25,
+      "markdownFilesTotal": 25,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 35,
+      "mentions": [
+        {
+          "path": "README_processing_engine.md",
+          "line": 75,
+          "context": "text",
+          "version": "150.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 76,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 79,
+          "context": "text",
+          "version": "150.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 80,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 81,
+          "context": "text",
+          "version": "7.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 82,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 83,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 84,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "README_processing_engine.md",
+          "line": 86,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "core/trace_exporters/README.md",
+          "line": 26,
+          "context": "text",
+          "version": "0.13.0"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/developer_experience.md",
+          "line": 84,
+          "context": "text",
+          "version": "2021.2.3"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/developer_experience.md",
+          "line": 85,
+          "context": "text",
+          "version": "1.61.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 65,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 72,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 72,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 73,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 78,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 94,
+          "context": "text",
+          "version": "3.5.0"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 114,
+          "context": "text",
+          "version": "3.0.2"
+        },
+        {
+          "path": "RELEASE.md",
+          "line": 120,
+          "context": "text",
+          "version": "3.0.1"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "timescale/timescaledb",
+      "commit": "e328f49182d980f773a2f38bcc4d5bdd89fbc95c",
+      "defaultBranch": "main",
+      "declaredVersion": "2.30.1",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "2.30.1",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 7,
+      "mentions": [
+        {
+          "path": "sql/updates/README.md",
+          "line": 45,
+          "context": "text",
+          "version": "0.7.0"
+        },
+        {
+          "path": "sql/updates/README.md",
+          "line": 46,
+          "context": "text",
+          "version": "0.4.0"
+        },
+        {
+          "path": "src/loader/README.md",
+          "line": 9,
+          "context": "text",
+          "version": "0.8.0"
+        },
+        {
+          "path": "test/perl/README.md",
+          "line": 60,
+          "context": "text",
+          "version": "5.8.8"
+        },
+        {
+          "path": "test/perl/README.md",
+          "line": 80,
+          "context": "text",
+          "version": "5.8.0"
+        },
+        {
+          "path": "test/perl/README.md",
+          "line": 86,
+          "context": "text",
+          "version": "5.8.0"
+        },
+        {
+          "path": "test/perl/README.md",
+          "line": 87,
+          "context": "text",
+          "version": "5.8.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "cockroachdb/cockroach",
+      "commit": "d30c905fff79ef825adc96bcc647f1872a90f2ff",
+      "defaultBranch": "master",
+      "declaredVersion": "26.2.7",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 7,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 95,
+          "context": "text",
+          "version": "23.1.29"
+        },
+        {
+          "path": "README.md",
+          "line": 95,
+          "context": "text",
+          "version": "23.2.16"
+        },
+        {
+          "path": "README.md",
+          "line": 95,
+          "context": "text",
+          "version": "24.1.7"
+        },
+        {
+          "path": "README.md",
+          "line": 95,
+          "context": "text",
+          "version": "24.2.5"
+        },
+        {
+          "path": "cloud/kubernetes/README.md",
+          "line": 148,
+          "context": "text",
+          "version": "0.23.0"
+        },
+        {
+          "path": "pkg/clusterversion/README.md",
+          "line": 44,
+          "context": "text",
+          "version": "24.1.0"
+        },
+        {
+          "path": "pkg/clusterversion/README.md",
+          "line": 124,
+          "context": "text",
+          "version": "24.1.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "grpc/grpc",
+      "commit": "0f8d72ed71fd3051bc6a08c4df80e76b3d53a03e",
+      "defaultBranch": "master",
+      "declaredVersion": "1.84.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "1.84.0",
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    },
+    {
+      "repo": "protocolbuffers/protobuf",
+      "commit": "b4462c8385061587111af8d1da425c3b683724d4",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "k3s-io/k3s",
+      "commit": "bb14efb431193972879eca2077f87b3ae17970f2",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "prometheus/node_exporter",
+      "commit": "60ce437b9c737c3b9a9619df457ae68a067d3cfc",
+      "defaultBranch": "master",
+      "declaredVersion": "1.12.1",
+      "declaredSource": "VERSION",
+      "latestRelease": "1.12.1",
+      "markdownFilesScanned": 13,
+      "markdownFilesTotal": 14,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 1,
+      "mentions": [
+        {
+          "path": "docs/V0_16_UPGRADE_GUIDE.md",
+          "line": 3,
+          "context": "text",
+          "version": "0.16.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "ceph/ceph",
+      "commit": "2d0cd8af0a0105dace8ba036a1689318e5a3d22c",
+      "defaultBranch": "main",
+      "declaredVersion": "21.3.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 9,
+      "mentions": [
+        {
+          "path": "monitoring/ceph-mixin/README.md",
+          "line": 20,
+          "context": "text",
+          "version": "0.17.0"
+        },
+        {
+          "path": "monitoring/ceph-mixin/README.md",
+          "line": 93,
+          "context": "text",
+          "version": "0.18.0"
+        },
+        {
+          "path": "monitoring/ceph-mixin/README.md",
+          "line": 94,
+          "context": "text",
+          "version": "0.4.0"
+        },
+        {
+          "path": "monitoring/ceph-mixin/README.md",
+          "line": 96,
+          "context": "text",
+          "version": "0.16.2"
+        },
+        {
+          "path": "monitoring/ceph-mixin/README.md",
+          "line": 97,
+          "context": "text",
+          "version": "2.33.4"
+        },
+        {
+          "path": "src/script/config-diff/README.md",
+          "line": 72,
+          "context": "text",
+          "version": "1.0.0"
+        },
+        {
+          "path": "src/script/config-diff/README.md",
+          "line": 72,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "src/script/config-diff/README.md",
+          "line": 75,
+          "context": "text",
+          "version": "1.1.0"
+        },
+        {
+          "path": "src/script/config-diff/README.md",
+          "line": 75,
+          "context": "text",
+          "version": "1.0.0"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "systemd/systemd",
+      "commit": "885fe07ee37cff7316680b5088d11081e01813b1",
+      "declaredVersion": null,
+      "status": "skipped-no-declared-version"
+    },
+    {
+      "repo": "moby/moby",
+      "commit": "4359a27c23a6218a8a25b136ecfa580cfc48c366",
+      "defaultBranch": "master",
+      "declaredVersion": "28.5.2",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": null,
+      "markdownFilesScanned": 30,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 0,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 3,
+      "mentions": [
+        {
+          "path": "README.md",
+          "line": 60,
+          "context": "text",
+          "version": "29.0.0"
+        },
+        {
+          "path": "README.md",
+          "line": 79,
+          "context": "text",
+          "version": "29.0.0"
+        },
+        {
+          "path": "man/vendor/github.com/russross/blackfriday/v2/README.md",
+          "line": 155,
+          "context": "text",
+          "version": "1.0.3"
+        }
+      ],
+      "status": "clean"
+    },
+    {
+      "repo": "laravel/framework",
+      "commit": "bddd0646678a127f75623339236e75b4939070e5",
+      "defaultBranch": "13.x",
+      "declaredVersion": "13.33.0",
+      "declaredSource": "highest-semver-tag",
+      "latestRelease": "13.33.0",
+      "markdownFilesScanned": 29,
+      "markdownFilesTotal": 30,
+      "changelogFilesSkipped": 1,
+      "versionRefs": 0,
+      "currentRefs": 0,
+      "staleRefs": 0,
+      "stale": [],
+      "mentionRefs": 0,
+      "mentions": [],
+      "status": "clean"
+    }
+  ]
+}

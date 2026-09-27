@@ -123,6 +123,13 @@ Python 3.11.2 is required.
         contexts = {ctx for _, ctx, _ in literals}
         self.assertIn("release-link", contexts)
 
+    def test_example_release_link_is_mention(self):
+        doc = "For example: https://github.com/envoyproxy/envoy/releases/tag/v1.39.0."
+        literals = vd.extract_version_literals(doc, repo_full="envoyproxy/envoy")
+        contexts = {ctx for _, ctx, _ in literals}
+        self.assertIn("example-link", contexts)
+        self.assertNotIn("release-link", contexts)
+
     def test_prerelease_and_4part_pins_not_truncated(self):
         doc = """
 A resolver only picks one under an explicit `dbt-core==2.0.0rc1` pin.
