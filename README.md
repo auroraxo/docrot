@@ -15,6 +15,38 @@ image reference, and answers two questions per image:
 
 Published dataset and report: <https://codebyaurora.com/docrot/>
 
+## Results
+
+First full pass over the **100 most-used repositories** from the corpus in
+`repos.txt`, scanned at default-branch HEAD on 2026-09-27. Raw data:
+[`docrot-results-100.json`](docrot-results-100.json) (images) and
+[`drift-results-100.json`](drift-results-100.json) (version pins);
+interactive report: <https://codebyaurora.com/docrot/>.
+
+**Image rot.** 6,179 image references resolved. 1,791 of them (29%) load
+from hosts outside GitHub. 58 external images no longer load, and 105
+in-repo paths resolve to nothing in the tree they name — **27 of the 100
+repositories carry at least one broken documentation image.** Extremes:
+`appsmithorg/appsmith` (9 dead Notion-hosted design-system screenshots, 73
+missing in-repo paths), `angular/angular` (18 tutorial images missing),
+`tensorflow/tensorflow` (all 9 build-status badges in the README's
+"Official Builds" table return 403, plus an artifact link to the
+discontinued Bintray returning 410 — reported as
+[tensorflow/tensorflow#128150](https://github.com/tensorflow/tensorflow/issues/128150)).
+
+**Version drift.** Of the same 100 repos, 89 advertise their declared
+release correctly, 10 declare no machine-readable version (skipped, never
+guessed), and **exactly one carries a stale pin**: `apache/airflow` pins
+`==3.3.0` in its README while the manifest declares 3.4.0 — reported as
+[apache/airflow#73769](https://github.com/apache/airflow/issues/73769) and
+fixed by [apache/airflow#73770](https://github.com/apache/airflow/pull/73770).
+
+Every number above was line-verified before reporting. Several of the
+false-positive classes were found precisely by chasing a headline finding
+to its source — the last one surfaced when the 100-repo pass flagged an
+`"For example:"` release link that was teaching a URL shape, not
+advertising a version.
+
 ## Usage
 
 ```sh
@@ -56,13 +88,10 @@ release also counts as current: main-branch manifests often declare an
 unreleased version, and pinning the newest real release is honest.
 
 Every finding is verified against the source line before it is reported;
-the first full pass over the 40-repository corpus flagged six repos, five
-of which proved to be the false-positive classes above — the rules here are
-what the hardened scan removed them with. The corpus was then widened to
-100 repositories; the 100-repo dataset lives in `drift-results-100.json`
-and currently holds exactly one stale pin (apache/airflow, filed as
-[apache/airflow#73769](https://github.com/apache/airflow/issues/73769)
-and fixed by [apache/airflow#73770](https://github.com/apache/airflow/pull/73770)).
+the first 40-repository pass flagged six repos, five of which proved to
+be the false-positive classes above — the rules here are what the hardened
+scan removed them with. The corpus was then widened to 100 repositories
+(see Results).
 
 ## Classification
 
