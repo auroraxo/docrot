@@ -194,6 +194,21 @@ st.markdown("![Alt](https://example.com/image.png)")
         text = '```\n<img src="/file=image.png">\n```\n<img src="real.png">'
         self.assertEqual(scan.extract_image_refs(text), ["real.png"])
 
+    def test_html_entities_decoded_in_img_src(self):
+        # Browsers decode entities in attribute values before fetching; the
+        # scanner must check the decoded URL (axios CHANGELOG false positive).
+        text = '<img src="https://h/u/123?v&#x3D;4&amp;s&#x3D;18">'
+        self.assertEqual(
+            scan.extract_image_refs(text),
+            ["https://h/u/123?v=4&s=18"])
+
+    def test_markdown_refs_not_unescaped(self):
+        # Only HTML attribute values carry entity encoding; markdown refs
+        # pass through unchanged.
+        text = '![x](https://h/a?b&#x3D;1)'
+        self.assertEqual(
+            scan.extract_image_refs(text), ["https://h/a?b&#x3D;1"])
+
 
 class NormalizeUrlTests(unittest.TestCase):
     def test_spaces_encoded(self):

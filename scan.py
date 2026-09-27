@@ -21,6 +21,7 @@ Classification, deliberately conservative:
 The headline number is verified rot among references whose targets can be
 resolved statically or checked over HTTP.
 """
+import html
 import json
 import os
 import re
@@ -80,7 +81,9 @@ def extract_image_refs(text):
     for m in HTML_IMG.finditer(text):
         ref = next((g for g in m.groups() if g is not None), "")
         if ref:
-            out.append(ref)
+            # Browsers decode HTML entities in attribute values before fetching;
+            # check and record the decoded URL, keep raw value in originalRef.
+            out.append(html.unescape(ref))
     return out
 
 
@@ -287,7 +290,7 @@ def main():
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
             json.dump({
-                "tool": "docrot", "version": 4,
+                "tool": "docrot", "version": 5,
                 "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "method": {
                     "markdownFileCapPerRepo": MD_CAP,
