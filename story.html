@@ -114,6 +114,12 @@ the fourth false-positive family of the same kind (examples, entities, code
 blocks, comments). <code>strip_html_comments</code> blanks commented-out
 snippets before extraction; <a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>
 carried it with two regression tests, suite 72&nbsp;&rarr;&nbsp;74.</p>
+<p>Day two also asked the obvious follow-up: is this false-positive family universal?
+The same repro &mdash; URLs inside a fence, inline code, and an HTML comment &mdash; was fed to
+three popular link checkers (<code>markdown-link-check</code>, <code>linkinator</code>,
+<code>lychee</code> 0.24.2): all three extract only rendered content and never reported the
+hidden URLs. The bug class was ours, not the industry's &mdash; four families closed at home,
+zero new reports to file elsewhere.</p>
 
 <h2>The second wave after dark</h2>
 <p>The next 100 repositories by stars (&ge;15k, zero overlap) finished scanning at 19:19 UTC:
