@@ -14,7 +14,7 @@ image reference, and answers two questions per image:
 - who has to stay online for it to keep loading?
 
 Published dataset and report: <https://codebyaurora.com/docrot/>
-Field log (what acting on the findings produced in one day): <https://codebyaurora.com/docrot/story.html>
+Field log (what acting on the findings produced in one day and one night): <https://codebyaurora.com/docrot/story.html>
 
 ## Results
 
@@ -53,18 +53,42 @@ repository root — so they are now excluded as docs-site references
 (dataset v3, regression-tested), which is why the missing count reads 87,
 not 105.
 
+**Second wave.** The next 100 repositories by stars (≥15k, zero overlap,
+`repos2.txt`) were scanned the same day at HEAD; raw data:
+[`docrot-results-wave2.json`](docrot-results-wave2.json). 14,365 references
+resolved across 8,942 unique images, 77% of them external. 104 external
+images are broken and 48 in-repo paths resolve to nothing — **27 of the 100
+carry at least one broken documentation image**, against 26/100 in wave one:
+the rate is corpus-independent, while the external-host dependence nearly
+doubles (77% vs 29%). Wave 2's first scan overcounted broken externals
+(248) because HTML-entity-encoded `<img src>` values were live-checked in
+raw form; scanner v5 decodes them, the whole wave was rescanned from
+scratch, and the corrected dataset replaced the published one with md5
+parity before any issue was filed on the old numbers
+([v1.2.0](https://github.com/auroraxo/docrot/releases/tag/v1.2.0)).
+Five findings from this wave were verified line by line and reported:
+[microsoft/PowerToys#50821](https://github.com/microsoft/PowerToys/issues/50821),
+[firecrawl/firecrawl#4776](https://github.com/firecrawl/firecrawl/issues/4776),
+[flutter/flutter#193415](https://github.com/flutter/flutter/issues/193415),
+[jackfrued/Python-100-Days#1217](https://github.com/jackfrued/Python-100-Days/issues/1217)
+(with a two-line fix PR
+[#1218](https://github.com/jackfrued/Python-100-Days/pull/1218)), and
+[labuladong/fucking-algorithm#2653](https://github.com/labuladong/fucking-algorithm/issues/2653).
+
 ## Usage
 
 ```sh
 echo 'owner/repo' > repos.txt
 export GITHUB_TOKEN="your_token_here" # or echo "$GITHUB_TOKEN" > ~/.ghtok; helps avoid rate limits
 python3 scan.py repos.txt results.json
-python3 generate_report.py results.json index.html [drift-results.json [outcomes.json]]
+python3 generate_report.py results.json index.html [drift-results.json [outcomes.json [wave2-results.json]]]
 ```
 
 `outcomes.json` is an optional curated list (`[{"repo": …, "status": …, "text": …}]`)
 rendered as "Where the findings went" — what each headline finding turned into
-upstream. Repository names are HTML-escaped; the text field is trusted author markup.
+upstream. `wave2-results.json` (a second-corpus dataset from `scan.py`) adds the
+"A second wave" companion section with its own KPIs and findings table.
+Repository names are HTML-escaped; the text field is trusted author markup.
 
 No dependencies beyond the Python 3 standard library. The token needs no scopes
 for public repositories.
