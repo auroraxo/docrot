@@ -26,8 +26,8 @@
   },
   {
     "repo": "istio/istio",
-    "status": "reported",
-    "text": "Broken image link in <code>architecture/environments/operator.md</code> (references <code>images/operator_render_flow.svg</code>, 404; asset actually lives at <code>operator/images/operator_render_flow.svg</code>) reported in <a href='https://github.com/istio/istio/issues/61944'>#61944</a> with a suggested one-line fix."
+    "status": "merged",
+    "text": "Broken image link in <code>architecture/environments/operator.md</code> (referenced <code>images/operator_render_flow.svg</code>, 404; actual asset at <code>operator/images/operator_render_flow.svg</code>) reported in <a href='https://github.com/istio/istio/issues/61944'>#61944</a>; fixed in <a href='https://github.com/istio/istio/pull/61950'>PR #61950</a> and merged into master."
   },
   {
     "repo": "moby/moby",
