@@ -11,8 +11,8 @@
   },
   {
     "repo": "tensorflow/tensorflow",
-    "status": "triaged",
-    "text": "9 dead build-status badges in the README's Official Builds table (HTTP 403 on Google Cloud Storage) and discontinued Bintray link reported in <a href='https://github.com/tensorflow/tensorflow/issues/128150'>#128150</a>; assigned to Venkat6871 and triaged as type:docs-bug."
+    "status": "fix-proposed",
+    "text": "9 dead build-status badges in the README's Official Builds table (HTTP 403) and discontinued Bintray link reported in <a href=\"https://github.com/tensorflow/tensorflow/issues/128150\">#128150</a>; reassigned and labelled <em>awaiting PR merge</em> &mdash; fix up as <a href=\"https://github.com/tensorflow/tensorflow/pull/128179\">PR #128179</a>, reporter-verified in-thread (all 9 badges still 403, every replacement URL 200)."
   },
   {
     "repo": "vitejs/vite",
