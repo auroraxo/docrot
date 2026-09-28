@@ -94,7 +94,7 @@ and at <strong>12:36 it was merged into main</strong>.</p>
 </table>
 
 <h2>The tool ate its own findings</h2>
-<p>Twice today the scanner itself was the finding.</p>
+<p>Twice on day one the scanner itself was the finding. On day two, a third time:</p>
 <p>First: 18 "missing" tutorial images in angular/angular turned out to be false positives.
 Angular's docs engine (<code>adev/</code>) rewrites image roots against the <em>site</em>,
 not the repository &mdash; all 13 distinct targets serve HTTP 200 from angular.dev. Chasing
@@ -108,6 +108,12 @@ downloads were being skipped silently. Scanner v4 now records
 <code>markdownFetchErrors</code> per repository, so a flaky download can no longer make a
 repo look image-free. <a href="https://github.com/auroraxo/docrot/releases/tag/v1.1.0">v1.1.0</a>
 shipped with both changes the same day.</p>
+<p>Third: the paid API's scanner-parity ritual pointed back the other way &mdash;
+image syntax inside <em>HTML comments</em> was still counted as a reference,
+the fourth false-positive family of the same kind (examples, entities, code
+blocks, comments). <code>strip_html_comments</code> blanks commented-out
+snippets before extraction; <a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>
+carried it with two regression tests, suite 72&nbsp;&rarr;&nbsp;74.</p>
 
 <h2>The second wave after dark</h2>
 <p>The next 100 repositories by stars (&ge;15k, zero overlap) finished scanning at 19:19 UTC:
@@ -251,12 +257,13 @@ and one archived repository (minio) documented as historical rot because there i
 </div>
 
 <h2>Methods, briefly</h2>
-<p>Six releases across two days (<a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.0">v1.0.0</a>,
+<p>Seven releases across two days (<a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.0">v1.0.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.1">v1.0.1</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.1.0">v1.1.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.2.0">v1.2.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.0">v1.3.0</a>,
-<a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.1">v1.3.1</a>), 72 unit tests,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.1">v1.3.1</a>,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>), 74 unit tests,
 every published number verified line by line before it went out &mdash; and corrected in
 public when a verification changed it. Unresolvable references (docs-site roots, template
 placeholders, data URIs) are counted but excluded from rot figures, so the exclusions are
