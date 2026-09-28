@@ -217,6 +217,14 @@ In the 100-repository corpus:
 The interactive report tables enumerate every host, its reference count, and
 which repositories depend on it: <https://codebyaurora.com/docrot/>
 
+## Version & history
+
+Every release is tagged and documented twice: [Releases](https://github.com/auroraxo/docrot/releases)
+carry the full measurement narrative per version, and the
+[CHANGELOG](CHANGELOG.md) keeps a machine-friendly Keep-a-Changelog history
+([1.0.0] through the current version). The scanner itself is versioned in
+`scan.py` (`"version": 5` dataset schema) alongside git tags.
+
 ## Licence
 
 MIT for the scanner. The dataset is CC0 — take it, re-run it, disagree with it.
