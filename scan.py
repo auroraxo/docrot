@@ -71,8 +71,23 @@ def strip_code(text):
     return text
 
 
+def strip_html_comments(text):
+    """Remove HTML comments before looking for rendered images.
+
+    Comment content is not rendered (same rationale as strip_code for
+    examples); an image link inside <!-- ... --> is invisible to readers
+    and must not enter the dataset. Same-length whitespace replacement
+    keeps line numbers exact if a caller ever needs them.
+    """
+    def blank(m):
+        return "".join(c if c == "\n" else " " for c in m.group(0))
+
+    return re.sub(r"(?s)<!--.*?-->", blank, text)
+
+
 def extract_image_refs(text):
     text = strip_code(text)
+    text = strip_html_comments(text)
     out = []
     for m in MD_IMG.finditer(text):
         ref = m.group(1) if m.group(1) is not None else m.group(2)

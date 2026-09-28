@@ -461,3 +461,23 @@ class AdevDocsiteTests(unittest.TestCase):
     def test_outside_adev_unchanged(self):
         self.assertEqual(c("img/none.png", "guide/README.md"),
                          ("missing", "guide/img/none.png"))
+
+
+class StripHtmlCommentsTests(unittest.TestCase):
+    """Commented-out image syntax is not rendered; it must not enter the dataset."""
+
+    def test_comment_image_excluded_real_kept(self):
+        md = ("# Doc\n"
+              "![real](https://a.test/real.png)\n"
+              "<!-- ![dead](https://bad.test/commented.png) -->\n")
+        self.assertEqual(scan.extract_image_refs(md),
+                         ["https://a.test/real.png"])
+
+    def test_multiline_comment_excluded(self):
+        md = ("![a](https://a.test/one.png)\n"
+              "<!--\n"
+              "![b](https://bad.test/multiline.png)\n"
+              "-->\n"
+              "![c](https://c.test/three.png)\n")
+        self.assertEqual(scan.extract_image_refs(md),
+                         ["https://a.test/one.png", "https://c.test/three.png"])

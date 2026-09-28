@@ -184,8 +184,9 @@ the exclusion is the difference between a dataset and a scare.
 - Markdown files are capped per repository (default 150, READMEs and docs trees
   first). A repository above the cap is sampled, not censused; the report shows
   both numbers.
-- Image-looking syntax inside fenced or inline code is ignored: examples do not
-  become rendered documentation images.
+- Image-looking syntax inside fenced or inline code, and inside HTML comments,
+  is ignored: examples and commented-out snippets do not become rendered
+  documentation images.
 - A host that refuses automated requests can look broken when a browser would
   load the image. Hosts are listed per image so any such case is checkable.
 - Only markdown and MDX are read. Images referenced from HTML templates, RST, or
