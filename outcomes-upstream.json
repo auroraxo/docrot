@@ -73,5 +73,15 @@
     "repo": "jackfrued/Python-100-Days",
     "status": "fix-proposed",
     "text": "Follow-up on <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>: the two <code>localhost</code> image URLs exist on the author's public Gitee mirror (verified HTTP 200); minimal two-line fix proposed in <a href=\"https://github.com/jackfrued/Python-100-Days/pull/1218\">#1218</a>."
+  },
+  {
+    "repo": "Azure/azure-quickstart-templates",
+    "status": "reported",
+    "text": "All 892 CI/deployment status badges on <code>azurequickstartsservice.blob.core.windows.net</code> return HTTP 409 <code>PublicAccessNotPermitted</code> (146 READMEs); reported in <a href=\"https://github.com/Azure/azure-quickstart-templates/issues/14882\">#14882</a>."
+  },
+  {
+    "repo": "aalansehaiyang/technology-talk",
+    "status": "reported",
+    "text": "Author docsite <code>offercome.cn</code> is unreachable entirely (DNS resolves, HTTPS times out): 477 off-repo images dead across <code>docs/md/**</code>; reported in <a href=\"https://github.com/aalansehaiyang/technology-talk/issues/84\">#84</a>."
   }
 ]
