@@ -75,19 +75,42 @@ Five findings from this wave were verified line by line and reported:
 [#1218](https://github.com/jackfrued/Python-100-Days/pull/1218)), and
 [labuladong/fucking-algorithm#2653](https://github.com/labuladong/fucking-algorithm/issues/2653).
 
+**Third wave.** One star tier down: the next 100 candidate repositories
+(10k–15k stars, zero overlap with either earlier corpus, `repos3.txt`)
+were scanned under scanner v5; raw data:
+[`docrot-results-wave3.json`](docrot-results-wave3.json). 6,037 references
+resolved across 4,457 unique images, 75% external. 1,472 external images
+are broken and 25 in-repo paths resolve to nothing — **30 of the 100 carry
+at least one broken documentation image** (against 27/100 in wave two and
+26/100 in wave one): across three tiers and 300 repositories, the rot
+share remains ~26–30%. This wave yielded the two largest single-host
+rot clusters of the project:
+- [Azure/azure-quickstart-templates#14882](https://github.com/Azure/azure-quickstart-templates/issues/14882):
+  all 892 status badges on `azurequickstartsservice.blob.core.windows.net`
+  return HTTP 409 Conflict (`PublicAccessNotPermitted`), breaking the
+  status block in 146 READMEs simultaneously (prescribed by
+  `1-CONTRIBUTION-GUIDE/sample-README.md`).
+- [aalansehaiyang/technology-talk#84](https://github.com/aalansehaiyang/technology-talk/issues/84):
+  author's personal CDN `offercome.cn` is completely unreachable (HTTPS
+  timeout), rendering 477 unique off-repo images dead across `docs/md/**`.
+- [sml2h3/ddddocr#317](https://github.com/sml2h3/ddddocr/issues/317):
+  all 26 off-repo images on author CDN `cdn.wenanzhe.com` return HTTP 404,
+  breaking sponsor badges and captcha demonstration images in READMEs.
+
 ## Usage
 
 ```sh
 echo 'owner/repo' > repos.txt
 export GITHUB_TOKEN="your_token_here" # or echo "$GITHUB_TOKEN" > ~/.ghtok; helps avoid rate limits
 python3 scan.py repos.txt results.json
-python3 generate_report.py results.json index.html [drift-results.json [outcomes.json [wave2-results.json]]]
+python3 generate_report.py results.json index.html [drift-results.json [outcomes.json [wave2-results.json [wave3-results.json]]]]
 ```
 
 `outcomes.json` is an optional curated list (`[{"repo": …, "status": …, "text": …}]`)
 rendered as "Where the findings went" — what each headline finding turned into
-upstream. `wave2-results.json` (a second-corpus dataset from `scan.py`) adds the
-"A second wave" companion section with its own KPIs and findings table.
+upstream. `wave2-results.json` and `wave3-results.json` (further 100-repo datasets from
+`scan.py`) add companion sections ("A second wave", "A third wave: one star tier down")
+with their own KPIs and per-wave findings tables.
 Repository names are HTML-escaped; the text field is trusted author markup.
 
 No dependencies beyond the Python 3 standard library. The token needs no scopes

@@ -347,6 +347,68 @@ class Wave2ReportTests(unittest.TestCase):
         self.assertIn("o/&lt;script&gt;", html)
 
 
+class Wave3ReportTests(unittest.TestCase):
+    WAVE3 = {
+        "tool": "docrot", "version": 5, "generatedAt": "2026-09-28T01:00:00Z",
+        "repos": [
+            {"repo": "o/wave3rot", "stars": 3, "commit": "e" * 40,
+             "defaultBranch": "main", "treeTruncated": False,
+             "markdownFilesScanned": 10, "markdownFilesTotal": 10,
+             "imageRefs": 4, "uniqueImages": 4, "inRepo": 1, "missingInRepo": 2,
+             "unresolvable": 0, "external": 3, "externalThirdParty": 2,
+             "externalBroken": 1, "externalThirdPartyBroken": 1,
+             "thirdPartyHosts": ["cdn.example"],
+             "markdownFetchErrors": {},
+             "images": []},
+            {"repo": "o/wave3clean", "stars": 2, "commit": "f" * 40,
+             "defaultBranch": "main", "treeTruncated": False,
+             "markdownFilesScanned": 2, "markdownFilesTotal": 2,
+             "imageRefs": 1, "uniqueImages": 1, "inRepo": 1, "missingInRepo": 0,
+             "unresolvable": 0, "external": 0, "externalThirdParty": 0,
+             "externalBroken": 0, "externalThirdPartyBroken": 0,
+             "thirdPartyHosts": [],
+             "markdownFetchErrors": {"a.md": "HTTP Error 502"},
+             "images": []},
+        ],
+    }
+
+    def test_wave3_section_absent_by_default(self):
+        self.assertNotIn("A third wave", generate_report.render(SAMPLE))
+
+    def test_wave3_section_renders_kpis_and_table(self):
+        html = generate_report.render(SAMPLE, None, None, None, self.WAVE3)
+        self.assertIn("A third wave", html)
+        self.assertIn("docrot-wave3.json", html)
+        self.assertIn("o/wave3rot", html)
+        # The clean repo appears only in the fetch-error disclosure, never in
+        # the findings table (which lists rows of "repository + findings").
+        self.assertNotIn("<tr><td><a href='https://github.com/o/wave3clean'>", html)
+        self.assertIn("Three waves, one method", html)
+
+    def test_wave3_cross_wave_counts(self):
+        # SAMPLE has one affected repo (o/rotten) -> wave one reads "1 in
+        # wave one". Without a wave2 argument the narrative stays silent
+        # about wave two; with it, all three waves are named.
+        html = generate_report.render(SAMPLE, None, None, None, self.WAVE3)
+        self.assertIn("1 in wave one, 1 in wave three", html)
+        self.assertNotIn("in wave two", html)
+        w2 = Wave3ReportTests.WAVE3  # same fixture shape, one affected repo
+        html2 = generate_report.render(SAMPLE, None, None, w2, self.WAVE3)
+        self.assertIn("1 in wave two, 1 in wave three", html2)
+
+    def test_wave3_fetch_errors_disclosed(self):
+        html = generate_report.render(SAMPLE, None, None, None, self.WAVE3)
+        self.assertIn("transient fetch failures", html)
+        self.assertIn("o/wave3clean", html)      # fetch-error disclosure line
+
+    def test_wave3_repo_names_escaped(self):
+        bad = json.loads(json.dumps(self.WAVE3))
+        bad["repos"][0]["repo"] = "o/<script>"
+        html = generate_report.render(SAMPLE, None, None, None, bad)
+        self.assertNotIn("<script>", html)
+        self.assertIn("o/&lt;script&gt;", html)
+
+
 if __name__ == "__main__":
     unittest.main()
 

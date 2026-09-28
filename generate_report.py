@@ -186,7 +186,75 @@ def render_wave2(wave2, w1data):
     return "\n".join(o)
 
 
-def render(data, drift=None, outcomes=None, wave2=None):
+def render_wave3(wave3, w1data, wave2=None):
+    """Render the third measurement wave (one star tier down) as a companion section."""
+    w3 = [r for r in wave3.get("repos", []) if "error" not in r]
+    w1 = [r for r in w1data.get("repos", []) if "error" not in r]
+    t3 = lambda k: sum(r.get(k, 0) for r in w3)
+    affected = [r for r in w3 if r.get("externalBroken") or r.get("missingInRepo")]
+    affected_1 = len([r for r in w1 if r.get("externalBroken") or r.get("missingInRepo")])
+    affected_2 = None
+    if wave2:
+        w2 = [r for r in wave2.get("repos", []) if "error" not in r]
+        affected_2 = len([r for r in w2 if r.get("externalBroken") or r.get("missingInRepo")])
+    fetch_err = [r["repo"] for r in w3 if r.get("markdownFetchErrors")]
+    ext_share = round(100 * t3("external") / t3("uniqueImages")) if t3("uniqueImages") else 0
+
+    o = []
+    o.append("<h2>A third wave: one star tier down</h2>")
+    o.append("<p class=sub>%s &middot; %d repositories &middot; raw data: "
+             "<a href='docrot-wave3.json'>docrot-wave3.json</a> &middot; "
+             "scanner: <a href='https://github.com/auroraxo/docrot'>docrot</a></p>"
+             % (e(wave3.get("generatedAt", "")), len(w3)))
+
+    o.append("<div class=grid>")
+    for label, val, cls in [
+        ("repositories", str(len(w3)), ""),
+        ("unique images", f"{t3('uniqueImages'):,}", ""),
+        ("loaded from outside the repo", f"{ext_share}%", ""),
+        ("external images broken", f"{t3('externalBroken'):,}",
+         "bad" if t3("externalBroken") else "ok"),
+        ("missing in the repository", str(t3("missingInRepo")),
+         "bad" if t3("missingInRepo") else "ok"),
+        ("clean of both", "%d / %d" % (len(w3) - len(affected), len(w3)), ""),
+    ]:
+        o.append("<div class=kpi><b class='%s'>%s</b><span>%s</span></div>" % (cls, val, label))
+    o.append("</div>")
+
+    mid = ("%d in wave two, " % affected_2) if affected_2 is not None else ""
+    o.append("<div class=box><h3 style='margin-top:0'>Three waves, one method</h3>"
+             "<p>Wave one sampled the most-starred 100 repositories; wave two added the "
+             "next 100 (&ge;15k stars); this wave descends one tier to the next 100 "
+             "candidates (10k&ndash;15k stars, zero overlap with either earlier corpus), "
+             "scanned with the entity-fixed v5 scanner from the start. Repositories "
+             "carrying at least one broken documentation image: %d in wave one, %s%d in "
+             "wave three &mdash; the share holds across star tiers rather than collapsing "
+             "in the long tail, while the damage per repository spans orders of "
+             "magnitude.</p>"
+             "<p class=small>Honesty ledger: this wave produced the two largest "
+             "single-host findings of the project so far; each was verified line by line "
+             "against HEAD before being reported (see <em>Where the findings went</em>)."
+             "%s</p></div>"
+             % (affected_1, mid, len(affected),
+                (" Repositories with transient fetch failures at scan time (disclosed per the "
+                 "scanner contract): %s." % e(", ".join(fetch_err))) if fetch_err else ""))
+
+    if affected:
+        o.append("<h2>Wave 3: repositories with findings</h2>")
+        o.append("<table><tr><th>repository</th><th>missing in repo</th>"
+                 "<th>broken external</th></tr>")
+        for r in sorted(affected, key=lambda r: -(r.get("missingInRepo", 0) +
+                                                  r.get("externalBroken", 0))):
+            o.append("<tr><td><a href='https://github.com/%s'>%s</a></td>"
+                     "<td>%s</td><td>%s</td></tr>"
+                     % (e(r["repo"]), e(r["repo"]),
+                        e(str(r.get("missingInRepo", 0))),
+                        e(str(r.get("externalBroken", 0)))))
+        o.append("</table>")
+    return "\n".join(o)
+
+
+def render(data, drift=None, outcomes=None, wave2=None, wave3=None):
     repos = [r for r in data["repos"] if "error" not in r]
     failed = [r for r in data["repos"] if "error" in r]
 
@@ -354,6 +422,9 @@ def render(data, drift=None, outcomes=None, wave2=None):
     if wave2:
         o.append(render_wave2(wave2, data))
 
+    if wave3:
+        o.append(render_wave3(wave3, data, wave2))
+
     m = data.get("method", {})
     o.append("<h2>Method, and what it does not claim</h2><div class=box><ul>")
     o.append("<li>For each repository: the default branch HEAD is resolved to a commit SHA, the "
@@ -424,9 +495,13 @@ def main():
     if len(sys.argv) > 5:
         with open(sys.argv[5]) as f:
             wave2 = json.load(f)
+    wave3 = None
+    if len(sys.argv) > 6:
+        with open(sys.argv[6]) as f:
+            wave3 = json.load(f)
     out = sys.argv[2]
     with open(out, "w") as f:
-        f.write(render(data, drift, outcomes, wave2))
+        f.write(render(data, drift, outcomes, wave2, wave3))
     print("wrote", out)
 
 
