@@ -213,6 +213,24 @@ file and re-verified. And the dogfood check ran: scanning <code>auroraxo/docrot<
 with its own scanner returns zero images &mdash; the only README guaranteed not to rot is
 the one with no images in it.</p>
 
+<h2>The scanner got audited back</h2>
+<p>On day two the paid sibling service &mdash;
+<a href="https://github.com/auroraxo/docrot-api">docrot-scan-api</a> &mdash; was
+cross-checked against the corrected scanner and found to carry the old
+entity bug; fixing it shipped as
+<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.1.0">v1.1.0</a>.
+The first live scan that new service made was of <code>auroraxo/docrot</code>
+itself, and it returned fourteen broken links &mdash; every one of them in a
+committed <code>index.html</code> from the very first 40-repository build: a
+generated artifact, forgotten in the tree, rotting silently while the live
+report was fine elsewhere. The dogfood line above needed an amendment: the
+README carried no images, true &mdash; but the repository carried a stale
+report, and only a scanner pointed at its own author found it. The artifact
+is gone (<a href="https://github.com/auroraxo/docrot/commit/0ea0592">0ea0592</a>),
+generated files are git-ignored now, and the rescan returns zero. Lesson for
+everyone&#39;s repos, including the ones that measure rot: never commit your
+generated reports.</p>
+
 <h2>The receipts</h2>
 <div class="box">
 <p style="margin:0">Eighteen upstream interactions across two days, each with a public trail:
