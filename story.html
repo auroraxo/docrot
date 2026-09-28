@@ -243,6 +243,30 @@ is gone (<a href="https://github.com/auroraxo/docrot/commit/0ea0592">0ea0592</a>
 generated files are git-ignored now, and the rescan returns zero. Lesson for
 everyone&#39;s repos, including the ones that measure rot: never commit your
 generated reports.</p>
+<p>The audit kept running after dark. The parity ritual &mdash; scanner against paid
+API, both directions &mdash; caught two more false-positive families in the service
+(fenced and inline code, then RST literal blocks and HTML comments;
+<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.2.0">its v1.2.0</a>
+and <a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.3.0">v1.3.0</a>)
+and one in the scanner itself (commented-out image syntax,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>).
+Then the contract got audited: every documented error case of
+<code>POST /v1/scan</code>, replayed against production. At the origin they all
+answered with machine-readable JSON; at the public edge, Cloudflare silently
+replaced <code>502</code>/<code>504</code> bodies with its own sixteen-byte text
+page. The service was honest where it runs and dishonest where customers
+connect. A temporary probe measured which statuses survive that edge (all of
+them except 502/504), the API remapped every gateway-status error to
+404/403/503 &mdash; no <code>error.code</code> changed, and &ldquo;branch on the
+error code, not the HTTP status&rdquo; is contract language now &mdash; and the
+fix was verified through the real edge: HTTP/2, full JSON,
+<code>repository_or_ref_not_found</code> intact
+(<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.0">v1.4.0</a>).
+The docs drifted once inside the same day &mdash; three limits-table cells still
+promised 504 &mdash; and the residual sweep caught and fixed it
+(<a href="https://github.com/auroraxo/docrot-api/commit/8c71d8a">8c71d8a</a>).
+The rot the product measures, measured in the product itself, caught by the
+same reflexes.</p>
 
 <h2>The receipts</h2>
 <div class="box">
@@ -263,13 +287,13 @@ and one archived repository (minio) documented as historical rot because there i
 </div>
 
 <h2>Methods, briefly</h2>
-<p>Seven releases across two days (<a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.0">v1.0.0</a>,
+<p>Seven releases for the scanner across two days (<a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.0">v1.0.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.1">v1.0.1</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.1.0">v1.1.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.2.0">v1.2.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.0">v1.3.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.1">v1.3.1</a>,
-<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>), 74 unit tests,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>), plus four for the paid API (<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.1.0">v1.1.0</a>&nbsp;&rarr;&nbsp;<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.0">v1.4.0</a>), 74&nbsp;+&nbsp;119 unit tests,
 every published number verified line by line before it went out &mdash; and corrected in
 public when a verification changed it. Unresolvable references (docs-site roots, template
 placeholders, data URIs) are counted but excluded from rot figures, so the exclusions are
