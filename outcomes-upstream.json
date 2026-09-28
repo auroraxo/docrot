@@ -83,5 +83,10 @@
     "repo": "aalansehaiyang/technology-talk",
     "status": "reported",
     "text": "Author docsite <code>offercome.cn</code> is unreachable entirely (DNS resolves, HTTPS times out): 477 off-repo images dead across <code>docs/md/**</code>; reported in <a href=\"https://github.com/aalansehaiyang/technology-talk/issues/84\">#84</a>."
+  },
+  {
+    "repo": "sml2h3/ddddocr",
+    "status": "reported",
+    "text": "All 26 off-repo images on author CDN <code>cdn.wenanzhe.com</code> return HTTP 404 (sponsor table and captcha demos across READMEs); reported in <a href=\"https://github.com/sml2h3/ddddocr/issues/317\">#317</a>."
   }
 ]
