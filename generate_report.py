@@ -132,6 +132,8 @@ def render_wave2(wave2, w1data):
     fetch_err = [r["repo"] for r in w2 if r.get("markdownFetchErrors")]
     ext_share = round(100 * t2("external") / t2("uniqueImages")) if t2("uniqueImages") else 0
     ext_share_1 = round(100 * t1("external") / t1("uniqueImages")) if t1("uniqueImages") else 0
+    tp_share = round(100 * t2("externalThirdParty") / t2("uniqueImages")) if t2("uniqueImages") else 0
+    tp_share_1 = round(100 * t1("externalThirdParty") / t1("uniqueImages")) if t1("uniqueImages") else 0
 
     o = []
     o.append("<h2>A second wave: the next 100 repositories</h2>")
@@ -158,8 +160,14 @@ def render_wave2(wave2, w1data):
              "<p>The first %d repositories were the most-starred by volume; this wave adds the "
              "next %d by stars (&ge;15k, no overlap). The share of repositories carrying in-repo "
              "missing images or broken external references barely moves (%d/100 then, %d/100 "
-             "now) &mdash; but the second wave is far more image-heavy (%s unique images vs %s) "
-             "and leans much harder on external hosts (%d%% external vs %d%%).</p>"
+             "now) &mdash; the second wave is far more image-heavy (%s unique images vs %s), "
+             "while the external share stays flat (%d%% vs %d%% of unique images) and the "
+             "third-party share actually dips (%d%% vs %d%%): wave 2's outside images lean "
+             "on GitHub's own mirrors rather than on independent hosts.</p>"
+             "<p class=small>Correction (v1.3.1): earlier prose compared shares across "
+             "different bases (&ldquo;77%% vs 29%%&rdquo; mixed external-per-unique-image with "
+             "third-party-per-reference). The datasets were always correct; the sentence "
+             "was not. Like for like: external 77%% &rarr; 77%%, third-party 53%% &rarr; 31%%.</p>"
              "<p class=small>Honesty ledger: wave 2 was rescanned under scanner v5 after the "
              "HTML-entity false-positive class was caught in our own review process "
              "(see <a href='https://github.com/auroraxo/docrot/releases/tag/v1.2.0'>v1.2.0</a>); "
@@ -167,7 +175,7 @@ def render_wave2(wave2, w1data):
              "upstream survived line-by-line verification before it was filed.%s</p></div>"
              % (len(w1), len(w2), len(affected_1),
                 len(affected), f"{t2('uniqueImages'):,}", f"{t1('uniqueImages'):,}",
-                ext_share, ext_share_1,
+                ext_share, ext_share_1, tp_share, tp_share_1,
                 (" Repositories with transient fetch failures at scan time (disclosed per the "
                  "scanner contract): %s." % e(", ".join(fetch_err))) if fetch_err else ""))
 
@@ -184,6 +192,71 @@ def render_wave2(wave2, w1data):
                         e(str(r.get("externalBroken", 0)))))
         o.append("</table>")
     return "\n".join(o)
+
+
+def render_tier_chart(w1data, wave3, wave2=None):
+    """Inline SVG: rot share and external share across measured star tiers."""
+    def tier(repos, label):
+        n = len(repos)
+        if not n:
+            return None
+        aff = len([r for r in repos if r.get("externalBroken") or r.get("missingInRepo")])
+        tp = round(100 * sum(r.get("externalThirdParty", 0) for r in repos) /
+                   sum(r.get("uniqueImages", 0) for r in repos)) \
+            if sum(r.get("uniqueImages", 0) for r in repos) else 0
+        return (label, round(100 * aff / n), tp)
+
+    rows = []
+    t1 = tier([r for r in w1data.get("repos", []) if "error" not in r], "Wave 1 &middot; top 100")
+    if t1:
+        rows.append(t1)
+    if wave2:
+        t2 = tier([r for r in wave2.get("repos", []) if "error" not in r], "Wave 2 &middot; &ge;15k")
+        if t2:
+            rows.append(t2)
+    t3 = tier([r for r in wave3.get("repos", []) if "error" not in r], "Wave 3 &middot; 10k&ndash;15k")
+    if t3:
+        rows.append(t3)
+    if len(rows) < 2:
+        return ""
+
+    track_w, bar_x = 470, 170
+    row_h, gap, group_gap, top = 26, 7, 34, 34
+    group_h = len(rows) * (row_h + gap) - gap
+    height = top + group_h + group_gap + group_h + 8
+
+    o = ['<svg viewBox="0 0 760 %d" width="100%%" role="img" '
+         'aria-label="Rot share and external-host share across the three measured tiers">' % height]
+    o.append('<text x="0" y="16" fill="#e6e8ee" font-size="13" font-weight="600">'
+             'Repositories carrying rot, per 100 scanned</text>')
+    y = top
+    for label, aff, ext in rows:
+        o.append('<text x="0" y="%d" fill="#9aa3b2" font-size="12" text-anchor="start">%s</text>'
+                 % (y + row_h - 9, label))
+        o.append('<rect x="%d" y="%d" width="%d" height="%d" rx="4" fill="#262b36"/>'
+                 % (bar_x, y, track_w, row_h))
+        w = round(track_w * aff / 100.0)
+        o.append('<rect x="%d" y="%d" width="%d" height="%d" rx="4" fill="#ff6b6b"/>'
+                 % (bar_x, y, w, row_h))
+        o.append('<text x="%d" y="%d" fill="#e6e8ee" font-size="12" font-weight="600">%d%%</text>'
+                 % (bar_x + track_w + 10, y + row_h - 9, aff))
+        y += row_h + gap
+    y += group_gap - gap
+    o.append('<text x="0" y="%d" fill="#e6e8ee" font-size="13" font-weight="600">'
+             'Unique images loaded from off-GitHub hosts</text>' % (y - 16))
+    for label, aff, ext in rows:
+        o.append('<text x="0" y="%d" fill="#9aa3b2" font-size="12" text-anchor="start">%s</text>'
+                 % (y + row_h - 9, label))
+        o.append('<rect x="%d" y="%d" width="%d" height="%d" rx="4" fill="#262b36"/>'
+                 % (bar_x, y, track_w, row_h))
+        w = round(track_w * ext / 100.0)
+        o.append('<rect x="%d" y="%d" width="%d" height="%d" rx="4" fill="#e0b341"/>'
+                 % (bar_x, y, w, row_h))
+        o.append('<text x="%d" y="%d" fill="#e6e8ee" font-size="12" font-weight="600">%d%%</text>'
+                 % (bar_x + track_w + 10, y + row_h - 9, ext))
+        y += row_h + gap
+    o.append('</svg>')
+    return "".join(o)
 
 
 def render_wave3(wave3, w1data, wave2=None):
@@ -238,6 +311,14 @@ def render_wave3(wave3, w1data, wave2=None):
              % (affected_1, mid, len(affected),
                 (" Repositories with transient fetch failures at scan time (disclosed per the "
                  "scanner contract): %s." % e(", ".join(fetch_err))) if fetch_err else ""))
+
+    chart = render_tier_chart(w1data, wave3, wave2)
+    if chart:
+        o.append('<div class=box><h3 style=\'margin-top:0\'>The same finding, drawn</h3>'
+                 '<p class=small style=\'margin-top:4\'>Both figures are computed from the '
+                 'published datasets only &mdash; same scanner, same classification, three '
+                 'independent corpora. The rot share barely moves; third-party dependence '
+                 'swings with where a corpus\'s outside images live.</p>%s</div>' % chart)
 
     if affected:
         o.append("<h2>Wave 3: repositories with findings</h2>")

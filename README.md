@@ -24,8 +24,9 @@ First full pass over the **100 most-used repositories** from the corpus in
 [`drift-results-100.json`](drift-results-100.json) (version pins);
 interactive report: <https://codebyaurora.com/docrot/>.
 
-**Image rot.** 6,179 image references resolved. 1,791 of them (29%) load
-from hosts outside GitHub. 58 external images no longer load, and 87
+**Image rot.** 6,179 image references resolved, covering 3,391 distinct
+images; 2,615 of those (77%) load from outside the repository, 1,791 (53%)
+from hosts GitHub doesn't control. 58 external images no longer load, and 87
 in-repo paths resolve to nothing in the tree they name — **26 of the 100
 repositories carry at least one broken documentation image.** Extremes:
 `appsmithorg/appsmith` (9 dead Notion-hosted design-system screenshots, 73
@@ -59,8 +60,10 @@ not 105.
 resolved across 8,942 unique images, 77% of them external. 104 external
 images are broken and 48 in-repo paths resolve to nothing — **27 of the 100
 carry at least one broken documentation image**, against 26/100 in wave one:
-the rate is corpus-independent, while the external-host dependence nearly
-doubles (77% vs 29%). Wave 2's first scan overcounted broken externals
+the rate is corpus-independent, the external share stays flat (77% vs 77%
+of unique images), and wave 2 leans less on independent third-party hosts
+(31% vs 53%). Corrected in v1.3.1: this sentence previously compared shares
+across different bases ("77% vs 29%") — the datasets were always right. Wave 2's first scan overcounted broken externals
 (248) because HTML-entity-encoded `<img src>` values were live-checked in
 raw form; scanner v5 decodes them, the whole wave was rescanned from
 scratch, and the corrected dataset replaced the published one with md5

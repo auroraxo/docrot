@@ -1,4 +1,5 @@
 import json
+import re
 import os
 import tempfile
 import unittest
@@ -407,6 +408,25 @@ class Wave3ReportTests(unittest.TestCase):
         html = generate_report.render(SAMPLE, None, None, None, bad)
         self.assertNotIn("<script>", html)
         self.assertIn("o/&lt;script&gt;", html)
+
+    def test_tier_chart_absent_with_single_tier(self):
+        self.assertEqual(generate_report.render_tier_chart(SAMPLE, {"repos": []}), "")
+
+    def test_tier_chart_renders_two_groups_and_bars(self):
+        svg = generate_report.render_tier_chart(SAMPLE, self.WAVE3, self.WAVE3)
+        self.assertIn("Repositories carrying rot, per 100 scanned", svg)
+        self.assertIn("Unique images loaded from off-GitHub hosts", svg)
+        # three tiers x two groups = six value labels. Rot: SAMPLE 1/2=50%,
+        # WAVE3-as-w2 1/2=50%, WAVE3 1/2=50%. Third-party per unique:
+        # SAMPLE 1/4=25%, WAVE3 2/5=40%, WAVE3 40% (w2/w3 same fixture).
+        vals = re.findall(r'font-weight="600">(\d+)%<', svg)
+        self.assertEqual(vals, ["50", "50", "50", "25", "40", "40"])
+
+    def test_tier_chart_no_chart_without_second_tier_in_report(self):
+        html = generate_report.render(SAMPLE, None, None, None, self.WAVE3)
+        self.assertIn("The same finding, drawn", html)   # w1 + w3 -> chart
+        html2 = generate_report.render(SAMPLE)
+        self.assertNotIn("The same finding, drawn", html2)
 
 
 if __name__ == "__main__":

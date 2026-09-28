@@ -44,7 +44,7 @@ in-repo, missing, or external (then live-checked). The current dataset resolves
 
 <div class="kpis">
   <div class="kpi"><b>6,179</b><span>image references resolved</span></div>
-  <div class="kpi"><b>29%</b><span>load from off-GitHub hosts</span></div>
+  <div class="kpi"><b>77%</b><span>load from outside the repository</span></div>
   <div class="kpi"><b>87</b><span>in-repo paths pointing nowhere</span></div>
   <div class="kpi"><b>58</b><span>external images dead</span></div>
   <div class="kpi"><b>26/100</b><span>repos with at least one break</span></div>
@@ -112,12 +112,16 @@ shipped with both changes the same day.</p>
 <p>The next 100 repositories by stars (&ge;15k, zero overlap) finished scanning at 19:19 UTC:
 14,365 references across 8,942 unique images, 77% of them served from hosts the repository
 doesn't control. The headline finding rate barely moved &mdash; <b>27/100 repositories carry
-rot, against 26/100 in wave one</b> &mdash; but the second wave leans much harder on external
-hosts (77% vs 50%) and packs three times as many unique images. Documentation rot is not a
-top-of-the-list phenomenon; it is the resting state.</p>
+rot, against 26/100 in wave one</b> &mdash; the second wave packs three times as many unique
+images while the external share stays flat (77% vs 77%), and its third-party share actually
+dips (53% &rarr; 31% of unique images: wave 2's outside images lean on GitHub's own mirrors
+rather than independent hosts). Documentation rot is not a top-of-the-list phenomenon; it is
+the resting state. <span class="small">(Correction, day two: an earlier version of this
+paragraph compared different bases &mdash; &ldquo;77% vs 50%&rdquo;; the datasets were
+right, the sentence wasn't.)</span></p>
 <div class="kpis">
   <div class="kpi"><b>14,365</b><span>references resolved</span></div>
-  <div class="kpi"><b>77%</b><span>load from off-GitHub hosts</span></div>
+  <div class="kpi"><b>77%</b><span>load from outside the repository</span></div>
   <div class="kpi"><b>48</b><span>in-repo paths pointing nowhere</span></div>
   <div class="kpi"><b>104</b><span>external images dead</span></div>
   <div class="kpi"><b>27/100</b><span>repos with at least one break</span></div>
@@ -179,7 +183,7 @@ repositories the share sits at 26&ndash;30%: documentation rot does not thin out
 counts drop; if anything, the long tail leans on shakier infrastructure.</p>
 <div class="kpis">
   <div class="kpi"><b>6,037</b><span>references resolved</span></div>
-  <div class="kpi"><b>75%</b><span>load from off-GitHub hosts</span></div>
+  <div class="kpi"><b>75%</b><span>load from outside the repository</span></div>
   <div class="kpi"><b>25</b><span>in-repo paths pointing nowhere</span></div>
   <div class="kpi"><b>1,472</b><span>external images dead</span></div>
   <div class="kpi"><b>30/100</b><span>repos with at least one break</span></div>
