@@ -20,6 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   comments are excluded by the existing strips.
 
 ### Fixed
+- **Tag repointed after a red-suite ship (process correction):** v1.5.0 was
+  initially tagged on a commit whose new tests still called
+  `extract_image_refs` unqualified while the module is imported as `scan`
+  (8 NameErrors; the suite run happened, but its red result was not
+  heeded before the release chain continued). Product code was unaffected
+  and separately verified by the extraction repro. Tests now use the
+  module namespace; the tag and release point at a commit where the full
+  suite is **82/82 green**.
 - **False-negative class closed:** reference-style images were silently
   skipped, under-counting references in repositories that use them. Found
   by a scanner-vs-API parity probe — the paid API's Markdown extractor

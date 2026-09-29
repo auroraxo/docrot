@@ -466,35 +466,35 @@ class AdevDocsiteTests(unittest.TestCase):
 class ReferenceStyleImageTests(unittest.TestCase):
     def test_full_reference_use_resolves(self):
         md = "![logo][lg]\n\n[lg]: https://example.com/logo.png\n"
-        self.assertIn("https://example.com/logo.png", extract_image_refs(md))
+        self.assertIn("https://example.com/logo.png", scan.extract_image_refs(md))
 
     def test_collapsed_use_uses_alt_as_label(self):
         md = "![logo][]\n\n[logo]: https://example.com/logo.png\n"
-        self.assertIn("https://example.com/logo.png", extract_image_refs(md))
+        self.assertIn("https://example.com/logo.png", scan.extract_image_refs(md))
 
     def test_shorthand_use_resolves(self):
         md = "![logo]\n\n[logo]: https://example.com/logo.png\n"
-        self.assertIn("https://example.com/logo.png", extract_image_refs(md))
+        self.assertIn("https://example.com/logo.png", scan.extract_image_refs(md))
 
     def test_link_only_definition_is_not_an_image(self):
         md = "see [the docs][docs]\n\n[docs]: https://example.com/page\n"
-        self.assertNotIn("https://example.com/page", extract_image_refs(md))
+        self.assertNotIn("https://example.com/page", scan.extract_image_refs(md))
 
     def test_unresolved_use_produces_nothing(self):
         md = "![x][missing]\n"
-        self.assertEqual(extract_image_refs(md), [])
+        self.assertEqual(scan.extract_image_refs(md), [])
 
     def test_labels_case_insensitive(self):
         md = "![a][Logo]\n\n[logo]: https://example.com/l.png\n"
-        self.assertIn("https://example.com/l.png", extract_image_refs(md))
+        self.assertIn("https://example.com/l.png", scan.extract_image_refs(md))
 
     def test_definition_in_code_block_ignored(self):
         md = "![logo][lg]\n\n```\n[lg]: https://example.com/code.png\n```\n"
-        self.assertEqual(extract_image_refs(md), [])
+        self.assertEqual(scan.extract_image_refs(md), [])
 
     def test_definition_in_comment_ignored(self):
         md = "![logo][lg]\n\n<!-- [lg]: https://example.com/c.png -->\n"
-        self.assertEqual(extract_image_refs(md), [])
+        self.assertEqual(scan.extract_image_refs(md), [])
 
 class StripHtmlCommentsTests(unittest.TestCase):
     """Commented-out image syntax is not rendered; it must not enter the dataset."""
