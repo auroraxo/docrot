@@ -223,7 +223,7 @@ Every release is tagged and documented twice: [Releases](https://github.com/auro
 carry the full measurement narrative per version, and the
 [CHANGELOG](CHANGELOG.md) keeps a machine-friendly Keep-a-Changelog history
 ([1.0.0] through the current version). The scanner itself is versioned in
-`scan.py` (`"version": 7` dataset schema) alongside git tags.
+`scan.py` (`"version": 8` dataset schema) alongside git tags.
 
 ## Licence
 

@@ -516,6 +516,29 @@ class InlineCodePairingTests(unittest.TestCase):
         md = "a\n\n\nb `![p](p.png)` c\n"
         self.assertEqual(scan.extract_image_refs(md), [])
 
+    def test_deep_indented_fence_inside_list_item_not_extracted(self):
+        # Airbnb react/README.md renders 4-space-indented ```jsx fences as
+        # code (verified in GitHub HTML); fence stripping must tolerate the
+        # list-item indent (0-7 spaces per CommonMark).
+        md = ("- For components: use\n\n"
+              "    ```jsx\n"
+              "    // bad\n"
+              "    <img src=\"hello.jpg\" />\n"
+              "    ```\n\n"
+              "    After the block.\n")
+        self.assertEqual(scan.extract_image_refs(md), [])
+
+    def test_odd_backtick_in_item_does_not_leak_next_items_span(self):
+        # Real-file shape (jujumilk3/leaked-system-prompts): a stray
+        # unpaired backtick run in one list item shifted the pairing of the
+        # FOLLOWING item's balanced span and left `![alt](URL)` live. The
+        # bad-case topology was verified against GitHub HTML: that item
+        # renders <code>. CommonMark pairs inline runs per block, so
+        # pairing must split at list-item starts.
+        md = ("- stray ` tick here\n"
+              "- Never fabricate or use `![alt](URL)` markdown\n")
+        self.assertEqual(scan.extract_image_refs(md), [])
+
     def test_backtick_literal_spans_survive_cleanly(self):
         md = "fenced ` ```html `, ` ```svg ` blocks and ![r](real.png)\n"
         self.assertEqual(scan.extract_image_refs(md), ["real.png"])

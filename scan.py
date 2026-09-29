@@ -75,7 +75,7 @@ def strip_code(text):
     dataset. This deliberately handles Markdown's common backtick/tilde forms;
     it is not intended to be a complete Markdown parser.
     """
-    text = re.sub(r"(?ms)^[ \t]{0,3}(`{3,}|~{3,})[^\n]*\n.*?^[ \t]{0,3}\1[ \t]*$", "", text)
+    text = re.sub(r"(?ms)^[ \t]{0,7}(`{3,}|~{3,})[^\n]*\n.*?^[ \t]{0,7}\1[ \t]*$", "", text)
     return _strip_inline_code(text)
 
 
@@ -102,25 +102,44 @@ def _strip_inline_code(text):
         if re.fullmatch(r"\n[ \t]*\n", part):
             out.append(part)          # blank-line separator, verbatim
             continue
-        runs = [(m.start(), m.end(), len(m.group(0))) for m in re.finditer(r"`+", part)]
-        if len(runs) < 2:
-            out.append(part)
-            continue
-        pos = 0
-        i = 0
-        n = len(runs)
-        while i < n:
-            length = runs[i][2]
-            j = i + 1
-            while j < n and runs[j][2] != length:
-                j += 1
-            if j < n:
-                out.append(part[pos:runs[i][0]])
-                pos = runs[j][1]
-                i = j + 1
-            else:
-                i += 1                # unclosed run renders literally
-        out.append(part[pos:])
+        # CommonMark: each list item is its own block with its own inline
+        # content; backtick runs never pair ACROSS an item boundary. Splitting
+        # a part at list-item starts fixes a parity leak an odd run in one
+        # item caused in the next (observed on a real leaked-prompt file:
+        # `![alt](URL)` inside backticks rendered <code> on GitHub but the
+        # shifted pairing left the image syntax live).
+        subs = []
+        last = 0
+        for m in re.finditer(r"(?m)^[ \t]*(?:[-*+]|\d+[.)])[ \t]+", part):
+            if m.start() > last:
+                subs.append(part[last:m.start()])
+                last = m.start()
+        subs.append(part[last:])
+        for sub in subs:
+            out.append(_pair_backtick_runs(sub))
+    return "".join(out)
+
+
+def _pair_backtick_runs(part):
+    runs = [(m.start(), m.end(), len(m.group(0))) for m in re.finditer(r"`+", part)]
+    if len(runs) < 2:
+        return part
+    out = []
+    pos = 0
+    i = 0
+    n = len(runs)
+    while i < n:
+        length = runs[i][2]
+        j = i + 1
+        while j < n and runs[j][2] != length:
+            j += 1
+        if j < n:
+            out.append(part[pos:runs[i][0]])
+            pos = runs[j][1]
+            i = j + 1
+        else:
+            i += 1                # unclosed run renders literally
+    out.append(part[pos:])
     return "".join(out)
 
 
@@ -389,7 +408,7 @@ def main():
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
             json.dump({
-                "tool": "docrot", "version": 7,
+                "tool": "docrot", "version": 8,
                 "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "method": {
                     "markdownFileCapPerRepo": MD_CAP,

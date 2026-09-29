@@ -8,6 +8,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.6.0] — 2026-09-29
+
+### Fixed
+- **Fenced-code stripping tolerates deep indentation (0-7 spaces).** Fences
+  inside list items (CommonMark allows up to 3 spaces of indent for the list
+  plus more for the fence content) rendered as code on GitHub but were not
+  stripped: an image example inside a 4-space-indented ```jsx fence in
+  airbnb/javascript's react/README.md entered the v7 wave-2 dataset as a
+  phantom "missing" finding. Verified against GitHub's rendered HTML.
+- **Inline-code pairing is list-item-local.** A backtick pair spanning a
+  blank line at a list-item boundary still closes (CommonMark: each list
+  item is its own block). The paragraph-local-only rule left an
+  `![alt](URL)` example in a leaked-prompts file live (jujumilk3/
+  leaked-system-prompts, wave-3 v7 dataset, also verified as `<code>` in
+  GitHub HTML). Pairing now splits at item starts before matching runs.
+- Dataset schema `version` bumps 7 → **8**.
+
+### Process
+- Found during the manual classification of the v7 rescan (the
+  before-publishing rule, again): BOTH defects were phantom findings in
+  freshly produced v7 datasets. Nothing was published from v7; a schema-8
+  rescan supersedes it. synthesize_v8.py encodes the success expectations
+  (both new phantoms absent, the original skills phantom still absent,
+  webpack's 327 references intact) BEFORE the v8 results exist.
+- Suite 87 → **89 green**.
+
+## [1.5.2] — 2026-09-29
+
+### Fixed
+- Separator routing in the paragraph-local inline-code pairing: a content
+  part starting with a single newline (triple-newline sequences) was
+  misrouted as a blank-line separator and skipped pairing. Discriminator
+  is now a full match on the blank-line pattern. Suite 86 → 87.
+
 ## [1.5.1] — 2026-09-29
 
 ### Fixed
