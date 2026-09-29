@@ -509,6 +509,13 @@ class InlineCodePairingTests(unittest.TestCase):
         md = "run `cat evals.json` then ![ok](https://e.com/x.png) end\n"
         self.assertEqual(scan.extract_image_refs(md), ["https://e.com/x.png"])
 
+    def test_triple_newline_before_code_span_still_pairs(self):
+        # A content part may start with \n (triple newline); only a full
+        # blank-line pair is a separator. startswith("\n") misrouted it and
+        # leaked the span.
+        md = "a\n\n\nb `![p](p.png)` c\n"
+        self.assertEqual(scan.extract_image_refs(md), [])
+
     def test_backtick_literal_spans_survive_cleanly(self):
         md = "fenced ` ```html `, ` ```svg ` blocks and ![r](real.png)\n"
         self.assertEqual(scan.extract_image_refs(md), ["real.png"])

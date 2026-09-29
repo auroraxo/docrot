@@ -99,7 +99,7 @@ def _strip_inline_code(text):
     parts = re.split(r"(\n[ \t]*\n)", text)
     out = []
     for part in parts:
-        if part.startswith("\n"):
+        if re.fullmatch(r"\n[ \t]*\n", part):
             out.append(part)          # blank-line separator, verbatim
             continue
         runs = [(m.start(), m.end(), len(m.group(0))) for m in re.finditer(r"`+", part)]
