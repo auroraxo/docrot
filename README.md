@@ -100,6 +100,31 @@ rot clusters of the project:
   all 26 off-repo images on author CDN `cdn.wenanzhe.com` return HTTP 404,
   breaking sponsor badges and captcha demonstration images in READMEs.
 
+**The 300-repo audit (scanner v5 -> v8).** Before extending the corpus any
+further, all three waves were re-scanned under three newer scanner
+generations and every delta was verified by hand. The verification found
+three false-positive classes *in the scanner itself* (interleaved
+backtick-run pairing, deeply indented fences inside list items, and
+list-item boundary pairing), each reproduced against GitHub's rendered
+HTML on a real repository and fixed before anything was published —
+[v1.5.1](https://github.com/auroraxo/docrot/releases/tag/v1.5.1),
+[v1.5.2](https://github.com/auroraxo/docrot/releases/tag/v1.5.2),
+[v1.6.0](https://github.com/auroraxo/docrot/releases/tag/v1.6.0), mirrored
+in [docrot-api v1.5.0](https://github.com/auroraxo/docrot-api/releases/tag/v1.5.0)
+and [v1.6.0](https://github.com/auroraxo/docrot-api/releases/tag/v1.6.0).
+Four hard expectation gates (both new phantoms absent, the original one
+still absent, no over-stripping of webpack's 47 recovered reference
+definitions) ran green before publication. The headline survived its own
+correction pass: rot share across 300 repositories moved from 83/300
+(27.7%) under v5 to 90/300 (30.0%) under
+[v8](https://codebyaurora.com/docrot/story.html) — still inside the
+published 26–30% band, per wave 28/29/33. Full datasets:
+[`docrot-results-wave1-v8.json`](docrot-results-wave1-v8.json),
+[`docrot-results-wave2-v8.json`](docrot-results-wave2-v8.json),
+[`docrot-results-wave3-v8.json`](docrot-results-wave3-v8.json); the earlier
+v6/v7 datasets remain in the repo as archived intermediates and are
+superseded.
+
 ## Usage
 
 ```sh
