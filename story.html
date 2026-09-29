@@ -273,6 +273,30 @@ break again.
 The rot the product measures, measured in the product itself, caught by the
 same reflexes.</p>
 
+<h2>The scanner&#39;s own blind spot, measured</h2>
+<p>Closing the reference-style image gap in
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.5.0">v1.5.0</a> raised an
+uncomfortable question: how much rot had the old extractor silently skipped? Wave&nbsp;1 &mdash;
+the top-100 corpus &mdash; was re-scanned under scanner v6 (<a href="docrot-wave1-v6.json">full
+dataset</a>) and every delta was checked by hand. The missed references were real and
+widespread: unique-image counts moved in 21 of 100 repositories (net +47), and
+webpack/webpack alone surfaced 47 badges it had always rendered but v5 never counted &mdash;
+all 47 verified as <code>[label]: url</code> definitions at the foot of its README, the exact
+class the old extractor dropped. Yet the headline barely moved: repositories carrying broken
+references went from <strong>26/100 under v5 to 28/100 under v6</strong> &mdash; still inside the
+published 26&ndash;30% band. Checked one by one, the delta splits cleanly:
+clickhouse/clickhouse is the one genuine find (two reference-style images in
+<code>base/poco/README.md</code> pointing at <code>doc/images/*.png</code> paths never
+committed); excalidraw and nuxt entered the rot set only because deepwiki badges served 200
+during the v5 window and rate-limit 429s during the v6 window; webpack&#39;s packagephobia
+column went 1&rarr;21 for the same reason &mdash; the 429 was already in the v5 dataset, v6
+just sees all twenty-one references now that definitions resolve; and istio/istio left the
+rot set because upstream fixed the reference itself between the two scanned commits
+(<code>images/operator_render_flow.svg</code> &rarr;
+<code>../../operator/images/operator_render_flow.svg</code>), content drift, not a scanner
+artifact. The blind spot hid references, not a headline: the 26&ndash;30% claim survived its
+own correction pass.</p>
+
 <h2>The receipts</h2>
 <div class="box">
 <p style="margin:0">Eighteen upstream interactions across two days, each with a public trail:
@@ -292,13 +316,14 @@ and one archived repository (minio) documented as historical rot because there i
 </div>
 
 <h2>Methods, briefly</h2>
-<p>Seven releases for the scanner across two days (<a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.0">v1.0.0</a>,
+<p>Eight releases for the scanner across two days (<a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.0">v1.0.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.0.1">v1.0.1</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.1.0">v1.1.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.2.0">v1.2.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.0">v1.3.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.1">v1.3.1</a>,
-<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>), plus five for the paid API (<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.1.0">v1.1.0</a>&nbsp;&rarr;&nbsp;<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.1">v1.4.1</a>), 74&nbsp;+&nbsp;119 unit tests,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.5.0">v1.5.0</a>), plus five for the paid API (<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.1.0">v1.1.0</a>&nbsp;&rarr;&nbsp;<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.1">v1.4.1</a>), 82&nbsp;+&nbsp;119 unit tests,
 every published number verified line by line before it went out &mdash; and corrected in
 public when a verification changed it. Unresolvable references (docs-site roots, template
 placeholders, data URIs) are counted but excluded from rot figures, so the exclusions are
