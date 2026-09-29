@@ -496,6 +496,23 @@ class ReferenceStyleImageTests(unittest.TestCase):
         md = "![logo][lg]\n\n<!-- [lg]: https://example.com/c.png -->\n"
         self.assertEqual(scan.extract_image_refs(md), [])
 
+class InlineCodePairingTests(unittest.TestCase):
+    def test_image_example_in_code_span_not_counted(self):
+        md = "put a markdown reference - `![](<path from flow root>)` for an image\n"
+        self.assertEqual(scan.extract_image_refs(md), [])
+
+    def test_spans_do_not_pair_across_blank_lines(self):
+        md = "a ` x\n\nb `![p](p.png)` c\n"
+        self.assertEqual(scan.extract_image_refs(md), [])
+
+    def test_real_use_between_spans_still_counted(self):
+        md = "run `cat evals.json` then ![ok](https://e.com/x.png) end\n"
+        self.assertEqual(scan.extract_image_refs(md), ["https://e.com/x.png"])
+
+    def test_backtick_literal_spans_survive_cleanly(self):
+        md = "fenced ` ```html `, ` ```svg ` blocks and ![r](real.png)\n"
+        self.assertEqual(scan.extract_image_refs(md), ["real.png"])
+
 class StripHtmlCommentsTests(unittest.TestCase):
     """Commented-out image syntax is not rendered; it must not enter the dataset."""
 

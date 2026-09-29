@@ -8,6 +8,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.5.1] — 2026-09-29
+
+### Fixed
+- **Inline-code stripping is CommonMark-accurate (Scanner v7).** Image syntax
+  inside code spans (doc examples like `` `![](<path from flow root>)` ``) is
+  no longer extracted. The previous regex paired backtick runs positionally
+  instead of by equal length, paragraph-locally; on real documents with
+  interleaved run lengths it left phantom references in the dataset. Found
+  while manually verifying the wave-2/wave-3 v6 deltas: anthropics/skills
+  `eval-hillclimb.md` — GitHub renders the span as `<code>`, scanner v6 had
+  counted it as a missing image (verified against GitHub's rendered HTML).
+- Dataset schema `version` bumps 6 → **7**.
+- **Honesty note:** the wave-2 v6 dataset published today contains exactly
+  one known phantom (`path from flow root`, anthropics/skills, reported as
+  missing). A 300-repo v7 rescan supersedes the v6 wave datasets; the story
+  is NOT updated until that synthesis is complete and every mover verified.
+
+### Added
+- 4 regression tests (span example, paragraph locality, interleaved literal
+  ticks, real reference between spans); suite 82 → **86 green**.
+
+---
+
 ## [1.5.0] — 2026-09-29
 
 ### Added

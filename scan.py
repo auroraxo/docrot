@@ -76,8 +76,52 @@ def strip_code(text):
     it is not intended to be a complete Markdown parser.
     """
     text = re.sub(r"(?ms)^[ \t]{0,3}(`{3,}|~{3,})[^\n]*\n.*?^[ \t]{0,3}\1[ \t]*$", "", text)
-    text = re.sub(r"(?s)(`+).*?\1", "", text)
-    return text
+    return _strip_inline_code(text)
+
+
+def _strip_inline_code(text):
+    """Remove inline code spans with CommonMark equal-length run pairing.
+
+    A backtick run opens a span; its closer is the next run of the SAME
+    length; runs of a different length in between are span content. The
+    previous regex ((`+).*?\1) deviated from this on documents that
+    interleave run lengths (stray single ticks next to triple-tick
+    literals): a phantom image inside an unclosed-looking span could
+    survive stripping and enter the dataset as a false missing finding
+    (observed on a real 68 KB doc, verified against GitHub's rendered
+    HTML, where the span renders as <code>).
+    """
+    # Code spans are inline constructs: inline parsing happens per paragraph,
+    # so a backtick run never pairs across a blank line. Splitting on blank
+    # lines (separators kept verbatim) encodes that rule; without it a stray
+    # tick in one paragraph would swallow the opener of the next and leak its
+    # span content into the dataset.
+    parts = re.split(r"(\n[ \t]*\n)", text)
+    out = []
+    for part in parts:
+        if part.startswith("\n"):
+            out.append(part)          # blank-line separator, verbatim
+            continue
+        runs = [(m.start(), m.end(), len(m.group(0))) for m in re.finditer(r"`+", part)]
+        if len(runs) < 2:
+            out.append(part)
+            continue
+        pos = 0
+        i = 0
+        n = len(runs)
+        while i < n:
+            length = runs[i][2]
+            j = i + 1
+            while j < n and runs[j][2] != length:
+                j += 1
+            if j < n:
+                out.append(part[pos:runs[i][0]])
+                pos = runs[j][1]
+                i = j + 1
+            else:
+                i += 1                # unclosed run renders literally
+        out.append(part[pos:])
+    return "".join(out)
 
 
 def strip_html_comments(text):
@@ -345,7 +389,7 @@ def main():
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
             json.dump({
-                "tool": "docrot", "version": 6,
+                "tool": "docrot", "version": 7,
                 "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "method": {
                     "markdownFileCapPerRepo": MD_CAP,
