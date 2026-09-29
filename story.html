@@ -273,29 +273,58 @@ break again.
 The rot the product measures, measured in the product itself, caught by the
 same reflexes.</p>
 
-<h2>The scanner&#39;s own blind spot, measured</h2>
+<h2>The scanner&#39;s own blind spot, measured &mdash; across all 300 repositories</h2>
 <p>Closing the reference-style image gap in
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.5.0">v1.5.0</a> raised an
-uncomfortable question: how much rot had the old extractor silently skipped? Wave&nbsp;1 &mdash;
-the top-100 corpus &mdash; was re-scanned under scanner v6 (<a href="docrot-wave1-v6.json">full
-dataset</a>) and every delta was checked by hand. The missed references were real and
-widespread: unique-image counts moved in 21 of 100 repositories (net +47), and
-webpack/webpack alone surfaced 47 badges it had always rendered but v5 never counted &mdash;
-all 47 verified as <code>[label]: url</code> definitions at the foot of its README, the exact
-class the old extractor dropped. Yet the headline barely moved: repositories carrying broken
-references went from <strong>26/100 under v5 to 28/100 under v6</strong> &mdash; still inside the
-published 26&ndash;30% band. Checked one by one, the delta splits cleanly:
-clickhouse/clickhouse is the one genuine find (two reference-style images in
-<code>base/poco/README.md</code> pointing at <code>doc/images/*.png</code> paths never
-committed); excalidraw and nuxt entered the rot set only because deepwiki badges served 200
-during the v5 window and rate-limit 429s during the v6 window; webpack&#39;s packagephobia
-column went 1&rarr;21 for the same reason &mdash; the 429 was already in the v5 dataset, v6
-just sees all twenty-one references now that definitions resolve; and istio/istio left the
-rot set because upstream fixed the reference itself between the two scanned commits
-(<code>images/operator_render_flow.svg</code> &rarr;
-<code>../../operator/images/operator_render_flow.svg</code>), content drift, not a scanner
-artifact. The blind spot hid references, not a headline: the 26&ndash;30% claim survived its
-own correction pass.</p>
+uncomfortable question: how much rot had the old extractor silently skipped? What began as a
+wave-1 check grew into a full 300-repository audit across three scanner schemas &mdash; and in
+verifying our own numbers, we found three distinct phantom-finding classes in the scanner
+itself, fixed them across three releases
+(<a href="https://github.com/auroraxo/docrot/releases/tag/v1.5.1">v1.5.1</a>,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.5.2">v1.5.2</a>,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.6.0">v1.6.0</a>, mirrored in
+the paid <a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.6.0">docrot-api v1.6.0</a>),
+and ran four automated hard-expectation gates before publishing a single byte:
+<a href="docrot-wave1-v8.json">wave&nbsp;1 (v8)</a>,
+<a href="docrot-wave2-v8.json">wave&nbsp;2 (v8)</a>,
+<a href="docrot-wave3-v8.json">wave&nbsp;3 (v8)</a>.</p>
+<div class="kpis">
+  <div class="kpi"><b>17,026</b><span>unique images (v8)</span></div>
+  <div class="kpi"><b>+236</b><span>recovered vs v5 (16,790)</span></div>
+  <div class="kpi"><b>83 &rarr; 90</b><span>rot repositories / 300</span></div>
+  <div class="kpi"><b>30.0%</b><span>total rot share (v5 was 27.7%)</span></div>
+  <div class="kpi"><b>4/4</b><span>expectation gates green</span></div>
+</div>
+<p>The headline metric held: across the 300 repositories, the rot share moved from
+<strong>83/300 (27.7%) under v5</strong> to <strong>90/300 (30.0%) under v8</strong> &mdash;
+precisely inside the published 26&ndash;30% band (wave 1: 26%&rarr;28%; wave 2: 27%&rarr;29%;
+wave 3: 30%&rarr;33%). But the manual verification of every delta uncovered a deeper story:
+our own tool had been producing false positives:</p>
+<ul>
+  <li><strong>Phantom 1 (fixed in v1.5.1/v1.5.2):</strong> A real 68&nbsp;KB document
+  (<code>anthropics/skills</code>) carried a code-span example whose backtick runs had
+  interleaved lengths. The scanner&#39;s positional regex failed to match them, leaving a
+  markdown image example alive; GitHub renders it as <code>&lt;code&gt;</code>. We rewrote
+  inline-code pairing to CommonMark equal-length paragraph-local rules (gate E1c: 0 missing in v8).</li>
+  <li><strong>Phantom 2 (fixed in v1.6.0):</strong> <code>airbnb/javascript</code> had a
+  4-space-indented <code>```jsx</code> fence inside a list item. The old fence-stripper only
+  tolerated 0&ndash;3 spaces of indent. The example <code>&lt;img src="hello.jpg"&gt;</code>
+  entered the v7 dataset as a false missing image; GitHub renders it as code. Tolerating 0&ndash;7
+  indent closed it (gate E1a: 0 missing in v8).</li>
+  <li><strong>Phantom 3 (fixed in v1.6.0):</strong> An unpaired backtick in one list item
+  shifted the pairing of the subsequent item in <code>jujumilk3/leaked-system-prompts</code>,
+  leaking <code>![alt](URL)</code> into the report. Pairing was made list-item-local
+  (gate E1b: exactly 2 missing in v8, the phantom URL gone).</li>
+  <li><strong>No over-stripping:</strong> All 47 reference-style badges recovered in
+  <code>webpack/webpack</code> remain intact across all revisions (gate E2: exactly 327
+  unique images in v8).</li>
+</ul>
+<p>The non-phantom movers split into three clean real-world classes: transient 429/502 outages
+(deepwiki, netdata badge service, formatjs), upstream content drift (istio fixed an image path;
+gradio added guide chapters), and <code>MD_CAP=150</code> window drift (repositories with &gt;150
+markdown files seeing their sorted window shift between commits, as in gradio&#39;s custom-component
+guides). The blind spot hid references, not a headline &mdash; and when we found the scanner&#39;s
+own errors, we fixed and proved them before publishing the corrected dataset.</p>
 
 <h2>The receipts</h2>
 <div class="box">
