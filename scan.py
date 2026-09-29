@@ -42,6 +42,15 @@ MD_IMG = re.compile(
 )
 HTML_IMG = re.compile(r"<img\b[^>]*?\bsrc\s*=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s>]+))", re.I)
 
+# Reference-style images: the use is `![alt][label]` (or collapsed/shorthand);
+# the URL lives in a `[label]: url` definition elsewhere in the document.
+MD_REF_USE = re.compile(r"!\[([^\]]*)\]\[([^\]]*)\]")
+MD_SHORT_USE = re.compile(r"!\[([^\]\n]+)\](?!\[|\()")
+MD_REF_DEF = re.compile(
+    r"(?m)^[ \t]{0,3}\[([^\]\n]+)\]:[ \t]*(?:<([^>\n]*)>|([^\s]+))"
+    r"(?:[ \t]+(?:\"[^\"]*\"|'[^']*'|\([^)]*\)))?[ \t]*$"
+)
+
 GITHUB_OWNED = ("raw.githubusercontent.com", "github.com", "gist.github.com",
                 "user-images.githubusercontent.com", "camo.githubusercontent.com",
                 "avatars.githubusercontent.com", "github.githubassets.com",
@@ -99,6 +108,37 @@ def extract_image_refs(text):
             # Browsers decode HTML entities in attribute values before fetching;
             # check and record the decoded URL, keep raw value in originalRef.
             out.append(html.unescape(ref))
+    out.extend(reference_image_urls(text))
+    return out
+
+
+def reference_image_urls(text):
+    """URLs of reference-style images that actually render.
+
+    A `[label]: url` definition only becomes an image reference when an
+    image use points at it; a definition referenced solely by a plain text
+    link is a link target, not an image, and stays out. Labels match
+    case-insensitively (CommonMark). Unresolved uses (`![x][nope]`) render
+    as literal text, not a broken image, and produce nothing.
+    """
+    defs = {}
+    for m in MD_REF_DEF.finditer(text):
+        label = m.group(1).strip().casefold()
+        url = m.group(2) if m.group(2) is not None else m.group(3)
+        if label and url and label not in defs:
+            defs[label] = url
+    if not defs:
+        return []
+    out = []
+    for m in MD_REF_USE.finditer(text):
+        label = (m.group(2) or m.group(1)).strip().casefold()
+        url = defs.get(label)
+        if url:
+            out.append(url)
+    for m in MD_SHORT_USE.finditer(text):
+        url = defs.get(m.group(1).strip().casefold())
+        if url:
+            out.append(url)
     return out
 
 
@@ -305,7 +345,7 @@ def main():
             repos.append({"repo": slug, "error": "%s: %s" % (type(e).__name__, e)})
         with open(out, "w") as f:
             json.dump({
-                "tool": "docrot", "version": 5,
+                "tool": "docrot", "version": 6,
                 "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "method": {
                     "markdownFileCapPerRepo": MD_CAP,

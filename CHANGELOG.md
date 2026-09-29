@@ -8,6 +8,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.5.0] — 2026-09-29
+
+### Added
+- **Reference-style images are counted (Scanner v6):** `![alt][label]`,
+  collapsed `![alt][]`, and shorthand `![label]` uses now resolve against
+  their `[label]: url` definitions and enter the dataset. Precision guards:
+  a definition referenced only by a plain text link remains a link target,
+  not an image; unresolved uses render as literal text and produce nothing;
+  labels match case-insensitively; definitions inside code blocks or HTML
+  comments are excluded by the existing strips.
+
+### Fixed
+- **False-negative class closed:** reference-style images were silently
+  skipped, under-counting references in repositories that use them. Found
+  by a scanner-vs-API parity probe — the paid API's Markdown extractor
+  already consumed reference definitions while the open-source scanner did
+  not (the mirror image of the v1.4.0 comment find). Dataset schema
+  `version` bumps to 6; suite 74 → **82 green**.
+
+---
+
 ## [1.4.0] — 2026-09-28
 
 ### Fixed
