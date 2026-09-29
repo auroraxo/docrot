@@ -264,7 +264,12 @@ fix was verified through the real edge: HTTP/2, full JSON,
 (<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.0">v1.4.0</a>).
 The docs drifted once inside the same day &mdash; three limits-table cells still
 promised 504 &mdash; and the residual sweep caught and fixed it
-(<a href="https://github.com/auroraxo/docrot-api/commit/8c71d8a">8c71d8a</a>).
+(<a href="https://github.com/auroraxo/docrot-api/commit/8c71d8a">8c71d8a</a>). Later the same day, tracing the public discovery chain
+caught one more: the service&#39;s own root endpoint advertised its documentation
+with a relative path that resolved to a 404 behind the edge &mdash; fixed in
+<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.1">v1.4.1</a>,
+and the edge replay grew to 18 checks so root discovery can never silently
+break again.
 The rot the product measures, measured in the product itself, caught by the
 same reflexes.</p>
 
@@ -293,7 +298,7 @@ and one archived repository (minio) documented as historical rot because there i
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.2.0">v1.2.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.0">v1.3.0</a>,
 <a href="https://github.com/auroraxo/docrot/releases/tag/v1.3.1">v1.3.1</a>,
-<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>), plus four for the paid API (<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.1.0">v1.1.0</a>&nbsp;&rarr;&nbsp;<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.0">v1.4.0</a>), 74&nbsp;+&nbsp;119 unit tests,
+<a href="https://github.com/auroraxo/docrot/releases/tag/v1.4.0">v1.4.0</a>), plus five for the paid API (<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.1.0">v1.1.0</a>&nbsp;&rarr;&nbsp;<a href="https://github.com/auroraxo/docrot-api/releases/tag/v1.4.1">v1.4.1</a>), 74&nbsp;+&nbsp;119 unit tests,
 every published number verified line by line before it went out &mdash; and corrected in
 public when a verification changed it. Unresolvable references (docs-site roots, template
 placeholders, data URIs) are counted but excluded from rot figures, so the exclusions are
