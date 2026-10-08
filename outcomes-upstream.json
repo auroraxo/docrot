@@ -1,92 +1,92 @@
 [
-  {
-    "repo": "apache/airflow",
-    "status": "merged",
-    "text": "Stale version pin in README (==3.3.0 vs 3.4.0) reported in <a href='https://github.com/apache/airflow/issues/73769'>#73769</a>, fixed in <a href='https://github.com/apache/airflow/pull/73770'>#73770</a>, approved and <b>merged</b> into main by PMC chair Jarek Potiuk on 2026-09-27."
-  },
-  {
-    "repo": "appsmithorg/appsmith",
-    "status": "triaged",
-    "text": "82 broken image references in the ADS design-system docs (9 dead Notion S3 assets + 73 missing in-repo docs/ images) reported in <a href='https://github.com/appsmithorg/appsmith/issues/42298'>#42298</a>; taken into the team's internal tracker as <a href='https://linear.app/appsmith/issue/APP-16043'>APP-16043</a>."
-  },
-  {
-    "repo": "tensorflow/tensorflow",
-    "status": "fix-proposed",
-    "text": "9 dead build-status badges in the README's Official Builds table (HTTP 403) and discontinued Bintray link reported in <a href=\"https://github.com/tensorflow/tensorflow/issues/128150\">#128150</a>; reassigned and labelled <em>awaiting PR merge</em> &mdash; fix up as <a href=\"https://github.com/tensorflow/tensorflow/pull/128179\">PR #128179</a>, reporter-verified in-thread (all 9 badges still 403, every replacement URL 200)."
-  },
-  {
-    "repo": "vitejs/vite",
-    "status": "policy-closed",
-    "text": "2 broken announcement OG-image links in the changelog (caused by the .png to .webp asset rename in 91396071) submitted as <a href='https://github.com/vitejs/vite/pull/23594'>#23594</a>; automatically closed under the project's AI policy via agentscan without human review. Reproducible verification chain left in <a href='https://github.com/vitejs/vite/pull/23594#issuecomment-5856570501'>comment</a> for human maintainers."
-  },
-  {
-    "repo": "minio/minio",
-    "status": "archived",
-    "text": "2 missing in-repo images in vendored package READMEs (<code>internal/ringbuffer/Circular_Buffer_Animation.gif</code>, <code>internal/s3select/jstream/jstream.png</code>) verified 404 at HEAD \u2014 <b>not reportable</b>: the repository is archived and read-only. The finding remains in the dataset as historical rot."
-  },
-  {
-    "repo": "istio/istio",
-    "status": "merged",
-    "text": "Broken image link in <code>architecture/environments/operator.md</code> (referenced <code>images/operator_render_flow.svg</code>, 404; actual asset at <code>operator/images/operator_render_flow.svg</code>) reported in <a href='https://github.com/istio/istio/issues/61944'>#61944</a>; fixed in <a href='https://github.com/istio/istio/pull/61950'>PR #61950</a> and merged into master."
-  },
-  {
-    "repo": "moby/moby",
-    "status": "reported",
-    "text": "CNM diagram broken in <code>daemon/libnetwork/docs/design.md</code> (root-relative <code>/docs/cnm-model.jpg</code> \u2192 404 while the image sits next to the document at <code>daemon/libnetwork/docs/cnm-model.jpg</code>, 200) reported in <a href='https://github.com/moby/moby/issues/53789'>#53789</a> with a suggested one-line fix."
-  },
-  {
-    "repo": "nocodb/nocodb",
-    "status": "reported",
-    "text": "Both Data Exporter extension screenshots broken by a doubled <code>data-exporter/</code> path segment in <code>description.md</code> (actual assets live one level up, verified 404/200 pair) reported in <a href='https://github.com/nocodb/nocodb/issues/14662'>#14662</a> with a two-line fix offer."
-  },
-  {
-    "repo": "supabase/supabase",
-    "status": "reported",
-    "text": "Missing BotFather screenshot in the elevenlabs-speech-to-text example README (root-relative <code>/assets/images/cookbooks/\u2026</code> \u2192 404, file exists nowhere in the tree) reported in <a href='https://github.com/supabase/supabase/issues/50948'>#50948</a> with a text-instructions fallback suggestion. The three Croatian/Sinhala README image breaks from the same corpus are separately covered by <a href='https://github.com/supabase/supabase/pull/50300'>#50300</a>."
-  },
-  {
-    "repo": "microsoft/PowerToys",
-    "status": "reported",
-    "text": "Screenshot referenced in <code>tools/project_template/README.md</code> was deleted in 2021 (#14709) but reference survived (verified 404 at HEAD); reported in <a href=\"https://github.com/microsoft/PowerToys/issues/50821\">#50821</a>."
-  },
-  {
-    "repo": "firecrawl/firecrawl",
-    "status": "reported",
-    "text": "9 broken image links across two exported blog articles under <code>examples/blog-articles/</code> (referenced <code>notebook_files/</code> and <code>images/</code> directories were never committed to the repo, all 404); reported in <a href=\"https://github.com/firecrawl/firecrawl/issues/4776\">#4776</a>."
-  },
-  {
-    "repo": "flutter/flutter",
-    "status": "reproduced",
-    "text": "Two broken image references in <code>dev/snippets/README.md</code> (referenced <code>assets/</code> directory missing from tree, both URLs 404); reported in <a href=\"https://github.com/flutter/flutter/issues/193415\">#193415</a>, reproduced by a Flutter triager on master &mdash; fix offered as <a href=\"https://github.com/flutter/flutter/pull/193429\">PR #193429</a> (awaiting Google CLA)."
-  },
-  {
-    "repo": "jackfrued/Python-100-Days",
-    "status": "reported",
-    "text": "Local macOS desktop path committed in markdown (<code>/Users/Hao/Desktop/...</code>), missing <code>res/</code> images (404), and unresolvable <code>localhost</code> URLs; reported in <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>."
-  },
-  {
-    "repo": "labuladong/fucking-algorithm",
-    "status": "reported",
-    "text": "22 broken image paths on author docsite (<code>labuladong.online/algo/images/...</code>, 404 while site root is 200) and missing <code>table_qr2.jpg</code> in repo; reported in <a href=\"https://github.com/labuladong/fucking-algorithm/issues/2653\">#2653</a>."
-  },
-  {
-    "repo": "jackfrued/Python-100-Days",
-    "status": "fix-proposed",
-    "text": "Follow-up on <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>: the two <code>localhost</code> image URLs exist on the author's public Gitee mirror (verified HTTP 200); minimal two-line fix proposed in <a href=\"https://github.com/jackfrued/Python-100-Days/pull/1218\">#1218</a>."
-  },
-  {
-    "repo": "Azure/azure-quickstart-templates",
-    "status": "reported",
-    "text": "All 892 CI/deployment status badges on <code>azurequickstartsservice.blob.core.windows.net</code> return HTTP 409 <code>PublicAccessNotPermitted</code> (146 READMEs); reported in <a href=\"https://github.com/Azure/azure-quickstart-templates/issues/14882\">#14882</a>."
-  },
-  {
-    "repo": "aalansehaiyang/technology-talk",
-    "status": "reported",
-    "text": "Author docsite <code>offercome.cn</code> is unreachable entirely (DNS resolves, HTTPS times out): 477 off-repo images dead across <code>docs/md/**</code>; reported in <a href=\"https://github.com/aalansehaiyang/technology-talk/issues/84\">#84</a>."
-  },
-  {
-    "repo": "sml2h3/ddddocr",
-    "status": "reported",
-    "text": "All 26 off-repo images on author CDN <code>cdn.wenanzhe.com</code> return HTTP 404 (sponsor table and captcha demos across READMEs); reported in <a href=\"https://github.com/sml2h3/ddddocr/issues/317\">#317</a>."
-  }
+ {
+  "repo": "apache/airflow",
+  "status": "merged",
+  "text": "Stale version pin in README (==3.3.0 vs 3.4.0) reported in <a href='https://github.com/apache/airflow/issues/73769'>#73769</a>, fixed in <a href='https://github.com/apache/airflow/pull/73770'>#73770</a>, approved and <b>merged</b> into main by PMC chair Jarek Potiuk on 2026-09-27."
+ },
+ {
+  "repo": "appsmithorg/appsmith",
+  "status": "triaged",
+  "text": "82 broken image references in the ADS design-system docs (9 dead Notion S3 assets + 73 missing in-repo docs/ images) reported in <a href='https://github.com/appsmithorg/appsmith/issues/42298'>#42298</a>; taken into the team's internal tracker as <a href='https://linear.app/appsmith/issue/APP-16043'>APP-16043</a>."
+ },
+ {
+  "repo": "tensorflow/tensorflow",
+  "status": "merged",
+  "text": "9 dead Kokoro build-status badges in the README's Official Builds table (HTTP 403) and the discontinued Bintray link (410) reported in <a href=\"https://github.com/tensorflow/tensorflow/issues/128150\">#128150</a>; labeled <em>type:docs-bug</em>, assigned, and fixed upstream in <a href=\"https://github.com/tensorflow/tensorflow/pull/128179\">PR&nbsp;#128179</a> (&ldquo;Remove dead Kokoro build status links from README&rdquo;), <strong>merged 2026-09-30</strong> and the issue closed &mdash; master README re-verified: zero Bintray / dead-badge references remain."
+ },
+ {
+  "repo": "vitejs/vite",
+  "status": "policy-closed",
+  "text": "2 broken announcement OG-image links in the changelog (caused by the .png to .webp asset rename in 91396071) submitted as <a href='https://github.com/vitejs/vite/pull/23594'>#23594</a>; automatically closed under the project's AI policy via agentscan without human review. Reproducible verification chain left in <a href='https://github.com/vitejs/vite/pull/23594#issuecomment-5856570501'>comment</a> for human maintainers."
+ },
+ {
+  "repo": "minio/minio",
+  "status": "archived",
+  "text": "2 missing in-repo images in vendored package READMEs (<code>internal/ringbuffer/Circular_Buffer_Animation.gif</code>, <code>internal/s3select/jstream/jstream.png</code>) verified 404 at HEAD — <b>not reportable</b>: the repository is archived and read-only. The finding remains in the dataset as historical rot."
+ },
+ {
+  "repo": "istio/istio",
+  "status": "merged",
+  "text": "Broken image link in <code>architecture/environments/operator.md</code> (referenced <code>images/operator_render_flow.svg</code>, 404; actual asset at <code>operator/images/operator_render_flow.svg</code>) reported in <a href='https://github.com/istio/istio/issues/61944'>#61944</a>; fixed in <a href='https://github.com/istio/istio/pull/61950'>PR #61950</a> and merged into master."
+ },
+ {
+  "repo": "moby/moby",
+  "status": "reported",
+  "text": "CNM diagram broken in <code>daemon/libnetwork/docs/design.md</code> (root-relative <code>/docs/cnm-model.jpg</code> → 404 while the image sits next to the document at <code>daemon/libnetwork/docs/cnm-model.jpg</code>, 200) reported in <a href='https://github.com/moby/moby/issues/53789'>#53789</a> with a suggested one-line fix."
+ },
+ {
+  "repo": "nocodb/nocodb",
+  "status": "reported",
+  "text": "Both Data Exporter extension screenshots broken by a doubled <code>data-exporter/</code> path segment in <code>description.md</code> (actual assets live one level up, verified 404/200 pair) reported in <a href='https://github.com/nocodb/nocodb/issues/14662'>#14662</a> with a two-line fix offer."
+ },
+ {
+  "repo": "supabase/supabase",
+  "status": "reported",
+  "text": "Missing BotFather screenshot in the elevenlabs-speech-to-text example README (root-relative <code>/assets/images/cookbooks/…</code> → 404, file exists nowhere in the tree) reported in <a href='https://github.com/supabase/supabase/issues/50948'>#50948</a> with a text-instructions fallback suggestion. The three Croatian/Sinhala README image breaks from the same corpus are separately covered by <a href='https://github.com/supabase/supabase/pull/50300'>#50300</a>."
+ },
+ {
+  "repo": "microsoft/PowerToys",
+  "status": "reported",
+  "text": "Screenshot referenced in <code>tools/project_template/README.md</code> was deleted in 2021 (#14709) but reference survived (verified 404 at HEAD); reported in <a href=\"https://github.com/microsoft/PowerToys/issues/50821\">#50821</a>."
+ },
+ {
+  "repo": "firecrawl/firecrawl",
+  "status": "reported",
+  "text": "9 broken image links across two exported blog articles under <code>examples/blog-articles/</code> (referenced <code>notebook_files/</code> and <code>images/</code> directories were never committed to the repo, all 404); reported in <a href=\"https://github.com/firecrawl/firecrawl/issues/4776\">#4776</a>."
+ },
+ {
+  "repo": "flutter/flutter",
+  "status": "reproduced",
+  "text": "Two broken image references in <code>dev/snippets/README.md</code> (referenced <code>assets/</code> directory missing from tree, both URLs 404); reported in <a href=\"https://github.com/flutter/flutter/issues/193415\">#193415</a>, reproduced by a Flutter triager on master &mdash; fix offered as <a href=\"https://github.com/flutter/flutter/pull/193429\">PR #193429</a> (awaiting Google CLA)."
+ },
+ {
+  "repo": "jackfrued/Python-100-Days",
+  "status": "reported",
+  "text": "Local macOS desktop path committed in markdown (<code>/Users/Hao/Desktop/...</code>), missing <code>res/</code> images (404), and unresolvable <code>localhost</code> URLs; reported in <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>."
+ },
+ {
+  "repo": "labuladong/fucking-algorithm",
+  "status": "reported",
+  "text": "22 broken image paths on author docsite (<code>labuladong.online/algo/images/...</code>, 404 while site root is 200) and missing <code>table_qr2.jpg</code> in repo; reported in <a href=\"https://github.com/labuladong/fucking-algorithm/issues/2653\">#2653</a>."
+ },
+ {
+  "repo": "jackfrued/Python-100-Days",
+  "status": "fix-proposed",
+  "text": "Follow-up on <a href=\"https://github.com/jackfrued/Python-100-Days/issues/1217\">#1217</a>: the two <code>localhost</code> image URLs exist on the author's public Gitee mirror (verified HTTP 200); minimal two-line fix proposed in <a href=\"https://github.com/jackfrued/Python-100-Days/pull/1218\">#1218</a>."
+ },
+ {
+  "repo": "Azure/azure-quickstart-templates",
+  "status": "reported",
+  "text": "All 892 CI/deployment status badges on <code>azurequickstartsservice.blob.core.windows.net</code> return HTTP 409 <code>PublicAccessNotPermitted</code> (146 READMEs); reported in <a href=\"https://github.com/Azure/azure-quickstart-templates/issues/14882\">#14882</a>."
+ },
+ {
+  "repo": "aalansehaiyang/technology-talk",
+  "status": "reported",
+  "text": "Author docsite <code>offercome.cn</code> is unreachable entirely (DNS resolves, HTTPS times out): 477 off-repo images dead across <code>docs/md/**</code>; reported in <a href=\"https://github.com/aalansehaiyang/technology-talk/issues/84\">#84</a>."
+ },
+ {
+  "repo": "sml2h3/ddddocr",
+  "status": "reported",
+  "text": "All 26 off-repo images on author CDN <code>cdn.wenanzhe.com</code> return HTTP 404 (sponsor table and captcha demos across READMEs); reported in <a href=\"https://github.com/sml2h3/ddddocr/issues/317\">#317</a>."
+ }
 ]

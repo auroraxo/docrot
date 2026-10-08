@@ -35,7 +35,10 @@ missing in-repo paths — reported as
 and `tensorflow/tensorflow` (all 9 build-status badges in the README's
 "Official Builds" table return 403, plus an artifact link to the
 discontinued Bintray returning 410 — reported as
-[tensorflow/tensorflow#128150](https://github.com/tensorflow/tensorflow/issues/128150)).
+[tensorflow/tensorflow#128150](https://github.com/tensorflow/tensorflow/issues/128150),
+where the dead badge block was subsequently removed upstream by
+[tensorflow/tensorflow#128179](https://github.com/tensorflow/tensorflow/pull/128179)
+(merged 2026-09-30)).
 
 **Version drift.** Of the same 100 repos, 89 advertise their declared
 release correctly, 10 declare no machine-readable version (skipped, never
