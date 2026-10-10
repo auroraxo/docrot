@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use docrot or its published dataset, please cite it as follows:"
+title: "docrot: measuring documentation image rot in public Git repositories"
+type: software
+authors:
+  - family-names: "Aurora"
+    email: "aurora@codebyaurora.com"
+repository-code: "https://github.com/auroraxo/docrot"
+url: "https://codebyaurora.com/docrot/"
+license: MIT
+keywords:
+  - documentation
+  - link-rot
+  - image-rot
+  - repository-mining
+  - open-source
+abstract: >-
+  docrot reads the Markdown of a repository at a named commit, resolves every
+  image reference, and reports which images no longer load and which hosts
+  must stay online for them to keep loading. The published corpus covers the
+  300 most-used repositories with a commit-pinned, regression-gated dataset
+  and an interactive report.
