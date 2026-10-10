@@ -1,5 +1,7 @@
 # docrot
 
+[![CI](https://github.com/auroraxo/docrot/actions/workflows/ci.yml/badge.svg)](https://github.com/auroraxo/docrot/actions/workflows/ci.yml)
+
 Measure documentation image rot in public Git repositories.
 
 Documentation breaks silently. A screenshot is hot-linked from a company CDN, the
