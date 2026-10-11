@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: auroraxo/docrot-check@v1
+      - uses: auroraxo/docrot-check@c4addbc8d101eb45320ec168e9cc0ce383cd687a
         with:
           fail-on-broken: "false"
