@@ -130,6 +130,33 @@ published 26–30% band, per wave 28/29/33. Full datasets:
 v6/v7 datasets remain in the repo as archived intermediates and are
 superseded.
 
+### Known rot clusters
+
+Grouping the 1,691 broken off-repo references from the v8 audit (300 repos,
+33,588 references, 17,026 unique images) by hostname shows that most rot is
+concentrated in a few clusters rather than evenly spread. Every row below was
+re-aggregated from the three published v8 datasets and re-verified live with
+`curl -L` on 2026-10-11:
+
+| Host | Broken unique images | Refs | Repos | Live status 2026-10-11 |
+| --- | ---: | ---: | ---: | --- |
+| `azurequickstartsservice.blob.core.windows.net` | 892 | 892 | 1 (146 READMEs) | HTTP 409 (`PublicAccessNotPermitted`) — filed as [#14882](https://github.com/Azure/azure-quickstart-templates/issues/14882) |
+| `offercome.cn` (incl. `www.`) | 477 | 491 | 1 | TLS certificate expired (curl exit 60) — filed as [#84](https://github.com/aalansehaiyang/technology-talk/issues/84) |
+| `cdn.wenanzhe.com` | 26 | 78 | 1 | HTTP 404 — filed as [#317](https://github.com/sml2h3/ddddocr/issues/317) |
+| `labuladong.online` | 22 | 24 | 1 | HTTP 404 |
+| `travis-ci.org` (legacy `.org` badges) | 8 | 16 | 7 | 8/8 distinct targets HTTP 404; the live `.com`/`api.` endpoints answer 200 |
+| `upload.wikimedia.org` | 23 | 40 | 2 | HTTP 200 now (was HTTP 429 at scan time — transient, not rot) |
+| `packagephobia.com` | 26 | 27 | 2 | HTTP 429 now (rate-limited, not a permanent cluster) |
+| `badgen.net` | 20 | 20 | 2 | mixed HTTP 200/502 (flaky, not a permanent cluster) |
+
+Read as: three single-host failures (`blob.core.windows.net`,
+`offercome.cn`, `cdn.wenanzhe.com`) account for 1,395 of the 1,691 broken
+references — one dead origin can break an entire documentation set at once.
+The `travis-ci.org` row is the one cross-repository cluster that is still
+permanently dead (7 repos carry 8 distinct badges pointing at the retired
+`.org` endpoint). The remaining rows are scan-time transients and are
+documented as such so they are not mistaken for durable findings.
+
 ## Usage
 
 ```sh
