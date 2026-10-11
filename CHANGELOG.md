@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.7.0] — 2026-10-11
+
+### Added
+- **60-second reproduction section in the README.** Re-run a published
+  Wave-3 finding (sml2h3/ddddocr, 26 broken external images) with the
+  committed scanner in one command; the numbers must match the dataset or
+  "the rot moved — open an issue".
+- **CI.** GitHub Actions workflow running the 89-test stdlib suite on
+  Python 3.10/3.12 for push and PR, with a README badge.
+- **Security policy** (SECURITY.md): private disclosure via GitHub
+  Security Advisories, 72h acknowledgement.
+- **CITATION.cff** so the dataset and scanner can be cited formally.
+
+### Changed
+- Report page (codebyaurora.com/docrot/) now ships canonical, Open Graph,
+  and Twitter card metadata.
+- README: 300-repo v5→v8 scanner-audit section; upstream outcomes updated
+  (tensorflow#128150 fixed by merged PR tensorflow#128179 — third merged
+  upstream fix).
+
+### Community
+- Contributor surface complete: CONTRIBUTING.md and Contributor Covenant
+  2.1 Code of Conduct join the existing MIT LICENSE and bug/feature issue
+  templates.
+
+---
+
 ## [1.6.0] — 2026-09-29
 
 ### Fixed
