@@ -247,6 +247,39 @@ In the 100-repository corpus:
 The interactive report tables enumerate every host, its reference count, and
 which repositories depend on it: <https://codebyaurora.com/docrot/>
 
+## Reproduce one finding in 60 seconds
+
+The whole dataset is rebuilt by `scan.py`, but you don't have to trust the
+aggregate: pick a single repository from any wave file and re-run just it.
+`sml2h3/ddddocr` is a compact example — the published wave-3 dataset lists 26
+broken external images on the author CDN `cdn.wenanzhe.com`.
+
+```sh
+export GITHUB_TOKEN="your_token_here"        # or echo "$GITHUB_TOKEN" > ~/.ghtok
+echo 'sml2h3/ddddocr' > one-repo.txt
+python3 scan.py one-repo.txt one-repo.json   # ~10s
+python3 -c "import json; r=json.load(open('one-repo.json'))['repos'][0]; \
+ print({k: r[k] for k in ('imageRefs','uniqueImages','externalThirdPartyBroken','missingInRepo')})"
+```
+
+Expected output (scanner v8, 2026-10-11, HEAD `c40f56f`):
+
+```
+{'imageRefs': 81, 'uniqueImages': 29, 'externalThirdPartyBroken': 26, 'missingInRepo': 1}
+```
+
+Each entry in `one-repo.json` carries its `target`, HTTP `status` and `refs`
+(the exact file and line syntax that produced it). Spot-check any of them in a
+browser or with curl:
+
+```sh
+curl -s -o /dev/null -w '%{http_code}\n' -L https://cdn.wenanzhe.com/img/logo.gif
+# -> 404
+```
+
+If you get different numbers, the rot moved — which is the point of the tool.
+Open an issue with your output and it counts as a finding either way.
+
 ## Version & history
 
 Every release is tagged and documented twice: [Releases](https://github.com/auroraxo/docrot/releases)
