@@ -291,3 +291,10 @@ carry the full measurement narrative per version, and the
 ## Licence
 
 MIT for the scanner. The dataset is CC0 — take it, re-run it, disagree with it.
+
+## Support
+
+Questions, phantom reports that are not bugs, and "should this count as rot?"
+debates belong in [GitHub Discussions](https://github.com/auroraxo/docrot/discussions).
+Bugs and feature requests go through the issue templates — discussion threads
+tend to stay unanswered as issues.
