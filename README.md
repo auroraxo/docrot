@@ -144,7 +144,7 @@ re-aggregated from the three published v8 datasets and re-verified live with
 | `offercome.cn` (incl. `www.`) | 477 | 491 | 1 | TLS certificate expired (curl exit 60) — filed as [#84](https://github.com/aalansehaiyang/technology-talk/issues/84) |
 | `cdn.wenanzhe.com` | 26 | 78 | 1 | HTTP 404 — filed as [#317](https://github.com/sml2h3/ddddocr/issues/317) |
 | `labuladong.online` | 22 | 24 | 1 | HTTP 404 |
-| `travis-ci.org` (legacy `.org` badges) | 8 | 16 | 7 | 8/8 distinct targets HTTP 404; the live `.com`/`api.` endpoints answer 200 |
+| `travis-ci.org` (legacy `.org` badges) | 8 | 16 | 7 | 8/8 distinct targets HTTP 404; the live `.com`/`api.` endpoints answer 200 — filed as [nestjs/nest#18091](https://github.com/nestjs/nest/issues/18091) and [wifiphisher/wifiphisher#1727](https://github.com/wifiphisher/wifiphisher/issues/1727) |
 | `upload.wikimedia.org` | 23 | 40 | 2 | HTTP 200 now (was HTTP 429 at scan time — transient, not rot) |
 | `packagephobia.com` | 26 | 27 | 2 | HTTP 429 now (rate-limited, not a permanent cluster) |
 | `badgen.net` | 20 | 20 | 2 | mixed HTTP 200/502 (flaky, not a permanent cluster) |
@@ -156,6 +156,24 @@ The `travis-ci.org` row is the one cross-repository cluster that is still
 permanently dead (7 repos carry 8 distinct badges pointing at the retired
 `.org` endpoint). The remaining rows are scan-time transients and are
 documented as such so they are not mistaken for durable findings.
+
+#### Screened, not rot
+
+Three additional hostname clusters looked promising by repo spread but were
+**rejected** after live re-verification on 2026-10-11 (curl, no browser):
+
+- `deepwiki.com` badge (8 repos incl. supabase, excalidraw, nuxt, langflow):
+  HTTP 429 on every attempt — rate limiting, not a dead host.
+- `repology.org` badges (6 repos incl. neovim, scrcpy, systemd, netdata):
+  HTTP 403 with curl's default agent but **HTTP 200** with a browser
+  `User-Agent` — bot blocking, not rot.
+- `starchart.cc` star badges (3 repos): HTTP 400 with body
+  `{"error":"rate limited, please try again later"}` — service alive,
+  rate limiting, not rot.
+
+None of these belong in an issue to the affected repositories: the URLs work
+for human visitors, and the scanners see a transient refusal they may or may
+not retry. Rot requires the resource to be gone, not gated.
 
 ## Usage
 
