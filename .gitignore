@@ -4,3 +4,7 @@ results*.json
 one.txt
 v2check.txt
 index.html
+proof-results-*.json
+proof-scan-*.log
+proof-targets-*.txt
+b4out/
