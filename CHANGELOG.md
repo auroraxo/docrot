@@ -8,6 +8,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.8.0] — 2026-10-12
+
+### Added
+- **`scan_local.py` + tests (6)** — local-repo scanner for CI and GitHub
+  Action use. Same classification rules as `scan.py` (in-repo / missing /
+  external / unresolvable) but operates on a checked-out tree, so a CI
+  step can run the same engine on its own repository without a GitHub
+  token. Headline figure: `externalThirdPartyBroken + missingInRepo`.
+  `test_scan_local.py` covers a 9-image fixture mixing dead external,
+  missing in-repo, and healthy refs; the live-CI path is gated by
+  `SKIP_LIVE_CHECKS=1`.
+- **CI:** dogfoods `auroraxo/docrot-check` (warn-only) so the published
+  engine scans the engine's own docs. Pinned to the action's `v1` tag
+  now that the tagged release exists.
+- **README "Screened, not rot" section** — explicit list of the three
+  in-repo `README.md` images that *look* like dead rot (a favicon that
+  points to a non-200, a local asset path that's only resolved by the
+  docs site, and a sponsor placeholder) but are actually intentional
+  and reproducible; documents the live host-aggregation result for
+  `deepwiki/repology/starchart` so a future reader doesn't file a
+  duplicate issue.
+- **README "Known rot clusters" section** — eight cluster hosts
+  (travis-ci.org legacy, broken.stock, dead-knight, etc.) with the
+  number of distinct target URLs and their live HTTP status, plus the
+  upstream issues filed against the affected projects.
+
+### Changed
+- **CI test matrix** now runs `test_scan_local` alongside the existing
+  `test_docrot` and `test_version_drift` suites (70 + 19 + 6 = 95 tests on
+  Python 3.10/3.12).
+- **`docrot-check` pin** in the docs CI moved from a hard-coded commit
+  SHA to the action's published `v1` tag.
+
 ## [1.7.0] — 2026-10-11
 
 ### Added

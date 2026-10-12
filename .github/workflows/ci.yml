@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Run test suite (stdlib only)
-        run: python3 -m unittest test_docrot test_version_drift -v
+        run: python3 -m unittest test_docrot test_version_drift test_scan_local -v
 
   docrot-check:
     # Dogfood auroraxo/docrot-check: scan this repository's own markdown for
@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: auroraxo/docrot-check@c4addbc8d101eb45320ec168e9cc0ce383cd687a
+      - uses: auroraxo/docrot-check@v1
         with:
           fail-on-broken: "false"
